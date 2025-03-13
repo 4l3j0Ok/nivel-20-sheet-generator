@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./templates/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap v4 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -41,7 +41,7 @@
       <div class="col-9 bordered rounded">
         <div class="row p-2">
           <div class="info-field col pl-1 pr-2">
-            <div class="field-value handwrite">{{character.name}} {{character.level}}</div>
+            <div class="field-value handwrite">{{character.class_}} {{character.level}}</div>
             <div class="field-label">Clase y nivel</div>
           </div>
           <div class="info-field col pl-1 pr-1">
@@ -658,9 +658,7 @@
           <div class="row align-items-center" style="height: 420px">
 
             <div class="col text-center pb-1">
-              <img
-                src="https://s3-eu-west-2.amazonaws.com/dungeon20/images/2797669/original-d5cf450b00db31ade5bba47049882691884e1f87.png?1740764819"
-                style="max-width: 100%; max-height: 100%">
+              <img src={{character.image}} style="max-width: 100%; max-height: 100%">
             </div>
 
           </div>
@@ -713,7 +711,7 @@
               <div class="row">
                 <div class="col pr-0">
                   <div class="info-field p-2">
-                    <div class="field-value handwrite">Brujo</div>
+                    <div class="field-value handwrite">{{character.class_}}</div>
                     <div class="field-label">Clase sortílega</div>
                   </div>
                 </div>

@@ -5,11 +5,13 @@ class Character:
     def __init__(
         self,
         name,
+        class_,
         level,
         background,
         race,
         alignment,
         experience,
+        image,
         abilities,
         saving_throws,
         skills,
@@ -32,11 +34,13 @@ class Character:
         traits,
     ):
         self.name = name
+        self.class_ = class_
         self.level = level
         self.background = background
         self.race = race
         self.alignment = alignment
         self.experience = experience
+        self.image = image
         self.abilities = abilities
         self.saving_throws = saving_throws
         self.skills = skills
@@ -71,12 +75,14 @@ with open("./templates/index.html.tpl", "r", encoding="utf-8") as file:
 template = Template(template_content)
 
 character = Character(
-    name="Aldor",
-    level="5",
-    background="Soldado",
-    race="Elfo",
-    alignment="Legal Bueno",
+    name="Thrain Stormforge",
+    class_="Brujo",
+    level="8",
+    background="Noble",
+    race="Humano",
+    alignment="Caótico Neutral",
     experience="15000",
+    image="https://s3-eu-west-2.amazonaws.com/dungeon20/images/2797669/original-d5cf450b00db31ade5bba47049882691884e1f87.png?1740764819",
     abilities={
         "strength": {"modifier": "+2", "value": "14"},
         "dexterity": {"modifier": "+3", "value": "16"},
@@ -142,6 +148,7 @@ character = Character(
                     "duration": "Instantáneo",
                     "range": "120 pies",
                     "components": "V, S",
+                    "description": "Haces 2d6 de daño de fuego a una criatura.",
                 },
                 {
                     "level": "1",
@@ -151,23 +158,11 @@ character = Character(
                     "duration": "1 minuto",
                     "range": "30 pies",
                     "components": "V, S",
+                    "description": "Creas un espejismo visual que ocupa un cubo de 10 pies.",
                 },
             ],
         },
-        "level_2": {
-            "slots": "3",
-            "list": [
-                {
-                    "level": "2",
-                    "name": "Invisibilidad",
-                    "school": "Ilusión",
-                    "casting_time": "1 acción",
-                    "duration": "1 hora",
-                    "range": "Toque",
-                    "components": "V, S",
-                }
-            ],
-        },
+        "level_2": {"slots": "3", "list": []},
         "level_3": {"slots": "0", "list": []},
         "level_4": {"slots": "0", "list": []},
         "level_5": {"slots": "0", "list": []},
@@ -186,7 +181,7 @@ character = Character(
     ],
 )
 
-player = Player(name="Alejo")
+player = Player(name="Alejoide")
 
 data = {
     "character": character,
