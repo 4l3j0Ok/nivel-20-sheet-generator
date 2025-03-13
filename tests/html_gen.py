@@ -133,15 +133,6 @@ character = Character(
         "total": "5",
         "level_1": {
             "slots": "4",
-            # <div class="col-1 text-center pl-0 pr-0">
-            #     {{ spell.level }}
-            #   </div>
-            #   <div class="col-2 underline pl-0">{{ spell.name }}</div>
-            #   <div class="col-2">{{ spell.school }}</div>
-            #   <div class="col-2">{{ spell.casting_time }}</div>
-            #   <div class="col-3">{{ spell.duration }}</div>
-            #   <div class="col-1">{{ spell.range }}</div>
-            #   <div class="col-1 text-center pl-0 pr-0">{{ spell.components }}</div>
             "list": [
                 {
                     "level": "1",
