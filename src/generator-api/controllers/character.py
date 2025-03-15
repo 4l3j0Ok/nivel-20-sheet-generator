@@ -1,7 +1,7 @@
 from jinja2 import Template
 import requests
 from traceback import print_exc
-from models.character import Character, Background, FeatsAndTraits, Feat, Fields
+from models.character import Character, Background, FeatsAndTraits, Feat, Fields, Class
 from markdown import markdown
 
 
@@ -35,8 +35,10 @@ def convert_to_character(character_url) -> Character:
         name=character_data.get("info").get("name"),
         player_name=character_data.get("info").get("player"),
         race=character_data.get("info").get("race"),
-        class_=character_data.get("professions")[0].get("name"),
-        level=character_data.get("professions")[0].get("level"),
+        classes=[
+            Class(**profession) for profession in character_data.get("professions")
+        ],
+        level=character_data.get("info").get("level"),
         background=background,
         fields=fields,
         image=character_data.get("info").get("image_url"),
@@ -52,12 +54,12 @@ def convert_to_character(character_url) -> Character:
         initiative=character_data.get("initiative").get("total"),
         speed=character_data.get("speed").get("total"),
         max_hit_points=character_data.get("info").get("hit_points"),
-        hit_dice=f"{character_data.get('professions')[0].get('level')}d{character_data.get('professions')[0].get('hit_points_dice')}",
-        spellcasting_ability=character_data.get("spell_books")[0].get(
+        hit_dice=f"{character_data.get('professions')[-1].get('level')}d{character_data.get('professions')[-1].get('hit_points_dice')}",
+        spellcasting_ability=character_data.get("spell_books")[-1].get(
             "spell_ability_name"
         ),
-        spell_save_dc=character_data.get("spell_books")[0].get("spell_save_dc"),
-        spell_attack_bonus=character_data.get("spell_books")[0].get(
+        spell_save_dc=character_data.get("spell_books")[-1].get("spell_save_dc"),
+        spell_attack_bonus=character_data.get("spell_books")[-1].get(
             "spell_attack_bonus"
         ),
         spells=get_spells(character_data),
@@ -517,91 +519,100 @@ def get_spells(character: dict) -> list:
             list=[],
         ),
         level_1=dict(
-            slots=int(
-                character.get("spell_books")[0].get("current_level_slots").get("1", 0)
-            ),
+            slots=0,
             list=[],
         ),
         level_2=dict(
-            slots=int(
-                character.get("spell_books")[0].get("current_level_slots").get("2", 0)
-            ),
+            slots=0,
             list=[],
         ),
         level_3=dict(
-            slots=int(
-                character.get("spell_books")[0].get("current_level_slots").get("3", 0)
-            ),
+            slots=0,
             list=[],
         ),
         level_4=dict(
-            slots=int(
-                character.get("spell_books")[0].get("current_level_slots").get("4", 0)
-            ),
+            slots=0,
             list=[],
         ),
         level_5=dict(
-            slots=int(
-                character.get("spell_books")[0].get("current_level_slots").get("5", 0)
-            ),
+            slots=0,
             list=[],
         ),
         level_6=dict(
-            slots=int(
-                character.get("spell_books")[0].get("current_level_slots").get("6", 0)
-            ),
+            slots=0,
             list=[],
         ),
-        known_spells=character.get("spell_books")[0].get("known_spells"),
-        known_cantrips=character.get("spell_books")[0].get("cantrips"),
+        known_spells=0,
+        known_cantrips=0,
     )
-    for i in character.get("spell_books")[0].get("spells"):
-        for spell in i[1]:
-            spells[
-                f"level_{spell.get('level')}" if spell.get("level") != 0 else "cantrips"
-            ]["list"].append(
-                dict(
-                    level=spell.get("level") if spell.get("level") != 0 else "Truco",
-                    name=spell.get("name"),
-                    school=spell.get("spell_school_name"),
-                    casting_time=spell.get("casting_time"),
-                    duration=spell.get("duration"),
-                    range=spell.get("range"),
-                    components=spell.get("short_components"),
-                    description=markdown(
-                        spell.get("description"), extensions=["tables"]
-                    ),
+    for spell_book in character.get("spell_books"):
+        for level, total in spell_book.get("current_level_slots").items():
+            if not level.isdigit():
+                continue
+            spells[f"level_{level}"]["slots"] += int(total)
+        for i in spell_book.get("spells"):
+            # indice 1 es la lista de hechizos, indice 0 es el int de nivel de hechizo
+            for spell in i[1]:
+                spells[
+                    f"level_{spell.get('level')}"
+                    if spell.get("level") != 0
+                    else "cantrips"
+                ]["list"].append(
+                    dict(
+                        level=spell.get("level")
+                        if spell.get("level") != 0
+                        else "Truco",
+                        name=spell.get("name"),
+                        school=spell.get("spell_school_name"),
+                        casting_time=spell.get("casting_time"),
+                        duration=spell.get("duration"),
+                        range=spell.get("range"),
+                        components=spell.get("short_components"),
+                        description=markdown(
+                            spell.get("description"), extensions=["tables"]
+                        )
+                        if spell.get("description")
+                        else "",
+                    )
                 )
-            )
     return spells
 
 
 def get_feats_and_traits(character: dict) -> list:
     """Obtiene los rasgos y características de un personaje."""
-    class_feats = FeatsAndTraits(
-        origin=character.get("professions")[0].get("name"), list=[]
-    )
+    classes_feats = []
+    for profession in character.get("professions"):
+        class_feats = FeatsAndTraits(list=[], origin=profession.get("name"))
+        for feat in profession.get("feats"):
+            class_feats.list.append(
+                Feat(
+                    name=feat.get("name"),
+                    description=markdown(feat.get("description", "")).replace(
+                        "<p>", '<p style="margin-bottom: 0.3rem;">'
+                    )
+                    if feat.get("description")
+                    else "",
+                    summary=markdown(feat.get("summary", "")).replace(
+                        "<p>", '<p style="margin-bottom: 0.3rem;">'
+                    )
+                    if feat.get("summary")
+                    else "",
+                )
+            )
+        classes_feats.append(class_feats)
     race_feats = FeatsAndTraits(
         origin=character.get("info").get("subrace_name"), list=[]
     )
-    for feat in character.get("professions")[0].get("feats"):
-        class_feats.list.append(
-            Feat(
-                name=feat.get("name"),
-                description=markdown(feat.get("description", "")).replace(
-                    "<p>", '<p style="margin-bottom: 0.3rem;">'
-                ),
-                summary=markdown(feat.get("summary", "")).replace(
-                    "<p>", '<p style="margin-bottom: 0.3rem;">'
-                ),
-            )
-        )
     for feat in character.get("race_feats"):
         race_feats.list.append(
             Feat(
                 name=feat.get("name"),
-                description=markdown(feat.get("description", "")),
-                summary=markdown(feat.get("summary", "")),
+                description=markdown(feat.get("description", ""))
+                if feat.get("description")
+                else "",
+                summary=markdown(feat.get("summary", ""))
+                if feat.get("summary")
+                else "",
             )
         )
     return [race_feats, class_feats]

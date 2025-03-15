@@ -41,7 +41,11 @@
       <div class="col-9 bordered rounded">
         <div class="row p-2">
           <div class="info-field col pl-1 pr-2">
-            <div class="field-value handwrite">{{character.class_}} {{character.level}}</div>
+            <div class="field-value handwrite">
+              {% for class in character.classes %}
+              {{class.name}} {{character.level}}
+              {% endfor %}
+            </div>
             <div class="field-label">Clase y nivel</div>
           </div>
           <div class="info-field col pl-1 pr-1">
@@ -772,7 +776,7 @@
               <div class="row">
                 <div class="col pr-0">
                   <div class="info-field p-2">
-                    <div class="field-value handwrite">{{character.class_}}</div>
+                    <div class="field-value handwrite">{{character.classes[-1].name}}</div>
                     <div class="field-label">Clase sortílega</div>
                   </div>
                 </div>

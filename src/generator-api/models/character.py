@@ -33,6 +33,25 @@ class Feat:
         self.summary = kwargs.get("summary")
 
 
+class Class:
+    name: str
+    description: str
+    archetype_name: str
+    archetype_description: str
+    level: int
+    hit_points_dice: int
+    feats: List
+
+    def __init__(self, **kwargs):
+        self.name = kwargs.get("name")
+        self.description = kwargs.get("description")
+        self.archetype_name = kwargs.get("archetype_name")
+        self.archetype_description = kwargs.get("archetype_description")
+        self.level = kwargs.get("level")
+        self.hit_points_dice = kwargs.get("hit_points_dice")
+        self.feats = [Feat(**feat) for feat in kwargs.get("feats")]
+
+
 @dataclass
 class FeatsAndTraits:
     origin: str
@@ -57,7 +76,9 @@ class Fields:
         self.alignment = kwargs.get("alineamiento")
         self.appearance = kwargs.get("apariencia")
         self.age = kwargs.get("edad")
-        self.history = markdown(kwargs.get("historia"))
+        self.history = (
+            markdown(kwargs.get("historia")) if kwargs.get("historia") else ""
+        )
         self.languages = kwargs.get("idiomas")
         self.notes = kwargs.get("notas")
         self.experience_points = kwargs.get("puntos_de_experiencia")
@@ -72,7 +93,7 @@ class Character:
     name: str
     player_name: str
     race: str
-    class_: str
+    classes: List[Class]
     level: int
     background: Background
     fields: Fields
