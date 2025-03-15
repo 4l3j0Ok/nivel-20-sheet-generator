@@ -153,9 +153,11 @@
             <div class="bordered rounded p-2">
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
+                  {% if character.saving_throws.strength.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.saving_throws.strength.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Fuerza</div>
@@ -166,9 +168,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
+                  {% if character.saving_throws.dexterity.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.saving_throws.dexterity.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Destreza</div>
@@ -179,9 +183,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
+                  {% if character.saving_throws.constitution.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.saving_throws.constitution.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Constitución</div>
@@ -192,9 +198,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
+                  {% if character.saving_throws.intelligence.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.saving_throws.intelligence.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Inteligencia</div>
@@ -205,9 +213,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
+                  {% if character.saving_throws.wisdom.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.saving_throws.wisdom.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Sabiduría</div>
@@ -218,9 +228,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
+                  {% if character.saving_throws.charisma.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.saving_throws.charisma.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Carisma</div>
@@ -234,9 +246,11 @@
             <div class="mt-2 bordered rounded p-2">
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.acrobatics.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.acrobatics.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Acrobacias</div>
@@ -247,10 +261,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.arcana.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.arcana.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif
-                  %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Arcanos</div>
@@ -261,9 +276,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.athletics.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.athletics.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Atletismo</div>
@@ -274,9 +291,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.deception.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.deception.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Engañar</div>
@@ -287,9 +306,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.history.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.history.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Historia</div>
@@ -300,9 +321,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.performance.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.performance.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Interpretación</div>
@@ -313,9 +336,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.intimidation.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.intimidation.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Intimidar</div>
@@ -326,9 +351,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.investigation.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.investigation.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Investigación</div>
@@ -339,9 +366,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.sleight_of_hand.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.sleight_of_hand.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Juego de Manos</div>
@@ -352,9 +381,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.medicine.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.medicine.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Medicina</div>
@@ -365,10 +396,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.nature.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.nature.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif
-                  %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Naturaleza</div>
@@ -379,9 +411,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.perception.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.perception.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Percepción</div>
@@ -392,9 +426,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.insight.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.insight.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Perspicacia</div>
@@ -405,9 +441,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.persuasion.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.persuasion.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Persuasión</div>
@@ -418,9 +456,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.religion.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.religion.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Religión</div>
@@ -431,9 +471,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.stealth.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.stealth.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Sigilo</div>
@@ -444,9 +486,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.survival.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.survival.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
-                  endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Supervivencia</div>
@@ -457,9 +501,11 @@
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
+                  {% if character.skills.animal_handling.proficiency %}
+                  <i class="fa fa-circle"></i>
+                  {% else %}
                   <i class="fa fa-circle-o"></i>
-                  {% if character.skills.animal_handling.proficiency %}<span
-                    class="handwrite proficiency-cross">x</span>{% endif %}
+                  {% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Trato con Animales</div>
@@ -692,7 +738,7 @@
 
     <!-- Página 2 -->
     <div style="page-break-after: always"></div>
-    <div class="row">
+    <div class="row mt-3">
       <div class="col-3 p-0">
         <div class="info-field p-2">
           <div class="field-value handwrite" style="margin-top: 22px">{{character.name}}</div>
@@ -701,7 +747,11 @@
       </div>
       <div class="col-9 bordered rounded">
         <div class="row align-items-center m-0 small" style="min-height: 60px; border-bottom: 1px black solid;">
-          <div class="col value p-1 handwrite small" style="max-height: 100%">{{character.fields.appearance}}</div>
+          <div class="col value p-1 handwrite small" style="max-height: 100%">
+            {% if character.fields.appearance %}
+            {{ character.fields.appearance }}
+            {% endif %}
+          </div>
         </div>
         <div class="field-label small">Apariencia</div>
       </div>
@@ -896,6 +946,7 @@
   <style type="text/css">
     body {
       text-transform: uppercase;
+      font-family: "Montserrat";
     }
 
     .ml-row {
@@ -938,7 +989,6 @@
     }
 
     .handwrite {
-      font-family: "Montserrat";
       color: #0D47A1;
       text-transform: none;
       font-size: 1.6em;
