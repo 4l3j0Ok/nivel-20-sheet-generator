@@ -741,7 +741,7 @@
     <div style="page-break-after: always"></div>
     <div class="row">
       <div class="mt-3 bordered rounded p-1 bg-white" style="min-height: 1420px;">
-        <div class="value p-1 handwrite xx-small" style="height: calc(100% - 32px)">
+        <div class="value p-1 handwrite xx-small" style="height: calc(100% - 20px)">
           {% for feats in character.feats_and_traits %}
           {% for feat in feats.list %}
           <div>
