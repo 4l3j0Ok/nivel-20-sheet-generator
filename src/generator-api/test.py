@@ -74,7 +74,7 @@ template = Template(template_content)
 
 character_url = "https://nivel20.com/s/yfv6zczc"
 character = character.convert_to_character(character_url)
-print(character.feats_and_traits)
+print(character.classes)
 character_html = template.render(character=character)
 
 # Guardar el personaje en un archivo
