@@ -85,66 +85,66 @@
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Fuerza</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.strength.total}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.strength.modifier}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.strength.modifier}}</span>
+                  <span class="small">{{character.abilities.strength.total}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Destreza</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.dexterity.total}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.dexterity.modifier}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.dexterity.modifier}}</span>
+                  <span class="small">{{character.abilities.dexterity.total}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Constitución</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.constitution.total}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.constitution.modifier}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.constitution.modifier}}</span>
+                  <span class="small">{{character.abilities.constitution.total}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Inteligencia</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.intelligence.total}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.intelligence.modifier}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.intelligence.modifier}}</span>
+                  <span class="small">{{character.abilities.intelligence.total}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Sabiduría</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.wisdom.total}}</div>
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.wisdom.modifier}}</div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.wisdom.modifier}}</span>
+                  <span class="small">{{character.abilities.wisdom.total}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Carisma</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.charisma.total}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.charisma.modifier}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.charisma.modifier}}</span>
+                  <span class="small">{{character.abilities.charisma.total}}</span>
                 </div>
               </div>
             </div>
@@ -708,18 +708,18 @@
     </div>
     <div class="row mt-3">
       <div class="col-4 p-0">
-        <div class="bordered rounded p-1 bg-white">
-          <div class="row align-items-center" style="height: 420px">
+        <div class="bordered rounded p-1 bg-white" style="height: 420px;">
+          <div class="row" style="height: 388px; overflow: hidden">
 
             <div class="col text-center pb-1">
-              <img src={{character.image}} style="max-width: 100%; max-height: 100%">
+              <img src="{{character.image}}" class="rounded" style="width: 100%;">
             </div>
 
           </div>
           <div class="title bottom text-center">Apariencia</div>
         </div>
         <div class="mt-3 bordered rounded p-1 bg-white">
-          <div class="value p-1 handwrite xx-small" style="height: 850px">
+          <div class="value p-1 handwrite xx-small" style="height: 880px">
             {% if character.fields.notes %}
             {{ character.fields.notes }}
             {% endif %}
@@ -761,7 +761,7 @@
       </div>
     </div>
     <div style="page-break-after: always"></div>
-
+    {% if character.spells.known_spells > 0 %}
     <div class="row">
       <div class="col-4 pl-0" style="margin-top: 24px">
         <div class="info-field p-2">
@@ -891,6 +891,7 @@
         {% endfor %}
       </div>
     </div>
+    {% endif %}
   </div>
   <style type="text/css">
     body {
