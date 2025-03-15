@@ -1,11 +1,24 @@
+import os
 from jinja2 import Template
 import requests
-from traceback import print_exc
-from models.character import Character, Background, FeatsAndTraits, Feat, Fields, Class
+from typing import Union
 from markdown import markdown
+from logger import logger
+from models.character import Character, Background, FeatsAndTraits, Feat, Fields, Class
+from controllers.exceptions import Nivel20APIError, ConvertCharacterError, InvalidURL
 
 
-def get_base_character(character_url: str) -> dict:
+def validate_url(func):
+    def wrapper(*args, **kwargs):
+        if "nivel20.com" not in str(args[0]):
+            raise InvalidURL()
+        return func(*args, **kwargs)
+
+    return wrapper
+
+
+@validate_url
+def get_base_character(character_url: str) -> Union[dict, None]:
     """Obtiene un personaje de Nivel20."""
     try:
         # Primero hay que resolver la url que nos llega ya que hace un redirect.
@@ -17,71 +30,86 @@ def get_base_character(character_url: str) -> dict:
         response.raise_for_status()
         character = response.json().get("printable_hash")
         return character
-    except requests.RequestException as e:
-        print_exc()
-        raise Exception(f"No se pudo encontrar el personaje: {e}")
+    except requests.HTTPError as e:
+        logger.warning(f"Error HTTP al obtener el personaje: {e}")
+        raise Nivel20APIError(
+            "Error al obtener el personaje. Verifica que la URL sea correcta."
+        )
     except Exception as e:
-        print_exc()
-        raise Exception(f"Error desconocido: {e}")
+        logger.error(f"Error al obtener el personaje: {e}")
+        raise Exception("Error desconocido al obtener el personaje.")
 
 
+@validate_url
 def convert_to_character(character_url) -> Character:
     """Convierte un personaje de Nivel20 en un objeto Character."""
-    character_data = get_base_character(character_url)
-    background = Background(**character_data.get("background"))
-    fields = Fields(**character_data.get("fields"))
-    feats_and_traits = get_feats_and_traits(character_data)
-    character = Character(
-        name=character_data.get("info").get("name"),
-        player_name=character_data.get("info").get("player"),
-        race=character_data.get("info").get("race"),
-        classes=[
-            Class(**profession) for profession in character_data.get("professions")
-        ],
-        level=character_data.get("info").get("level"),
-        background=background,
-        fields=fields,
-        image=character_data.get("info").get("image_url"),
-        abilities=get_abilities(character_data),
-        saving_throws=get_saving_throws(character_data),
-        skills=get_skills(character_data),
-        attacks=get_attacks(character_data),
-        equipment=get_equipment(character_data),
-        proficiencies=get_proficiencies(character_data),
-        passive_wisdom=get_passive_wisdom(character_data),
-        proficiency_bonus=character_data.get("info").get("proficiency_bonus"),
-        armor_class=character_data.get("armor").get("normal"),
-        initiative=character_data.get("initiative").get("total"),
-        speed=character_data.get("speed").get("total"),
-        max_hit_points=character_data.get("info").get("hit_points"),
-        hit_dice=f"{character_data.get('professions')[-1].get('level')}d{character_data.get('professions')[-1].get('hit_points_dice')}"
-        if character_data.get("professions")
-        else "",
-        spellcasting_ability=character_data.get("spell_books")[-1].get(
-            "spell_ability_name"
+    try:
+        character_data = get_base_character(character_url)
+        background = Background(**character_data.get("background"))
+        fields = Fields(**character_data.get("fields"))
+        feats_and_traits = get_feats_and_traits(character_data)
+        character = Character(
+            name=character_data.get("info").get("name"),
+            player_name=character_data.get("info").get("player"),
+            race=character_data.get("info").get("race"),
+            classes=[
+                Class(**profession) for profession in character_data.get("professions")
+            ],
+            level=character_data.get("info").get("level"),
+            background=background,
+            fields=fields,
+            image=character_data.get("info").get("image_url"),
+            abilities=get_abilities(character_data),
+            saving_throws=get_saving_throws(character_data),
+            skills=get_skills(character_data),
+            attacks=get_attacks(character_data),
+            equipment=get_equipment(character_data),
+            proficiencies=get_proficiencies(character_data),
+            passive_wisdom=get_passive_wisdom(character_data),
+            proficiency_bonus=character_data.get("info").get("proficiency_bonus"),
+            armor_class=character_data.get("armor").get("normal"),
+            initiative=character_data.get("initiative").get("total"),
+            speed=character_data.get("speed").get("total"),
+            max_hit_points=character_data.get("info").get("hit_points"),
+            hit_dice=f"{character_data.get('professions')[-1].get('level')}d{character_data.get('professions')[-1].get('hit_points_dice')}"
+            if character_data.get("professions")
+            else "",
+            spellcasting_ability=character_data.get("spell_books")[-1].get(
+                "spell_ability_name"
+            )
+            if character_data.get("spell_books")
+            else "",
+            spell_save_dc=character_data.get("spell_books")[-1].get("spell_save_dc")
+            if character_data.get("spell_books")
+            else 0,
+            spell_attack_bonus=character_data.get("spell_books")[-1].get(
+                "spell_attack_bonus"
+            )
+            if character_data.get("spell_books")
+            else 0,
+            spells=get_spells(character_data),
+            feats_and_traits=feats_and_traits,
         )
-        if character_data.get("spell_books")
-        else "",
-        spell_save_dc=character_data.get("spell_books")[-1].get("spell_save_dc")
-        if character_data.get("spell_books")
-        else 0,
-        spell_attack_bonus=character_data.get("spell_books")[-1].get(
-            "spell_attack_bonus"
-        )
-        if character_data.get("spell_books")
-        else 0,
-        spells=get_spells(character_data),
-        feats_and_traits=feats_and_traits,
-    )
-    return character
+        return character
+    except Exception as e:
+        logger.error(f"Error al convertir el personaje: {e}")
+        raise ConvertCharacterError("Error en el proceso de conversión del personaje.")
 
 
-def render_character(character: Character) -> str:
+def create_sheet(character: Character) -> str:
     """Renderiza un personaje en HTML."""
-    with open("./templates/index.html.tpl", "r", encoding="utf-8") as file:
-        template_content = file.read()
+    try:
+        # "./templates/index.html.tpl"
+        template_path = os.path.join(
+            os.path.dirname(__file__), "..", "templates", "index.html.tpl"
+        )
+        with open(template_path, "r", encoding="utf-8") as file:
+            template_content = file.read()
         template = Template(template_content)
-        return template.render(character=character.__dict__)
+        return template.render(character=character)
+    except Exception as e:
+        logger.error(f"Error al renderizar el personaje: {e}")
+        raise Exception("Error al renderizar el personaje")
 
 
 def get_abilities(character: dict) -> dict:
@@ -577,7 +605,9 @@ def get_spells(character: dict) -> list:
                         range=spell.get("range"),
                         components=spell.get("short_components"),
                         description=markdown(
-                            spell.get("description"), extensions=["tables"]
+                            # Agregamos extension de tablas y de citas (cuando se pone > asdasd)
+                            spell.get("description"),
+                            extensions=["extra"],
                         ).replace('<a href="/', '<a href="https://nivel20.com/')
                         if spell.get("description")
                         else "",
@@ -595,12 +625,14 @@ def get_feats_and_traits(character: dict) -> list:
             class_feats.list.append(
                 Feat(
                     name=feat.get("name"),
-                    description=markdown(feat.get("description", ""))
+                    description=markdown(
+                        feat.get("description", ""), extensions=["extra"]
+                    )
                     .replace("<p>", '<p style="margin-bottom: 0.3rem;">')
                     .replace('<a href="/', '<a href="https://nivel20.com/')
                     if feat.get("description")
                     else "",
-                    summary=markdown(feat.get("summary", ""))
+                    summary=markdown(feat.get("summary", ""), extensions=["extra"])
                     .replace("<p>", '<p style="margin-bottom: 0.3rem;">')
                     .replace('<a href="/', '<a href="https://nivel20.com/')
                     if feat.get("summary")
@@ -615,12 +647,12 @@ def get_feats_and_traits(character: dict) -> list:
         race_feats.list.append(
             Feat(
                 name=feat.get("name"),
-                description=markdown(feat.get("description", "")).replace(
-                    '<a href="/', '<a href="https://nivel20.com/'
-                )
+                description=markdown(
+                    feat.get("description", ""), extensions=["extra"]
+                ).replace('<a href="/', '<a href="https://nivel20.com/')
                 if feat.get("description")
                 else "",
-                summary=markdown(feat.get("summary", "")).replace(
+                summary=markdown(feat.get("summary", ""), extensions=["extra"]).replace(
                     '<a href="/', '<a href="https://nivel20.com/'
                 )
                 if feat.get("summary")
