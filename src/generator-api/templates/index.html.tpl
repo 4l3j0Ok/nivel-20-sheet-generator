@@ -482,7 +482,7 @@
         </div>
         <div class="row mr-0">
           <div class="col mt-3 bordered rounded p-1 bg-white">
-            <div class="value p-1 handwrite x-small" style="height: 438px">
+            <div class="value p-1 handwrite x-small" style="height: 436px">
               <div class="mt-2">
                 <div class="underline">Competencias:</div>
                 <div>{{character.proficiencies}}</div>
