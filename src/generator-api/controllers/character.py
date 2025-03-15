@@ -54,14 +54,22 @@ def convert_to_character(character_url) -> Character:
         initiative=character_data.get("initiative").get("total"),
         speed=character_data.get("speed").get("total"),
         max_hit_points=character_data.get("info").get("hit_points"),
-        hit_dice=f"{character_data.get('professions')[-1].get('level')}d{character_data.get('professions')[-1].get('hit_points_dice')}",
+        hit_dice=f"{character_data.get('professions')[-1].get('level')}d{character_data.get('professions')[-1].get('hit_points_dice')}"
+        if character_data.get("professions")
+        else "",
         spellcasting_ability=character_data.get("spell_books")[-1].get(
             "spell_ability_name"
-        ),
-        spell_save_dc=character_data.get("spell_books")[-1].get("spell_save_dc"),
+        )
+        if character_data.get("spell_books")
+        else "",
+        spell_save_dc=character_data.get("spell_books")[-1].get("spell_save_dc")
+        if character_data.get("spell_books")
+        else 0,
         spell_attack_bonus=character_data.get("spell_books")[-1].get(
             "spell_attack_bonus"
-        ),
+        )
+        if character_data.get("spell_books")
+        else 0,
         spells=get_spells(character_data),
         feats_and_traits=feats_and_traits,
     )
@@ -570,7 +578,7 @@ def get_spells(character: dict) -> list:
                         components=spell.get("short_components"),
                         description=markdown(
                             spell.get("description"), extensions=["tables"]
-                        )
+                        ).replace('<a href="/', '<a href="https://nivel20.com/')
                         if spell.get("description")
                         else "",
                     )
@@ -587,14 +595,14 @@ def get_feats_and_traits(character: dict) -> list:
             class_feats.list.append(
                 Feat(
                     name=feat.get("name"),
-                    description=markdown(feat.get("description", "")).replace(
-                        "<p>", '<p style="margin-bottom: 0.3rem;">'
-                    )
+                    description=markdown(feat.get("description", ""))
+                    .replace("<p>", '<p style="margin-bottom: 0.3rem;">')
+                    .replace('<a href="/', '<a href="https://nivel20.com/')
                     if feat.get("description")
                     else "",
-                    summary=markdown(feat.get("summary", "")).replace(
-                        "<p>", '<p style="margin-bottom: 0.3rem;">'
-                    )
+                    summary=markdown(feat.get("summary", ""))
+                    .replace("<p>", '<p style="margin-bottom: 0.3rem;">')
+                    .replace('<a href="/', '<a href="https://nivel20.com/')
                     if feat.get("summary")
                     else "",
                 )
@@ -607,10 +615,14 @@ def get_feats_and_traits(character: dict) -> list:
         race_feats.list.append(
             Feat(
                 name=feat.get("name"),
-                description=markdown(feat.get("description", ""))
+                description=markdown(feat.get("description", "")).replace(
+                    '<a href="/', '<a href="https://nivel20.com/'
+                )
                 if feat.get("description")
                 else "",
-                summary=markdown(feat.get("summary", ""))
+                summary=markdown(feat.get("summary", "")).replace(
+                    '<a href="/', '<a href="https://nivel20.com/'
+                )
                 if feat.get("summary")
                 else "",
             )
