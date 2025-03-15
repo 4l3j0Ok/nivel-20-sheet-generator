@@ -811,7 +811,6 @@
       </div>
     </div>
     <div style="page-break-after: always"></div>
-    {% if character.spells.known_spells > 0 %}
     <div class="row">
       <div class="col-4 pl-0" style="margin-top: 24px">
         <div class="info-field p-2">
@@ -941,7 +940,6 @@
         {% endfor %}
       </div>
     </div>
-    {% endif %}
   </div>
   <style type="text/css">
     body {
