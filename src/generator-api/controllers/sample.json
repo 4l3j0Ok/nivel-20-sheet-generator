@@ -1,0 +1,3739 @@
+{
+    "originals": {
+        "static": {
+            "armor_normal": {
+                "total": 13
+            }
+        }
+    },
+    "info": {
+        "level": 7,
+        "level_desc": "Brujo 7",
+        "proficiency_bonus": 3,
+        "hit_points": 51,
+        "id": 1477207,
+        "name": "Thrain Stormforge",
+        "status": "active",
+        "race_id": 12,
+        "race_name": "Enano",
+        "subrace_id": 71,
+        "subrace_name": "Enano de las montañas",
+        "race": "Enano de las montañas",
+        "player": "Alejoide",
+        "speed": 25,
+        "campaign_id": null,
+        "campaign": null,
+        "campaign_logo": null,
+        "image_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/2797669/original-d5cf450b00db31ade5bba47049882691884e1f87.png?1740764819",
+        "spell_caster": true
+    },
+    "proficiency": {
+        "none": 0,
+        "proficient": 3,
+        "expertise": 6
+    },
+    "tags": [],
+    "tag_ids": [],
+    "race": {
+        "id": 12,
+        "name": "Enano",
+        "portrait_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/179/medium-61ed89a616a257f114abebae93427996cd6fddc7.JPG?1599240918",
+        "description": "Los enanos son conocidos por su habilidad en el arte de la guerra, su gran resistencia a los castigos, su conocimiento de los secretos de la tierra, su dedicación al trabajo y su capacidad para beber cerveza. Los enanos son gente poco dada a las risas o las bromas, y suelen mostrarse recelosos con los desconocidos; sin embargo, se comportan de forma generosa con los que se ganan su confianza."
+    },
+    "subrace": {
+        "id": 71,
+        "name": "Enano de las montañas",
+        "portrait_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/179/medium-61ed89a616a257f114abebae93427996cd6fddc7.JPG?1599240918",
+        "description": "Como enano de las montañas, eres fuerte y duro, acostumbrado a una vida difícil en un terreno áspero. Probablemente eres alto (para un enano) y tiendes hacia una coloración de piel más clara. Los enanos escudo del norte de Faerûn a la vez que el dominante clan Hylar y el noble clan Daewar de Dragonlance, son enanos de las montañas."
+    },
+    "armor": {
+        "base_armor": 12,
+        "equipment_bonus": 0,
+        "modifiers_bonus": 0,
+        "ability_limit": null,
+        "ability_bonus": 1,
+        "normal": 14,
+        "flat_footed": 12,
+        "touch": 13,
+        "modifiers": [],
+        "fixed_base": null,
+        "fixed_base_source": null
+    },
+    "initiative": {
+        "base": 1,
+        "base_source": "Destreza",
+        "modifiers": [],
+        "modifiers_bonus": 0,
+        "fixed_value": null,
+        "fixed_value_source": null,
+        "proficiency": null,
+        "proficiency_bonus": 0,
+        "total_value": 1,
+        "total": 1
+    },
+    "speed": {
+        "base": 25,
+        "base_source": "Velocidad base Enano de las montañas",
+        "modifiers": [],
+        "modifiers_bonus": 0,
+        "fixed_value": null,
+        "fixed_value_source": null,
+        "proficiency": null,
+        "proficiency_bonus": 0,
+        "total_value": 25,
+        "total": 25
+    },
+    "saving_throw": {
+        "fue": {
+            "base": 0,
+            "bonus": 0,
+            "total": 1,
+            "ability": "fue",
+            "ability_mod": 1,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Fuerza",
+            "short_name": "Fue",
+            "slug": "fue",
+            "ability_name": "Fuerza",
+            "ability_short_name": "Fue"
+        },
+        "des": {
+            "base": 0,
+            "bonus": 0,
+            "total": 1,
+            "ability": "des",
+            "ability_mod": 1,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Destreza",
+            "short_name": "Des",
+            "slug": "des",
+            "ability_name": "Destreza",
+            "ability_short_name": "Des"
+        },
+        "con": {
+            "base": 0,
+            "bonus": 0,
+            "total": 3,
+            "ability": "con",
+            "ability_mod": 3,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Constitución",
+            "short_name": "Con",
+            "slug": "con",
+            "ability_name": "Constitución",
+            "ability_short_name": "Con"
+        },
+        "int": {
+            "base": 0,
+            "bonus": 0,
+            "total": 0,
+            "ability": "int",
+            "ability_mod": 0,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Inteligencia",
+            "short_name": "Int",
+            "slug": "int",
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int"
+        },
+        "sab": {
+            "base": 0,
+            "bonus": 0,
+            "total": 4,
+            "ability": "sab",
+            "ability_mod": 1,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "proficient",
+            "name": "Sabiduría",
+            "short_name": "Sab",
+            "slug": "sab",
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab"
+        },
+        "car": {
+            "base": 0,
+            "bonus": 0,
+            "total": 7,
+            "ability": "car",
+            "ability_mod": 4,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "proficient",
+            "name": "Carisma",
+            "short_name": "Car",
+            "slug": "car",
+            "ability_name": "Carisma",
+            "ability_short_name": "Car"
+        }
+    },
+    "saving_throws": [
+        {
+            "base": 0,
+            "bonus": 0,
+            "total": 1,
+            "ability": "fue",
+            "ability_mod": 1,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Fuerza",
+            "short_name": "Fue",
+            "slug": "fue",
+            "ability_name": "Fuerza",
+            "ability_short_name": "Fue"
+        },
+        {
+            "base": 0,
+            "bonus": 0,
+            "total": 1,
+            "ability": "des",
+            "ability_mod": 1,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Destreza",
+            "short_name": "Des",
+            "slug": "des",
+            "ability_name": "Destreza",
+            "ability_short_name": "Des"
+        },
+        {
+            "base": 0,
+            "bonus": 0,
+            "total": 3,
+            "ability": "con",
+            "ability_mod": 3,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Constitución",
+            "short_name": "Con",
+            "slug": "con",
+            "ability_name": "Constitución",
+            "ability_short_name": "Con"
+        },
+        {
+            "base": 0,
+            "bonus": 0,
+            "total": 0,
+            "ability": "int",
+            "ability_mod": 0,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "none",
+            "name": "Inteligencia",
+            "short_name": "Int",
+            "slug": "int",
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int"
+        },
+        {
+            "base": 0,
+            "bonus": 0,
+            "total": 4,
+            "ability": "sab",
+            "ability_mod": 1,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "proficient",
+            "name": "Sabiduría",
+            "short_name": "Sab",
+            "slug": "sab",
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab"
+        },
+        {
+            "base": 0,
+            "bonus": 0,
+            "total": 7,
+            "ability": "car",
+            "ability_mod": 4,
+            "modifiers": {
+                "bonus": []
+            },
+            "proficiency": "proficient",
+            "name": "Carisma",
+            "short_name": "Car",
+            "slug": "car",
+            "ability_name": "Carisma",
+            "ability_short_name": "Car"
+        }
+    ],
+    "ability": {
+        "fue": {
+            "base": 10,
+            "increments": 0,
+            "bonus": 2,
+            "race_bonus": 2,
+            "total": 12,
+            "mod": 1,
+            "modifiers": {
+                "bonus": [
+                    {
+                        "name": "+2 Fuerza",
+                        "value": 2,
+                        "modifier": "bonus",
+                        "source": "Subraza: Enano de las montañas"
+                    }
+                ],
+                "conditional_bonus": []
+            },
+            "id": 13,
+            "name": "Fuerza",
+            "short_name": "Fue",
+            "slug": "fue",
+            "description": "Mide la potencia física y capacidades deportivas",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 1,
+                "ability": "fue",
+                "ability_mod": 1,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Fuerza",
+                "short_name": "Fue",
+                "slug": "fue",
+                "ability_name": "Fuerza",
+                "ability_short_name": "Fue"
+            }
+        },
+        "des": {
+            "base": 13,
+            "increments": 0,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 13,
+            "mod": 1,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 14,
+            "name": "Destreza",
+            "short_name": "Des",
+            "slug": "des",
+            "description": "Mide la agilidad y los reflejos",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 1,
+                "ability": "des",
+                "ability_mod": 1,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Destreza",
+                "short_name": "Des",
+                "slug": "des",
+                "ability_name": "Destreza",
+                "ability_short_name": "Des"
+            }
+        },
+        "con": {
+            "base": 14,
+            "increments": 0,
+            "bonus": 2,
+            "race_bonus": 2,
+            "total": 16,
+            "mod": 3,
+            "modifiers": {
+                "bonus": [
+                    {
+                        "name": "+2 Constitución",
+                        "value": 2,
+                        "modifier": "bonus",
+                        "source": "Raza: Enano"
+                    }
+                ],
+                "conditional_bonus": []
+            },
+            "id": 15,
+            "name": "Constitución",
+            "short_name": "Con",
+            "slug": "con",
+            "description": "Mide la resistencia y la salud",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 3,
+                "ability": "con",
+                "ability_mod": 3,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Constitución",
+                "short_name": "Con",
+                "slug": "con",
+                "ability_name": "Constitución",
+                "ability_short_name": "Con"
+            }
+        },
+        "int": {
+            "base": 11,
+            "increments": 0,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 11,
+            "mod": 0,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 16,
+            "name": "Inteligencia",
+            "short_name": "Int",
+            "slug": "int",
+            "description": "Mide el razonamiento y la memoria",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 0,
+                "ability": "int",
+                "ability_mod": 0,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Inteligencia",
+                "short_name": "Int",
+                "slug": "int",
+                "ability_name": "Inteligencia",
+                "ability_short_name": "Int"
+            }
+        },
+        "sab": {
+            "base": 12,
+            "increments": 0,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 12,
+            "mod": 1,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 17,
+            "name": "Sabiduría",
+            "short_name": "Sab",
+            "slug": "sab",
+            "description": "Mide la perspicacia e intuición.",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 4,
+                "ability": "sab",
+                "ability_mod": 1,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "proficient",
+                "name": "Sabiduría",
+                "short_name": "Sab",
+                "slug": "sab",
+                "ability_name": "Sabiduría",
+                "ability_short_name": "Sab"
+            }
+        },
+        "car": {
+            "base": 16,
+            "increments": 2,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 18,
+            "mod": 4,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 18,
+            "name": "Carisma",
+            "short_name": "Car",
+            "slug": "car",
+            "description": "Mide la fuerza de personalidad y la presencia",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 7,
+                "ability": "car",
+                "ability_mod": 4,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "proficient",
+                "name": "Carisma",
+                "short_name": "Car",
+                "slug": "car",
+                "ability_name": "Carisma",
+                "ability_short_name": "Car"
+            }
+        }
+    },
+    "abilities": [
+        {
+            "base": 10,
+            "increments": 0,
+            "bonus": 2,
+            "race_bonus": 2,
+            "total": 12,
+            "mod": 1,
+            "modifiers": {
+                "bonus": [
+                    {
+                        "name": "+2 Fuerza",
+                        "value": 2,
+                        "modifier": "bonus",
+                        "source": "Subraza: Enano de las montañas"
+                    }
+                ],
+                "conditional_bonus": []
+            },
+            "id": 13,
+            "name": "Fuerza",
+            "short_name": "Fue",
+            "slug": "fue",
+            "description": "Mide la potencia física y capacidades deportivas",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 1,
+                "ability": "fue",
+                "ability_mod": 1,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Fuerza",
+                "short_name": "Fue",
+                "slug": "fue",
+                "ability_name": "Fuerza",
+                "ability_short_name": "Fue"
+            }
+        },
+        {
+            "base": 13,
+            "increments": 0,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 13,
+            "mod": 1,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 14,
+            "name": "Destreza",
+            "short_name": "Des",
+            "slug": "des",
+            "description": "Mide la agilidad y los reflejos",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 1,
+                "ability": "des",
+                "ability_mod": 1,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Destreza",
+                "short_name": "Des",
+                "slug": "des",
+                "ability_name": "Destreza",
+                "ability_short_name": "Des"
+            }
+        },
+        {
+            "base": 14,
+            "increments": 0,
+            "bonus": 2,
+            "race_bonus": 2,
+            "total": 16,
+            "mod": 3,
+            "modifiers": {
+                "bonus": [
+                    {
+                        "name": "+2 Constitución",
+                        "value": 2,
+                        "modifier": "bonus",
+                        "source": "Raza: Enano"
+                    }
+                ],
+                "conditional_bonus": []
+            },
+            "id": 15,
+            "name": "Constitución",
+            "short_name": "Con",
+            "slug": "con",
+            "description": "Mide la resistencia y la salud",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 3,
+                "ability": "con",
+                "ability_mod": 3,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Constitución",
+                "short_name": "Con",
+                "slug": "con",
+                "ability_name": "Constitución",
+                "ability_short_name": "Con"
+            }
+        },
+        {
+            "base": 11,
+            "increments": 0,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 11,
+            "mod": 0,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 16,
+            "name": "Inteligencia",
+            "short_name": "Int",
+            "slug": "int",
+            "description": "Mide el razonamiento y la memoria",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 0,
+                "ability": "int",
+                "ability_mod": 0,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "none",
+                "name": "Inteligencia",
+                "short_name": "Int",
+                "slug": "int",
+                "ability_name": "Inteligencia",
+                "ability_short_name": "Int"
+            }
+        },
+        {
+            "base": 12,
+            "increments": 0,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 12,
+            "mod": 1,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 17,
+            "name": "Sabiduría",
+            "short_name": "Sab",
+            "slug": "sab",
+            "description": "Mide la perspicacia e intuición.",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 4,
+                "ability": "sab",
+                "ability_mod": 1,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "proficient",
+                "name": "Sabiduría",
+                "short_name": "Sab",
+                "slug": "sab",
+                "ability_name": "Sabiduría",
+                "ability_short_name": "Sab"
+            }
+        },
+        {
+            "base": 16,
+            "increments": 2,
+            "bonus": 0,
+            "race_bonus": 0,
+            "total": 18,
+            "mod": 4,
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "id": 18,
+            "name": "Carisma",
+            "short_name": "Car",
+            "slug": "car",
+            "description": "Mide la fuerza de personalidad y la presencia",
+            "saving_throw": {
+                "base": 0,
+                "bonus": 0,
+                "total": 7,
+                "ability": "car",
+                "ability_mod": 4,
+                "modifiers": {
+                    "bonus": []
+                },
+                "proficiency": "proficient",
+                "name": "Carisma",
+                "short_name": "Car",
+                "slug": "car",
+                "ability_name": "Carisma",
+                "ability_short_name": "Car"
+            }
+        }
+    ],
+    "skill": {
+        "acrobacias": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "des",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 88,
+            "slug": "acrobacias",
+            "name": "Acrobacias",
+            "description": "Tu prueba de Destreza (Acrobacias) abarca tu intento por mantenerte en pie en situaciones difíciles, como cuando estás intentado correr sobre una capa de hielo, mantener el equilibrio en una cuerda floja o mantenerte recto sobre la borda de un barco que se balancea",
+            "requires_training": false,
+            "ability_name": "Destreza",
+            "ability_short_name": "Des",
+            "armor_penalty": null
+        },
+        "arcanos": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 3,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 91,
+            "slug": "arcanos",
+            "name": "Arcanos",
+            "description": "Tu prueba de Inteligencia (Arcana) mide tu capacidad para recordar conocimiento sobre conjuros, objetos mágicos, símbolos sobrenaturales, tradiciones mágicas, los planos de existencia y los habitantes de dichos planos",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        "atletismo": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "fue",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 4,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 87,
+            "slug": "atletismo",
+            "name": "Atletismo",
+            "description": "Tu prueba de Fuerza (Atletismo) cubre situaciones difíciles mientras escalas, saltas o nadas",
+            "requires_training": false,
+            "ability_name": "Fuerza",
+            "ability_short_name": "Fue",
+            "armor_penalty": null
+        },
+        "enganar": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 7,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 101,
+            "slug": "enganar",
+            "name": "Engañar",
+            "description": "Una prueba de Carisma (Engañar) determina si puedes esconder la verdad de manera convincente, ya sea verbalmente o a través de las acciones. Este engaño puede abarcar cualquier cosa, desde liar a alguien siendo ambiguo hasta mentir. Situaciones típicas son camelarse a un guardia, estafar a un mercader, ganar dinero con las apuestas, disfrazarse para hacerse pasar por otro, engañar a alguien suspicaz con afirmaciones falsas o mantener el rosto impávido mientras mientes descaradamente.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        "historia": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 92,
+            "slug": "historia",
+            "name": "Historia",
+            "description": "Tu prueba de Inteligencia (Historia) mide tu capacidad para recordar eventos históricos, gente legendaria, reinos antiguos, disputas pasadas, guerras recientes y civilizaciones perdidas",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        "interpretacion": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 4,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 102,
+            "slug": "interpretacion",
+            "name": "Interpretación",
+            "description": "Una prueba de Carisma (Interpretación) determina si consigues deleitar a una audiencia con música, baile, actuación, cuentacuentos o alguna otra forma de entretenimiento.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        "intimidar": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 4,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 103,
+            "slug": "intimidar",
+            "name": "Intimidar",
+            "description": "Cuando intentas influenciar a alguien a través de una amenaza, acciones hostiles o violencia física, el director de juego puede pedirte hacer una prueba de Carisma (Intimidar). Algunos ejemplos son intentar sonsacar información a un prisionero, convencer a unos matones de que se echen atrás en una confrontación o usar una botella rota para convencer a un visir despreciable de que reconsidere una decisión.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        "investigacion": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 93,
+            "slug": "investigacion",
+            "name": "Investigación",
+            "description": "Cuando miras a tu alrededor en busca de pistas y haces deducciones basándote en dichas pistas, haces una prueba de Inteligencia (Investigación). Puedes deducir dónde se encuentra un objeto escondido, discernir qué tipo de arma infligió una herida dependiendo de su apariencia o determinar el punto débil de un túnel que podría provocar un colapso. Estudiar detenidamente pergaminos antiguos en busca de conocimiento oculto también puede requerir una prueba de Inteligencia",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        "juego_de_manos": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "des",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 89,
+            "slug": "juego_de_manos",
+            "name": "Juego de Manos",
+            "description": "Cuando hagas un acto de prestidigitación o un movimiento rápido con las manos, como pasarle algo a alguien u ocultar algo en tu cuerpo, haz una prueba de Destreza (Juego de Manos)",
+            "requires_training": false,
+            "ability_name": "Destreza",
+            "ability_short_name": "Des",
+            "armor_penalty": null
+        },
+        "medicina": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 96,
+            "slug": "medicina",
+            "name": "Medicina",
+            "description": "Una prueba de Sabiduría (Medicina) te permite intentar estabilizar a un compañero moribundo o diagnosticar una enfermedad.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        "naturaleza": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 94,
+            "slug": "naturaleza",
+            "name": "Naturaleza",
+            "description": "Una prueba de Inteligencia (Naturaleza) mide tu capacidad para recordar conocimiento sobre terrenos, plantas, animales, el clima y los ciclos naturales.",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        "percepcion": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 4,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 97,
+            "slug": "percepcion",
+            "name": "Percepción",
+            "description": "Una prueba de Sabiduría (Percepción) te permite ver, oír o detectar de otro modo la presencia de algo. Mide tu percepción general sobre lo que te rodea y la agudeza de tus sentidos.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        "perspicacia": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 98,
+            "slug": "perspicacia",
+            "name": "Perspicacia",
+            "description": "Una prueba de Sabiduría (Perspicacia) determina si puedes conocer las verdaderas intenciones de una criatura, como cuando sospechas que te están mintiendo o predices el siguiente movimiento de alguien. Esto implica analizar el lenguaje corporal, la forma de hablar y los cambios en la gesticulación.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        "persuasion": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 4,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 104,
+            "slug": "persuasion",
+            "name": "Persuasión",
+            "description": "Cuando intentas influenciar a alguien o a un grupo de personas con tacto, cortesía o buen talante, el director de juego puede pedirte que hagas una prueba de Carisma (Persuasión). Normalmente usa persuasión cuando actúes de buena fe, para hacer amigos, hacer sugerencias cordiales o exhibir una etiqueta correcta. Ejemplos de persuadir a otros son convencer a un chambelán de que deje a tu grupo ver al rey, negociar la paz entre dos tribus en guerra o inspirar a una multitud de pueblerinos.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        "religion": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 95,
+            "slug": "religion",
+            "name": "Religión",
+            "description": "Una prueba de Inteligencia (Religión) mide tu capacidad para recordar conocimiento sobre deidades, ritos y oraciones, jerarquías religiosas, símbolos sagrados y las prácticas de cultos secretos.",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        "sigilo": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "des",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 90,
+            "slug": "sigilo",
+            "name": "Sigilo",
+            "description": "Haz una tirada de Destreza (Sigilo) cuando intentes ocultarte de tus enemigos, escabullirte de unos guardias, escaquearte sin que te perciban o acercarte sigilosamente a alguien sin que te vean ni oigan",
+            "requires_training": false,
+            "ability_name": "Destreza",
+            "ability_short_name": "Des",
+            "armor_penalty": null
+        },
+        "supervivencia": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 99,
+            "slug": "supervivencia",
+            "name": "Supervivencia",
+            "description": "El director de juego puede pedirte hacer una prueba de Sabiduría (Supervivencia) para seguir huellas, cazar, guiar a tu grupo por un yermo helado, identificar signos de osos lechuza que viven cerca, predecir el clima o evitar arenas movedizas u otros peligros naturales.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        "trato_con_animales": {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 100,
+            "slug": "trato_con_animales",
+            "name": "Trato con Animales",
+            "description": "Cuando hay cualquier duda sobre si puedes calmar a un animal doméstico, evitar que una montura se asuste o intuir las intenciones de un animal, el director de juego puede pedir una prueba de Sabiduría (Trato con Animales). También puedes hacerla para controlar a tu montura cuando haces una maniobra arriesgada.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        }
+    },
+    "skills": [
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "des",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 88,
+            "slug": "acrobacias",
+            "name": "Acrobacias",
+            "description": "Tu prueba de Destreza (Acrobacias) abarca tu intento por mantenerte en pie en situaciones difíciles, como cuando estás intentado correr sobre una capa de hielo, mantener el equilibrio en una cuerda floja o mantenerte recto sobre la borda de un barco que se balancea",
+            "requires_training": false,
+            "ability_name": "Destreza",
+            "ability_short_name": "Des",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 3,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 91,
+            "slug": "arcanos",
+            "name": "Arcanos",
+            "description": "Tu prueba de Inteligencia (Arcana) mide tu capacidad para recordar conocimiento sobre conjuros, objetos mágicos, símbolos sobrenaturales, tradiciones mágicas, los planos de existencia y los habitantes de dichos planos",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "fue",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 4,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 87,
+            "slug": "atletismo",
+            "name": "Atletismo",
+            "description": "Tu prueba de Fuerza (Atletismo) cubre situaciones difíciles mientras escalas, saltas o nadas",
+            "requires_training": false,
+            "ability_name": "Fuerza",
+            "ability_short_name": "Fue",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 7,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 101,
+            "slug": "enganar",
+            "name": "Engañar",
+            "description": "Una prueba de Carisma (Engañar) determina si puedes esconder la verdad de manera convincente, ya sea verbalmente o a través de las acciones. Este engaño puede abarcar cualquier cosa, desde liar a alguien siendo ambiguo hasta mentir. Situaciones típicas son camelarse a un guardia, estafar a un mercader, ganar dinero con las apuestas, disfrazarse para hacerse pasar por otro, engañar a alguien suspicaz con afirmaciones falsas o mantener el rosto impávido mientras mientes descaradamente.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 92,
+            "slug": "historia",
+            "name": "Historia",
+            "description": "Tu prueba de Inteligencia (Historia) mide tu capacidad para recordar eventos históricos, gente legendaria, reinos antiguos, disputas pasadas, guerras recientes y civilizaciones perdidas",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 4,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 102,
+            "slug": "interpretacion",
+            "name": "Interpretación",
+            "description": "Una prueba de Carisma (Interpretación) determina si consigues deleitar a una audiencia con música, baile, actuación, cuentacuentos o alguna otra forma de entretenimiento.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 4,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 103,
+            "slug": "intimidar",
+            "name": "Intimidar",
+            "description": "Cuando intentas influenciar a alguien a través de una amenaza, acciones hostiles o violencia física, el director de juego puede pedirte hacer una prueba de Carisma (Intimidar). Algunos ejemplos son intentar sonsacar información a un prisionero, convencer a unos matones de que se echen atrás en una confrontación o usar una botella rota para convencer a un visir despreciable de que reconsidere una decisión.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 93,
+            "slug": "investigacion",
+            "name": "Investigación",
+            "description": "Cuando miras a tu alrededor en busca de pistas y haces deducciones basándote en dichas pistas, haces una prueba de Inteligencia (Investigación). Puedes deducir dónde se encuentra un objeto escondido, discernir qué tipo de arma infligió una herida dependiendo de su apariencia o determinar el punto débil de un túnel que podría provocar un colapso. Estudiar detenidamente pergaminos antiguos en busca de conocimiento oculto también puede requerir una prueba de Inteligencia",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "des",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 89,
+            "slug": "juego_de_manos",
+            "name": "Juego de Manos",
+            "description": "Cuando hagas un acto de prestidigitación o un movimiento rápido con las manos, como pasarle algo a alguien u ocultar algo en tu cuerpo, haz una prueba de Destreza (Juego de Manos)",
+            "requires_training": false,
+            "ability_name": "Destreza",
+            "ability_short_name": "Des",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 96,
+            "slug": "medicina",
+            "name": "Medicina",
+            "description": "Una prueba de Sabiduría (Medicina) te permite intentar estabilizar a un compañero moribundo o diagnosticar una enfermedad.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 94,
+            "slug": "naturaleza",
+            "name": "Naturaleza",
+            "description": "Una prueba de Inteligencia (Naturaleza) mide tu capacidad para recordar conocimiento sobre terrenos, plantas, animales, el clima y los ciclos naturales.",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 4,
+            "proficiency": "proficient",
+            "proficiency_bonus": 3,
+            "id": 97,
+            "slug": "percepcion",
+            "name": "Percepción",
+            "description": "Una prueba de Sabiduría (Percepción) te permite ver, oír o detectar de otro modo la presencia de algo. Mide tu percepción general sobre lo que te rodea y la agudeza de tus sentidos.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 98,
+            "slug": "perspicacia",
+            "name": "Perspicacia",
+            "description": "Una prueba de Sabiduría (Perspicacia) determina si puedes conocer las verdaderas intenciones de una criatura, como cuando sospechas que te están mintiendo o predices el siguiente movimiento de alguien. Esto implica analizar el lenguaje corporal, la forma de hablar y los cambios en la gesticulación.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "car",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 4,
+            "total": 4,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 104,
+            "slug": "persuasion",
+            "name": "Persuasión",
+            "description": "Cuando intentas influenciar a alguien o a un grupo de personas con tacto, cortesía o buen talante, el director de juego puede pedirte que hagas una prueba de Carisma (Persuasión). Normalmente usa persuasión cuando actúes de buena fe, para hacer amigos, hacer sugerencias cordiales o exhibir una etiqueta correcta. Ejemplos de persuadir a otros son convencer a un chambelán de que deje a tu grupo ver al rey, negociar la paz entre dos tribus en guerra o inspirar a una multitud de pueblerinos.",
+            "requires_training": false,
+            "ability_name": "Carisma",
+            "ability_short_name": "Car",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "int",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 0,
+            "total": 0,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 95,
+            "slug": "religion",
+            "name": "Religión",
+            "description": "Una prueba de Inteligencia (Religión) mide tu capacidad para recordar conocimiento sobre deidades, ritos y oraciones, jerarquías religiosas, símbolos sagrados y las prácticas de cultos secretos.",
+            "requires_training": false,
+            "ability_name": "Inteligencia",
+            "ability_short_name": "Int",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "des",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 90,
+            "slug": "sigilo",
+            "name": "Sigilo",
+            "description": "Haz una tirada de Destreza (Sigilo) cuando intentes ocultarte de tus enemigos, escabullirte de unos guardias, escaquearte sin que te perciban o acercarte sigilosamente a alguien sin que te vean ni oigan",
+            "requires_training": false,
+            "ability_name": "Destreza",
+            "ability_short_name": "Des",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 99,
+            "slug": "supervivencia",
+            "name": "Supervivencia",
+            "description": "El director de juego puede pedirte hacer una prueba de Sabiduría (Supervivencia) para seguir huellas, cazar, guiar a tu grupo por un yermo helado, identificar signos de osos lechuza que viven cerca, predecir el clima o evitar arenas movedizas u otros peligros naturales.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        },
+        {
+            "ranks": 0,
+            "bonus": 0,
+            "ability": "sab",
+            "modifiers": {
+                "bonus": [],
+                "conditional_bonus": []
+            },
+            "ability_mod": 1,
+            "total": 1,
+            "proficiency": "none",
+            "proficiency_bonus": 0,
+            "id": 100,
+            "slug": "trato_con_animales",
+            "name": "Trato con Animales",
+            "description": "Cuando hay cualquier duda sobre si puedes calmar a un animal doméstico, evitar que una montura se asuste o intuir las intenciones de un animal, el director de juego puede pedir una prueba de Sabiduría (Trato con Animales). También puedes hacerla para controlar a tu montura cuando haces una maniobra arriesgada.",
+            "requires_training": false,
+            "ability_name": "Sabiduría",
+            "ability_short_name": "Sab",
+            "armor_penalty": null
+        }
+    ],
+    "unlocked_feats": [],
+    "feats": [],
+    "items": {
+        "armas": [
+            {
+                "name": "Ballesta pesada",
+                "description": "",
+                "group": "Armas marciales",
+                "slot": "Dos manos",
+                "equippable": true,
+                "location": "equipped",
+                "location_text": "Equipado",
+                "grants_attack": true,
+                "grants_armor": false,
+                "attack": {
+                    "range": "100/400",
+                    "target": "",
+                    "to_hit": {
+                        "ability_id": "14",
+                        "bonus": "",
+                        "value": "+1"
+                    },
+                    "damage": {
+                        "value": "1d10 +1",
+                        "dice": "1d10",
+                        "ability_id": "14",
+                        "ability_factor": "1",
+                        "bonus": "",
+                        "type": "perforante"
+                    }
+                },
+                "armor": {
+                    "type": "armor",
+                    "value": "",
+                    "max_ability": "",
+                    "penalty": ""
+                },
+                "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1289/medium-6f23fbd0c5b5a3407defa8158aaab545fcd287d2.PNG?1637061826",
+                "tags": [
+                    "De carga",
+                    "Distancia",
+                    "Dos manos",
+                    "Munición"
+                ],
+                "proficient": false,
+                "proficiency": null,
+                "fields": {
+                    "versatil": null,
+                    "municion": null
+                }
+            },
+            {
+                "name": "Daga",
+                "description": "",
+                "group": "Armas sencillas",
+                "slot": "Una mano",
+                "equippable": true,
+                "location": "equipped",
+                "location_text": "Equipado",
+                "grants_attack": true,
+                "grants_armor": false,
+                "attack": {
+                    "range": "20/60",
+                    "target": "",
+                    "to_hit": {
+                        "ability_id": "13",
+                        "bonus": "",
+                        "value": "+4"
+                    },
+                    "damage": {
+                        "value": "1d4 +1",
+                        "dice": "1d4",
+                        "ability_id": "13",
+                        "ability_factor": "1",
+                        "bonus": "",
+                        "type": "perforante"
+                    }
+                },
+                "armor": {
+                    "type": "armor",
+                    "value": "",
+                    "max_ability": "",
+                    "penalty": ""
+                },
+                "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1296/medium-820b8ce3d7ae44e600933d2182e34f1a39ec56e9.PNG?1637061866",
+                "tags": [
+                    "Arrojadiza",
+                    "Distancia",
+                    "Ligera",
+                    "Sutil"
+                ],
+                "proficient": true,
+                "proficiency": "proficient",
+                "fields": {
+                    "versatil": null,
+                    "municion": null
+                }
+            },
+            {
+                "name": "Hacha de mano",
+                "description": "",
+                "group": "Armas sencillas",
+                "slot": "Una mano",
+                "equippable": true,
+                "location": "equipped",
+                "location_text": "Equipado",
+                "grants_attack": true,
+                "grants_armor": false,
+                "attack": {
+                    "range": "20/60",
+                    "target": "",
+                    "to_hit": {
+                        "ability_id": "13",
+                        "bonus": "",
+                        "value": "+4"
+                    },
+                    "damage": {
+                        "value": "1d6 +1",
+                        "dice": "1d6",
+                        "ability_id": "13",
+                        "ability_factor": "1",
+                        "bonus": "",
+                        "type": "cortante"
+                    }
+                },
+                "armor": {
+                    "type": "armor",
+                    "value": "",
+                    "max_ability": "",
+                    "penalty": ""
+                },
+                "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/607/medium-e1ecf8128910ddaa3770bf174d5ca230066cdf45.PNG?1637058336",
+                "tags": [
+                    "Arrojadiza",
+                    "Ligera"
+                ],
+                "proficient": true,
+                "proficiency": "proficient",
+                "fields": {
+                    "versatil": null,
+                    "municion": null
+                }
+            }
+        ],
+        "armaduras": [
+            {
+                "name": "Cuero tachonado",
+                "description": "Está fabricada de cuero duro pero flexible y reforzada con remaches o púas.",
+                "group": "Armadura ligera",
+                "slot": "Armadura",
+                "equippable": true,
+                "location": "equipped",
+                "location_text": "Equipado",
+                "grants_attack": false,
+                "grants_armor": true,
+                "attack": {
+                    "range": "",
+                    "target": "",
+                    "to_hit": {
+                        "ability_id": "",
+                        "bonus": "",
+                        "value": null
+                    },
+                    "damage": {
+                        "value": null,
+                        "dice": "",
+                        "ability_id": "",
+                        "ability_factor": "1",
+                        "bonus": "",
+                        "type": ""
+                    }
+                },
+                "armor": {
+                    "type": "armor",
+                    "value": "12",
+                    "max_ability": "",
+                    "penalty": "none"
+                },
+                "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/2083/medium-73bbbca0cbc358b6c232c293d340eab298162c88.png?1637235976",
+                "tags": [],
+                "proficient": true,
+                "proficiency": "proficient",
+                "fields": {
+                    "fuerza": null
+                }
+            }
+        ],
+        "equipo_de_aventuras": [
+            {
+                "name": "Foco arcano",
+                "description": "Un foco arcano es un objeto especial diseñado para canalizar el poder de los hechizos arcanos. Un hechicero, brujo o mago puede usar un objeto de este tipo como foco de lanzamiento de hechizos, como se describe en la sección Lanzamiento de hechizos .",
+                "group": "Herramientas",
+                "slot": null,
+                "equippable": false,
+                "location": null,
+                "location_text": null,
+                "grants_attack": false,
+                "grants_armor": false,
+                "attack": {
+                    "range": "",
+                    "target": "",
+                    "to_hit": {
+                        "ability_id": "",
+                        "bonus": "",
+                        "value": null
+                    },
+                    "damage": {
+                        "value": null,
+                        "dice": "",
+                        "ability_id": "",
+                        "ability_factor": "1",
+                        "bonus": "",
+                        "type": ""
+                    }
+                },
+                "armor": {
+                    "type": "armor",
+                    "value": "",
+                    "max_ability": "",
+                    "penalty": ""
+                },
+                "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3233/medium-94084401e985e759e10975e7459c4f42661cebb8.png?1694791820",
+                "tags": [],
+                "proficient": false,
+                "proficiency": null,
+                "fields": {}
+            },
+            {
+                "name": "Capa de protección",
+                "description": "Consigues un bonificador de +1 a la CA y a las tiradas de salvación mientras llevas esta capa.",
+                "group": "Herramientas",
+                "slot": null,
+                "equippable": false,
+                "location": null,
+                "location_text": null,
+                "grants_attack": false,
+                "grants_armor": true,
+                "attack": {
+                    "range": "",
+                    "target": "",
+                    "to_hit": {
+                        "ability_id": "",
+                        "bonus": "",
+                        "value": null
+                    },
+                    "damage": {
+                        "value": null,
+                        "dice": "",
+                        "ability_id": "",
+                        "ability_factor": "1",
+                        "bonus": "",
+                        "type": ""
+                    }
+                },
+                "armor": {
+                    "type": "armor",
+                    "value": "1",
+                    "max_ability": "0",
+                    "penalty": ""
+                },
+                "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/5926/medium-e5948dab8c108bf748ff47294e4d5f9061aca527.PNG?1700808147",
+                "tags": [],
+                "proficient": false,
+                "proficiency": null,
+                "fields": {}
+            }
+        ]
+    },
+    "attacks": [
+        {
+            "name": "Ballesta pesada",
+            "description": "",
+            "group": "Armas marciales",
+            "slot": "Dos manos",
+            "equippable": true,
+            "location": "equipped",
+            "location_text": "Equipado",
+            "grants_attack": true,
+            "grants_armor": false,
+            "attack": {
+                "range": "100/400",
+                "target": "",
+                "to_hit": {
+                    "ability_id": "14",
+                    "bonus": "",
+                    "value": "+1"
+                },
+                "damage": {
+                    "value": "1d10 +1",
+                    "dice": "1d10",
+                    "ability_id": "14",
+                    "ability_factor": "1",
+                    "bonus": "",
+                    "type": "perforante"
+                }
+            },
+            "armor": {
+                "type": "armor",
+                "value": "",
+                "max_ability": "",
+                "penalty": ""
+            },
+            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1289/medium-6f23fbd0c5b5a3407defa8158aaab545fcd287d2.PNG?1637061826",
+            "tags": [
+                "De carga",
+                "Distancia",
+                "Dos manos",
+                "Munición"
+            ],
+            "proficient": false,
+            "proficiency": null,
+            "fields": {
+                "versatil": null,
+                "municion": null
+            }
+        },
+        {
+            "name": "Daga",
+            "description": "",
+            "group": "Armas sencillas",
+            "slot": "Una mano",
+            "equippable": true,
+            "location": "equipped",
+            "location_text": "Equipado",
+            "grants_attack": true,
+            "grants_armor": false,
+            "attack": {
+                "range": "20/60",
+                "target": "",
+                "to_hit": {
+                    "ability_id": "13",
+                    "bonus": "",
+                    "value": "+4"
+                },
+                "damage": {
+                    "value": "1d4 +1",
+                    "dice": "1d4",
+                    "ability_id": "13",
+                    "ability_factor": "1",
+                    "bonus": "",
+                    "type": "perforante"
+                }
+            },
+            "armor": {
+                "type": "armor",
+                "value": "",
+                "max_ability": "",
+                "penalty": ""
+            },
+            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1296/medium-820b8ce3d7ae44e600933d2182e34f1a39ec56e9.PNG?1637061866",
+            "tags": [
+                "Arrojadiza",
+                "Distancia",
+                "Ligera",
+                "Sutil"
+            ],
+            "proficient": true,
+            "proficiency": "proficient",
+            "fields": {
+                "versatil": null,
+                "municion": null
+            }
+        },
+        {
+            "name": "Hacha de mano",
+            "description": "",
+            "group": "Armas sencillas",
+            "slot": "Una mano",
+            "equippable": true,
+            "location": "equipped",
+            "location_text": "Equipado",
+            "grants_attack": true,
+            "grants_armor": false,
+            "attack": {
+                "range": "20/60",
+                "target": "",
+                "to_hit": {
+                    "ability_id": "13",
+                    "bonus": "",
+                    "value": "+4"
+                },
+                "damage": {
+                    "value": "1d6 +1",
+                    "dice": "1d6",
+                    "ability_id": "13",
+                    "ability_factor": "1",
+                    "bonus": "",
+                    "type": "cortante"
+                }
+            },
+            "armor": {
+                "type": "armor",
+                "value": "",
+                "max_ability": "",
+                "penalty": ""
+            },
+            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/607/medium-e1ecf8128910ddaa3770bf174d5ca230066cdf45.PNG?1637058336",
+            "tags": [
+                "Arrojadiza",
+                "Ligera"
+            ],
+            "proficient": true,
+            "proficiency": "proficient",
+            "fields": {
+                "versatil": null,
+                "municion": null
+            }
+        }
+    ],
+    "protections": [
+        {
+            "name": "Cuero tachonado",
+            "description": "Está fabricada de cuero duro pero flexible y reforzada con remaches o púas.",
+            "group": "Armadura ligera",
+            "slot": "Armadura",
+            "equippable": true,
+            "location": "equipped",
+            "location_text": "Equipado",
+            "grants_attack": false,
+            "grants_armor": true,
+            "attack": {
+                "range": "",
+                "target": "",
+                "to_hit": {
+                    "ability_id": "",
+                    "bonus": "",
+                    "value": null
+                },
+                "damage": {
+                    "value": null,
+                    "dice": "",
+                    "ability_id": "",
+                    "ability_factor": "1",
+                    "bonus": "",
+                    "type": ""
+                }
+            },
+            "armor": {
+                "type": "armor",
+                "value": "12",
+                "max_ability": "",
+                "penalty": "none"
+            },
+            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/2083/medium-73bbbca0cbc358b6c232c293d340eab298162c88.png?1637235976",
+            "tags": [],
+            "proficient": true,
+            "proficiency": "proficient",
+            "fields": {
+                "fuerza": null
+            }
+        },
+        {
+            "name": "Capa de protección",
+            "description": "Consigues un bonificador de +1 a la CA y a las tiradas de salvación mientras llevas esta capa.",
+            "group": "Herramientas",
+            "slot": null,
+            "equippable": false,
+            "location": null,
+            "location_text": null,
+            "grants_attack": false,
+            "grants_armor": true,
+            "attack": {
+                "range": "",
+                "target": "",
+                "to_hit": {
+                    "ability_id": "",
+                    "bonus": "",
+                    "value": null
+                },
+                "damage": {
+                    "value": null,
+                    "dice": "",
+                    "ability_id": "",
+                    "ability_factor": "1",
+                    "bonus": "",
+                    "type": ""
+                }
+            },
+            "armor": {
+                "type": "armor",
+                "value": "1",
+                "max_ability": "0",
+                "penalty": ""
+            },
+            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/5926/medium-e5948dab8c108bf748ff47294e4d5f9061aca527.PNG?1700808147",
+            "tags": [],
+            "proficient": false,
+            "proficiency": null,
+            "fields": {}
+        }
+    ],
+    "equipment": "",
+    "fields": {
+        "alineamiento": "Caótico neutral",
+        "apariencia": "Thrain es un enano de unos 120 años trenzada está salpicada de perlas y almejas marinas, y sus ojos irradian un resplandor sobrenatural cuando está enojado. Tiene un corte tipo undercat bun (largo con coleta, rapado a los costados).",
+        "edad": "250 años",
+        "historia": null,
+        "idiomas": "Común, Enano",
+        "notas": "Thrain es un enano originario de Ravens Bluff. Se crió bajo la cultura del clan Hammerhand.\r\n\r\nSus padres eran parte de la división del clan que se encargaba de traficar con armas. Se dedicaban desde la forja de las armas hasta la venta de las mismas.\r\n\r\nBaldur's Gate y Waterdeep eran las ciudades donde principalmente se dedicaban al tráfico de armas, desplazandose gracias a sus enormes barcos que surcaban la Costa de la Espada. El clan solía hacer tratos con gente peligrosa, como bandidos, asesinos, seguidores de Bhaal, Shar, etc. A pesar de ello, la familia Stormforge siempre se mantuvo al margen de los problemas, y nunca se vio envuelta en problemas mayores.\r\n\r\nLos padres, cansados de la vida que llevaban, decidieron hacer sus últimos tratos y retirarse a una vida más tranquila. En uno de sus últimos negocios, los padres de Thrain fueron asesinados por seguidores de Shar, que querían quedarse con todas las armas que la familia Stormforge tenía en su poder. Thrain logró escapar, gracias a los guardias de Waterdeep, que llevaban tiempo buscando al clan Hammerhand por sus tratos con personas peligrosas.\r\n\r\nThrain pasó tiempo en la prisión de Waterdeep. Uno de tantos días, hundido en la tristeza, apareció el demonio Dagon en medio de la celda. El demonio le ofreció un trato: le daría una fuerza sobrenatural para acabar con los seguidores de Shar, a cambio de que brindara armamento a los seguidores del demonio sin condición y que le entregara su alma al morir. Thrain, firmó el trato y juró vengar la muerte de sus padres matando a todos los seguidores de Shar que encontrara por el resto de su vida.\r\n\r\nEl enano logró escapar de la prisión con la fuerza que el demonio le había otorgado, derrotando a la guardia de Waterdeep. Se dirigió a su hogar, donde se armó con la mejor armadura y armas que su familia había forjado. Reunió a varios guerreros del clan Hammerhand y se dirigió a la guarida de los seguidores de Shar en busca de venganza.\r\n\r\nCon cada muerte a manos del ahora warlock Thrain Stormforge, el demonio Dagon se fortalecía y Thrain se convertía en un ser más oscuro y sanguinario.",
+        "puntos_de_experiencia": null,
+        "perception": {
+            "base": 0,
+            "base_source": null,
+            "modifiers": [],
+            "modifiers_bonus": 0,
+            "fixed_value": null,
+            "fixed_value_source": null,
+            "proficiency": null,
+            "proficiency_bonus": 0,
+            "total_value": 0,
+            "total": 0
+        },
+        "profession_save_dc": {
+            "base": 11,
+            "base_source": null,
+            "modifiers": [],
+            "modifiers_bonus": 0,
+            "fixed_value": null,
+            "fixed_value_source": null,
+            "proficiency": null,
+            "proficiency_bonus": 0,
+            "total_value": 11,
+            "total": 11
+        },
+        "spell_attack": {
+            "base": 0,
+            "base_source": null,
+            "modifiers": [],
+            "modifiers_bonus": 0,
+            "fixed_value": null,
+            "fixed_value_source": null,
+            "proficiency": null,
+            "proficiency_bonus": 0,
+            "total_value": 0,
+            "total": 0
+        },
+        "spell_save": {
+            "base": 0,
+            "base_source": null,
+            "modifiers": [],
+            "modifiers_bonus": 0,
+            "fixed_value": null,
+            "fixed_value_source": null,
+            "proficiency": null,
+            "proficiency_bonus": 0,
+            "total_value": 0,
+            "total": 0
+        }
+    },
+    "multiclass": {
+        "multi_caster": false,
+        "profession_count": 1,
+        "caster_count": 0,
+        "pact_caster_count": 1,
+        "caster_level": 0,
+        "spell_slots": []
+    },
+    "spell_modifiers": {
+        "labels": {
+            "spell_ids": {},
+            "spell_list_ids": {}
+        },
+        "available_spell": {
+            "spell_ids": [],
+            "spell_list_ids": []
+        },
+        "known_spell": {
+            "spell_ids": [],
+            "spell_list_ids": []
+        },
+        "prepared_spell": {
+            "spell_ids": [],
+            "spell_list_ids": []
+        }
+    },
+    "spell_books": [
+        {
+            "profession_id": 66,
+            "profession_name": "Brujo",
+            "spells": [
+                [
+                    0,
+                    [
+                        {
+                            "id": 1,
+                            "name": "Burla dañina",
+                            "level": 0,
+                            "summary": "Insultas mágicamente a una criatura, que debe superar una TS de Sabiduría o sufrir 1d4 puntos de daño psíquico y tener desventaja en la siguiente tirada de ataque. El daño aumenta a nivel 5 (2d4), a nivel 11 (3d4) y a nivel 17 (4d4).",
+                            "description": "Sueltas una sarta de insultos enlazados con sutiles encantamientos a una criatura que puedas ver dentro del alcance. Si el objetivo puede oírte (aunque no es necesario que te entienda), debe superar una tirada de salvación de Sabiduría para no recibir 1d4 puntos de daño psíquico y tener desventaja en la siguiente tirada de ataque que haga antes del final de su siguiente turno.\r\n\r\nEl daño de este conjuro aumenta en 1d4 cuando llegas al nivel 5 (2d4), al nivel 11 (3d4) y la nivel 17 (4d4).",
+                            "components": "V",
+                            "short_components": "V",
+                            "component_material_description": "",
+                            "range": "60 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Instantáneo",
+                            "saving_throw": "Sabiduría niega",
+                            "attack": "Contra salvación 1d4 psíquico",
+                            "tags": [
+                                {
+                                    "id": 68,
+                                    "name": "Combate",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 73,
+                                    "name": "Daño",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 4,
+                            "spell_school_name": "Encantamiento",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7470972,
+                            "included": true,
+                            "prepared": true,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3473/medium-68cb4882e95822173aaa1a13ea0cda93801735e8.png?1695899439"
+                        },
+                        {
+                            "id": 6,
+                            "name": "Descarga sobrenatural",
+                            "level": 0,
+                            "summary": "Un rayo de energía alcanza a una criatura que elijas. Si impactas con una tirada de ataque de conjuro a distancia, inflige 1d10 puntos de daño por fuerza. Al subir de nivel aumenta el número de rayos: dos a nivel 5, tres a nivel 11 y cuatro a nivel 17. Haz una tirada de ataque por cada rayo.",
+                            "description": "Un rayo de energía chispeante alcanza a una criatura que elijas dentro del alcance. Haz una tirada de ataque de conjuro a distancia contra el objetivo. Si impactas, este recibe 1d10 puntos de daño por fuerza.\r\n\r\nEl conjuro crea más de un rayo cuando subes de nivel: dos rayos en el nivel 5, tres rayos en el nivel 11 y cuatro rayos en el nivel 17. Puedes dirigir los rayos al mismo objetivo o a objetivos diferentes. Haz una tirada de ataque por cada rayo.",
+                            "components": "V, S",
+                            "short_components": "V, S",
+                            "component_material_description": "",
+                            "range": "120 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Instantáneo",
+                            "saving_throw": null,
+                            "attack": "A distancia 1d10 fuerza",
+                            "tags": [
+                                {
+                                    "id": 68,
+                                    "name": "Combate",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 73,
+                                    "name": "Daño",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 5,
+                            "spell_school_name": "Evocación",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7470948,
+                            "included": true,
+                            "prepared": true,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/20/medium-ec4f10b3498add535e3c78b90125ac60c460e56a.png?1637056136"
+                        },
+                        {
+                            "id": 1580,
+                            "name": "Fragmento mental",
+                            "level": 0,
+                            "summary": "El objetivo debe tener éxito en una tirada de salvación de Inteligencia o recibir 1d6 de daño psíquico y restar 1d4 de la siguiente tirada de salvación antes del final de tu siguiente turno.",
+                            "description": "Introduces una púa desorientadora de energía psíquica en la mente de una criatura que puedas ver dentro del alcance. El objetivo deberá superar una tirada de salvación de Inteligencia o recibirá 1d6 de daño psíquico y restará 1d4 en la siguiente tirada de salvación que haga antes del final de tu siguiente turno.\r\n\r\nEl daño de este conjuro aumenta en 1d6 cuando alcanzas ciertos niveles: el nivel 5 (2d6), el nivel 11 (3d6) y el nivel 17 (4d6).",
+                            "components": "V",
+                            "short_components": "V",
+                            "component_material_description": "",
+                            "range": "60 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Instantáneo 1 asalto",
+                            "saving_throw": "Inteligencia niega",
+                            "attack": "Contra salvación 1d6 psíquico",
+                            "tags": [],
+                            "spell_school_id": 4,
+                            "spell_school_name": "Encantamiento",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471097,
+                            "included": true,
+                            "prepared": true,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": null
+                        },
+                        {
+                            "id": 14,
+                            "name": "Mano de mago",
+                            "level": 0,
+                            "summary": "Una mano espectral aparece flotando. Puedes usar tu acción para controlarla, manipular un objeto, abrir una puerta. etc. Puedes moverla 30 pies cada vez que la usas. No puede atacar, activar objetos mágicos ni transportar más de 10 libras.",
+                            "description": "Una mano espectral aparece flotando en un punto que elijas dentro del alcance. La mano dura mientras lo haga el conjuro o hasta que la disipes como acción. La mano se desvanece si está a más de 30 pies de ti o si vuelves a lanzar este conjuro.\r\n\r\nPuedes usar tu acción para controlar la mano. Puedes usar la mano para manipular un objeto, abrir una puerta o un recipiente cerrado, guardar o sacar un objeto de un recipiente abierto o verter el contenido de un vial. Puedes mover la mano hasta 30 pies cada vez que la usas.\r\n\r\nLa mano no puede atacar, activar objetos mágicos ni transportar más de 10 libras.",
+                            "components": "V, S",
+                            "short_components": "V, S",
+                            "component_material_description": "",
+                            "range": "30 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "1 minuto",
+                            "saving_throw": null,
+                            "attack": null,
+                            "tags": [
+                                {
+                                    "id": 88,
+                                    "name": "Utilidad",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 3,
+                            "spell_school_name": "Conjuración",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7470945,
+                            "included": true,
+                            "prepared": true,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/7052/medium-470b7efed24ae127fff6717df4b1356fe9664e5c.PNG?1703054784"
+                        },
+                        {
+                            "id": 840,
+                            "name": "Salvajismo Primitivo",
+                            "level": 0,
+                            "summary": "",
+                            "description": "Canalizas magia primordial para hacer que tus dientes o uñas se afilen, listos para lanzar un ataque corrosivo. Realiza un ataque de conjuro cuerpo a cuerpo contra una criatura situada a un 5 pies o menos de ti. Si impactas, el objetivo recibe 1d10 de daño de ácido. Después del ataque, tus dientes o uñas vuelven a la normalidad.\r\n\r\n**A niveles superiores.** El daño del conjuro aumenta en 1d10 cuando alcanzas nivel 5 (2d10), nivel 11 (3d10) y nivel 17 (4d10)",
+                            "components": "S",
+                            "short_components": "S",
+                            "component_material_description": "",
+                            "range": "Personal",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Instantáneo",
+                            "saving_throw": null,
+                            "attack": "Cuerpo a cuerpo 1d10 ácido",
+                            "tags": [
+                                {
+                                    "id": 84,
+                                    "name": "Cambiaformas",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 73,
+                                    "name": "Daño",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 66,
+                                    "name": "Mejora",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 8,
+                            "spell_school_name": "Transmutación",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7470967,
+                            "included": true,
+                            "prepared": true,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1035/medium-6d4d292210bb73b10b9da60c19896088b7f662f0.PNG?1637060850"
+                        },
+                        {
+                            "id": 844,
+                            "name": "Tañido de los Muertos",
+                            "level": 0,
+                            "summary": "",
+                            "description": "Señalas a una criatura que puedas ver y que se encuentre dentro del alcance. El sonido de una lacerante campana llena el aire a su alrededor durante un momento. El objetivo deberá tener éxito en una tirada de salvación de Sabiduría o sufrirá 1d8 de daño necrótico. Si a la criatura le falta alguno de sus puntos de golpe, en vez de 1d8 recibirá 1d12 de daño necrótico.\r\n\r\n**A niveles superiores.** El daño del conjuro aumenta en un dado cuando alcanzas nivel 5 (2d8 o 2d12), nivel 11 (3d8 o 3d12) y nivel 17 (4d8 o 4d12).",
+                            "components": "V, S",
+                            "short_components": "V, S",
+                            "component_material_description": "",
+                            "range": "60 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Instantáneo",
+                            "saving_throw": "Sabiduría niega",
+                            "attack": "Contra salvación 1d8 necrótico",
+                            "tags": [
+                                {
+                                    "id": 68,
+                                    "name": "Combate",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 73,
+                                    "name": "Daño",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 66,
+                                    "name": "Mejora",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 7,
+                            "spell_school_name": "Nigromancia",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471009,
+                            "included": true,
+                            "prepared": true,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/7075/medium-ca31fe2870c913675d4a594144282972634ba114.png?1703054795"
+                        },
+                        {
+                            "id": 23,
+                            "name": "Taumaturgia",
+                            "level": 0,
+                            "summary": "Realizas una maravilla menor dentro del alcance: tu voz retumba hasta 3 veces más; las llamas titilan, se avivan, debilitan o cambian de color; provocas temblores inofensivos; creas un sonido en un punto; una puerta o ventana se abre o cierra de golpe o cambias tus ojos.",
+                            "description": "Realizas una maravilla menor, una muestra de poder sobrenatural, dentro del alcance. Creas uno de los siguientes efectos mágicos dentro del alcance:\r\n\r\n* Tu voz retumba hasta tres veces igual de fuerte que tu tono normal durante 1 minuto.\r\n* Haces que las llamas titilen, se aviven, se debiliten o cambien de color durante 1 minuto.\r\n* Provocas temblores inofensivos en el suelo durante 1 minuto.\r\n* Creas un sonido instantáneo que se origina en un punto que elijas dentro del alcance, como el sonido sordo de un trueno, el graznido de un cuervo o unos susurros ominosos.\r\n* Haces que una puerta o una ventana se abra de repente o se cierre dando un golpe.\r\n* Alteras la apariencia de tus ojos durante 1 minuto.\r\n\r\nSi lanzas este conjuro varias veces, puedes tener hasta tres de estos efectos de 1 minuto activos a la vez. Puedes disipar uno de estos efectos como acción.",
+                            "components": "V",
+                            "short_components": "V",
+                            "component_material_description": "",
+                            "range": "30 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "1 minuto",
+                            "saving_throw": null,
+                            "attack": null,
+                            "tags": [
+                                {
+                                    "id": 71,
+                                    "name": "Control",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 8,
+                            "spell_school_name": "Transmutación",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471047,
+                            "included": true,
+                            "prepared": true,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3551/medium-73f1650be1e7aec7babc0659e26b850313b6f038.png?1696248320"
+                        }
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        {
+                            "id": 118,
+                            "name": "Inmovilizar persona",
+                            "level": 2,
+                            "summary": "Un humanoide que puedas ver debe superar una TS de Sabiduría o quedar paralizado. Al final de cada turno puede reintentar la TS para terminar el conjuro. Puedes apuntar con el conjuro a un humanoide adicional por cada nivel de conjuro por encima de 2. Deben estar a 30 pies entre sí.",
+                            "description": "Elige a un humanoide que puedas ver dentro del alcance. El objetivo debe superar una tirada de salvación de Sabiduría para no quedar paralizado mientras dure el conjuro. Al final de cada uno de sus turnos, puede hacer otra tirada de salvación de Sabiduría. Si tiene éxito, el conjuro termina.\r\n\r\n**En niveles superiores.** Cuando lanzas este conjuro usando un espacio de conjuro de nivel 3 o superior, puedes elegir como objetivo a otro humanoide adicional por cada espacio de conjuro por encima de 2. Los humanoides deben estar a 30 pies o menos entre sí.",
+                            "components": "V, S, M (un pedazo de hierro, pequeño y recto)",
+                            "short_components": "V, S, M",
+                            "component_material_description": "un pedazo de hierro, pequeño y recto",
+                            "range": "60 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Concentración 1 minuto",
+                            "saving_throw": "Sabiduría niega",
+                            "attack": null,
+                            "tags": [
+                                {
+                                    "id": 71,
+                                    "name": "Control",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 4,
+                            "spell_school_name": "Encantamiento",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471170,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/4074/medium-e7b58ef8923196e888363d396b054de357f1c6e0.png?1697196881"
+                        },
+                        {
+                            "id": 7792,
+                            "name": "Rociada de Cartas",
+                            "level": 2,
+                            "summary": "",
+                            "description": "Rocías un cono de 15 pies de cartas espectrales. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. Si falla, la criatura recibe 2d10 puntos de daño de fuerza y queda cegada hasta el final de su siguiente turno. Si la salvación tiene éxito, la criatura sólo recibe la mitad de daño.\r\n\r\n**A niveles superiores.**\r\n\r\nCuando lanzas este conjuro utilizando una ranura de conjuro de 3º nivel o superior, el daño aumenta en 1d10 por cada nivel de ranura por encima del 2º.",
+                            "components": "V, S, M (Una baraja de cartas)",
+                            "short_components": "V, S, M",
+                            "component_material_description": "Una baraja de cartas",
+                            "range": "Personal",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": "Cono de 15 pies",
+                            "target": null,
+                            "duration": "Instantáneo",
+                            "saving_throw": null,
+                            "attack": null,
+                            "tags": [],
+                            "spell_school_id": 3,
+                            "spell_school_name": "Conjuración",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471121,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": null
+                        }
+                    ]
+                ],
+                [
+                    3,
+                    [
+                        {
+                            "id": 7791,
+                            "name": "Antagonizar",
+                            "level": 3,
+                            "summary": "",
+                            "description": "Susurras palabras mágicas que antagonizan a una criatura de tu elección dentro de tu alcance. El objetivo debe realizar una tirada de salvación de Sabiduría. En caso de fallar la tirada de salvación, el objetivo recibe 4d4 puntos de daño psíquico y debe usar inmediatamente su reacción para realizar un ataque cuerpo a cuerpo contra otra criatura de tu elección que puedas ver. Si el objetivo no puede realizar este ataque (por ejemplo, porque no hay nadie a su alcance o porque su reacción no está disponible), el objetivo tiene desventaja en la siguiente tirada de ataque que realice antes del comienzo de tu siguiente turno. En una salvación con éxito, el objetivo sólo recibe la mitad de daño.\r\n\r\n**A niveles superiores.**\r\nCuando lanzas este conjuro utilizando una ranura de conjuro de 4º nivel o superior, el daño aumenta en 1d4 por cada nivel de ranura por encima del 3º.",
+                            "components": "V, S, M (Un naipe que represente a un pícaro)",
+                            "short_components": "V, S, M",
+                            "component_material_description": "Un naipe que represente a un pícaro",
+                            "range": "30 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Instantáneo",
+                            "saving_throw": null,
+                            "attack": null,
+                            "tags": [],
+                            "spell_school_id": 4,
+                            "spell_school_name": "Encantamiento",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471182,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": null
+                        },
+                        {
+                            "id": 299,
+                            "name": "Imponer maldición",
+                            "level": 3,
+                            "summary": "Si no supera una TS de Sabiduría, elige que la criatura tocada tenga: desventaja en pruebas y TS de una característica; desventaja en los ataques contra ti; superar una TS de Sab o no actuar en su acción; tus ataques infligen 1d8 necrótico. Utilizar conjuro de nivel superior aumenta la duración.",
+                            "description": "Tocas a una criatura, la cual debe superar una tirada de salvación de Sabiduría o quedará maldecida hasta que termine el conjuro. Cuando lances este conjuro, elige la naturaleza de la maldición de entre estas opciones:\r\n\r\n* Elige una puntuación de característica. Mientras el objetivo esté maldito, tendrá desventaja en las pruebas de característica y tiradas de salvación hechas con esa puntuación de característica.\r\n* Mientras el objetivo esté maldito, tendrá desventaja en las tiradas de ataque contra ti.\r\n* Mientras el objetivo esté maldito, deberá realizar una tirada de salvación de Sabiduría al principio de cada uno de sus turnos. Si la falla, malgastará su acción ese turno sin hacer nada.\r\n*  Mientras el objetivo esté maldito, tus ataques y conjuros le infligirán 1d8 de daño necrótico adicional.\r\n\r\nUn conjuro levantar maldición pone fin a este efecto. Si tu GM lo cree conveniente, puedes elegir un efecto alternativo para la maldición, pero este no podrá ser más poderoso que los descritos anteriormente y tu GM tendrá la última palabra sobre él.\r\n\r\n**A niveles superiores.** Si lanzas este conjuro mediante un espacio de conjuro de nivel 4 o superior, su duración será la concentración, hasta 10 minutos. Si usas un espacio de conjuro de nivel 5 o superior, la duración será de 8 horas. Si usas un espacio de conjuro de nivel 7 o superior, la duración será de 24 horas. Si usas un espacio de conjuro de nivel 9, el conjuro durará hasta que sea disipado. Si usas un espacio de conjuro de nivel 5 o superior, la duración no requiere concentración.",
+                            "components": "V, S",
+                            "short_components": "V, S",
+                            "component_material_description": "",
+                            "range": "Toque",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Concentración 1 minuto",
+                            "saving_throw": "Sabiduría niega",
+                            "attack": null,
+                            "tags": [
+                                {
+                                    "id": 74,
+                                    "name": "Desventaja",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 7,
+                            "spell_school_name": "Nigromancia",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471125,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/4335/medium-6e9ca61cb556922750f7287f9708c6b64e940374.png?1698311681"
+                        },
+                        {
+                            "id": 2256,
+                            "name": "Invocar engendro de las sombras",
+                            "level": 3,
+                            "summary": "",
+                            "description": "Invocas un espíritu de las sombras que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del <a href=\"/games/dnd-5/creatures/15954-espiritu-sombrio\" data-floating='true'>Espíritu sombrío (VD 0)</a>. Cuando lances el conjuro, elige una\r\nemoción: furia, desesperación o terror. La criatura se parecerá a un ser bípedo deforme marcado por la emoción elegida, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\r\n\r\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\r\n\r\n**A niveles superiores.** Cuando lances este conjuro mediante un espacio de conjuro de nivel 4 o superior, usa el nivel más alto cuando se mencione el nivel del conjuro en el perfil.",
+                            "components": "V, S, M (lágrimas dentro de una gema que valga al menos 300 po)",
+                            "short_components": "V, S, M",
+                            "component_material_description": "lágrimas dentro de una gema que valga al menos 300 po",
+                            "range": "90 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Concentración 1 hora",
+                            "saving_throw": null,
+                            "attack": null,
+                            "tags": [],
+                            "spell_school_id": 3,
+                            "spell_school_name": "Conjuración",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471189,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": null
+                        },
+                        {
+                            "id": 314,
+                            "name": "Toque vampírico",
+                            "level": 3,
+                            "summary": "Si impactas un ataque de conjuro cuerpo a cuerpo contra una criatura a tu alcance, el objetivo recibe 3d6 puntos de daño necrótico y tú recuperas la mitad del daño infligido. Puedes volver a hacer el ataque en cada turno como acción. El daño aumenta 1d6 por cada nivel de conjuro por encima de 3.",
+                            "description": "El toque de tu mano cubierta de sombras puede extraer la fuerza vital de otros para curar tus heridas. Haz un ataque de conjuro cuerpo a cuerpo contra una criatura dentro de tu alcance. Si impactas, el objetivo recibe 3d6 puntos de daño necrótico y tú recuperas tantos puntos de golpe como la mitad del daño infligido. Hasta que el conjuro termine, puedes volver a hacer el ataque en cada uno de tus turnos como acción.\r\n\r\n**En niveles superiores.** Cuando lanzas este conjuro usando un espacio de conjuro de nivel 4 o superior, el daño aumenta en 1d6 por cada nivel por encima de 3.",
+                            "components": "V, S",
+                            "short_components": "V, S",
+                            "component_material_description": "",
+                            "range": "Personal",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Concentración 1 minuto",
+                            "saving_throw": null,
+                            "attack": "Cuerpo a cuerpo 3d6 necrótico",
+                            "tags": [
+                                {
+                                    "id": 68,
+                                    "name": "Combate",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 80,
+                                    "name": "Curación",
+                                    "description": ""
+                                },
+                                {
+                                    "id": 73,
+                                    "name": "Daño",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 7,
+                            "spell_school_name": "Nigromancia",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471165,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/4174/medium-8677594c9afd85fda9b0dbeca3746555e35a9f1d.png?1698039897"
+                        }
+                    ]
+                ],
+                [
+                    4,
+                    [
+                        {
+                            "id": 369,
+                            "name": "Confusión",
+                            "level": 4,
+                            "summary": "Las criaturas en una esfera de 10 pies de radio a partir de un punto a tu elección deben superar una TS de Sabiduría o no podrán reaccionar y tiran 1d10 al principio de cada turno para determinar su comportamiento incontrolado. El radio aumenta 5 pies por cada nivel de conjuro por encima de 4.",
+                            "description": "Este conjuro distorsiona la mente de las criaturas creando ilusiones y provocando acciones incontroladas. Todas las criaturas que se encuentren en una esfera de 10 pies de radio, cuyo centro está en un lugar de tu elección dentro del alcance, deben superar una tirada de salvación de Sabiduría cuando lances este conjuro para no quedar afectadas por él.\r\n\r\nUn objetivo afectado no puede reaccionar y debe tirar 1d10 al principio de cada uno de sus turnos para determinar su comportamiento.\r\n\r\n| d10&nbsp; | Comportamiento |\r\n|--|--|\r\n| 1 | La criatura usa todo su movimiento para moverse en una dirección al azar. Para determinar dicha dirección, tira 1d8 y asigna una dirección a cada una de las caras del dado. La criatura no realiza ninguna acción este turno. |\r\n| 2-6\t| La criatura no se mueve ni realiza acciones este turno. |\r\n| 7-8\t| La criatura usa su acción para realizar un ataque cuerpo a cuerpo contra una criatura determinada al azar dentro de su alcance. Si no hay ninguna criatura dentro de su alcance, no hace nada durante este turno. |\r\n| 9-10 | La criatura puede actuar y moverse con normalidad. |\r\n\r\nAl final de cada turno, un objetivo afectado puede hacer una tirada de salvación de Sabiduría. Si tiene éxito, el efecto termina.\r\n\r\n**En niveles superiores.** Cuando lanzas este conjuro usando un espacio de conjuro de nivel 5 o superior, el radio de la esfera aumenta en 5 pies por cada nivel por encima de 4.",
+                            "components": "V, S, M (tres cáscaras de nuez)",
+                            "short_components": "V, S, M",
+                            "component_material_description": "tres cáscaras de nuez",
+                            "range": "90 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": "Esfera de 10 pies",
+                            "target": null,
+                            "duration": "Concentración 1 minuto",
+                            "saving_throw": "Sabiduría niega",
+                            "attack": null,
+                            "tags": [
+                                {
+                                    "id": 71,
+                                    "name": "Control",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 4,
+                            "spell_school_name": "Encantamiento",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471163,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3177/medium-ff3294622ae274b9ee64e65c8c61a983127c9b78.png?1694791541"
+                        },
+                        {
+                            "id": 366,
+                            "name": "Marchitar",
+                            "level": 4,
+                            "summary": "Un objetivo que puedas ver dentro del alcance debe hacer una TS de Constitución: si falla, recibe 8d8 puntos de daño necrótico y, si tiene éxito, la mitad. No afecta a no muertos ni constructos. El daño aumenta 1d8 por cada nivel de conjuro por encima de 4. Es más potente contra plantas.",
+                            "description": "La energía nigromántica anega a una criatura de tu elección que puedas ver dentro del alcance y le drena los humores y la vitalidad. El objetivo debe hacer una tirada de salvación de Constitución: si falla, recibe 8d8 puntos de daño necrótico y, si tiene éxito, la mitad. Este conjuro no tiene efecto sobre no muertos ni constructos.\r\n\r\nSi el objetivo es una criatura planta o a una planta mágica, esta tiene desventaja en la tirada de salvación y el conjuro le inflige el máximo de daño.\r\n\r\nSi el objetivo es una planta no mágica que no es una criatura, como un árbol o un arbusto, no hace tirada de salvación, simplemente se seca y muere.\r\n\r\n**En niveles superiores.** Cuando lanzas este conjuro usando un espacio de nivel 5 o superior, el daño aumenta en 1d8 por cada nivel por encima de 4.",
+                            "components": "V, S",
+                            "short_components": "V, S",
+                            "component_material_description": "",
+                            "range": "30 pies",
+                            "casting_time": "1 acción",
+                            "casting_time_unit": "action",
+                            "short_casting_time": "1 acción",
+                            "area": null,
+                            "target": null,
+                            "duration": "Instantáneo",
+                            "saving_throw": "Constitución mitad",
+                            "attack": "Contra salvación 8d8 necrótico",
+                            "tags": [
+                                {
+                                    "id": 73,
+                                    "name": "Daño",
+                                    "description": ""
+                                }
+                            ],
+                            "spell_school_id": 7,
+                            "spell_school_name": "Nigromancia",
+                            "prerequisites": "",
+                            "ritual": false,
+                            "spell_type": "default",
+                            "spell_type_text": "Conjuro estándar",
+                            "character_spell_id": 7471160,
+                            "included": true,
+                            "prepared": false,
+                            "profession_id": 66,
+                            "label": [],
+                            "icon_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/3182/medium-6abdae141e2a65636d7f92766686cfa05585d23d.png?1694791543"
+                        }
+                    ]
+                ]
+            ],
+            "focus_spells": [],
+            "spell_ability_id": 18,
+            "spell_ability_name": "Carisma",
+            "spell_ability_short_name": "Car",
+            "spell_ability_slug": "car",
+            "spell_ability_mod": 4,
+            "spell_list_id": 2,
+            "spell_list_name": "Conjuros de brujo",
+            "spell_caster": "pact_caster",
+            "spell_method": "known_spells",
+            "cantrips_enabled": true,
+            "min_spell_slot_level": 1,
+            "max_spell_slot_level": 5,
+            "current_level_slots": {
+                "4": "2",
+                "cantrips": "3",
+                "known_spells": "8"
+            },
+            "prepared_spells": null,
+            "prepared_cantrips": false,
+            "known_spells": 8,
+            "cantrips": 3,
+            "spell_save_proficiency": "proficient",
+            "spell_save_dc": 15,
+            "spell_attack_proficiency": "proficient",
+            "spell_attack_bonus": 7
+        }
+    ],
+    "professions": [
+        {
+            "id": 66,
+            "name": "Brujo",
+            "description": "Los brujos son buscadores del conocimiento que se encuentra escondido en el multiverso. A través de pactos hechos con seres poderosos de poder sobrenatural, los brujos desatan efectos mágicos tanto sutiles como espectaculares y recolectan secretos arcanos para potenciar su propio poder.",
+            "archetype_id": 1387,
+            "archetype_name": "El Muerto Viviente",
+            "archetype_description": "Has hecho un pacto con un ser inmortal, una criatura que desafía el ciclo de la vida y la muerte, abandonando su caparazón mortal para que pueda perseguir eternamente sus ambiciones.\r\n\r\nEl semiliche Acererak, el tirano vampiro Kas, la reina exánime Vlaakith o Azalin Rex serían tus patrones.",
+            "level": 7,
+            "hit_points_dice": 8,
+            "feats": [
+                {
+                    "id": 559,
+                    "name": "Descarga agónica",
+                    "symbol": null,
+                    "summary": "Cuando lances Descarga sobrenatural, añade al daño tu modificador por Carisma.",
+                    "description": "Requisito: truco Descarga sobrenatural\r\n\r\nCuando lances <a href=\"/games/dnd-5/spells/6-descarga-sobrenatural\" data-floating='true'>Descarga sobrenatural</a>, añade al daño tu modificador por Carisma.",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 66,
+                    "category_id": 51,
+                    "category_name": "Invocación sobrenatural",
+                    "group_name": "Invocación sobrenatural",
+                    "required_level": 1,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 12366,
+                    "name": "Don de las Profundidades",
+                    "symbol": null,
+                    "summary": "Puedes respirar bajo el agua y ganas una velocidad nadando igual a tu velocidad caminando.\r\nTambién puedes lanzar respirar bajo el agua una vez sin gastar un espacio de conjuro. Recuperas la capacidad para hacerlo tras finalizar un descanso largo.",
+                    "description": "Puedes respirar bajo el agua y ganas una velocidad nadando igual a tu velocidad caminando.\r\nTambién puedes lanzar respirar bajo el agua una vez sin gastar un espacio de conjuro. Recuperas la capacidad para hacerlo tras finalizar un descanso largo.",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 66,
+                    "category_id": 51,
+                    "category_name": "Invocación sobrenatural",
+                    "group_name": "Invocación sobrenatural",
+                    "required_level": 5,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 9953,
+                    "name": "Forma del Terror",
+                    "symbol": null,
+                    "summary": "",
+                    "description": "Manifiestas un aspecto del terrorífico poder de tu patrón. Como acción adicional, puedes transformarte durante 1 minuto. Mientras estés transformado, obtienes los siguientes beneficios:\r\n\r\n* Obtienes una cantidad de puntos de golpe temporales igual a 1d10 + tu nivel de brujo.\r\n* Una vez durante cada uno de tus turnos, cuando impactes a una criatura con una tirada de ataque, podrás obligarla a realizar una tirada de salvación de Sabiduría y, si la falla, el objetivo quedará asustado de ti hasta el final de tu siguiente turno.\r\n* Eres inmune al estado de asustado.\r\n\r\nPuedes transformarte una cantidad de veces igual a tu bonificador por competencia y recuperas todos los usos tras finalizar un descanso largo.\r\n\r\nLa apariencia de tu Forma del Terror refleja algún aspecto de tu patrón. Por ejemplo tu forma podría ser un velo de sombras que forme la corona y la túnica de tu patrón liche o tu cuerpo podría brillar con glifos de ritos funerarios ancestrales y estar rodeado por vientos del desierto, sugiriendo que tu patrón es una momia.",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 1387,
+                    "category_id": null,
+                    "category_name": null,
+                    "group_name": "El Muerto Viviente",
+                    "required_level": 1,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 12372,
+                    "name": "Lanza de Letargo",
+                    "symbol": null,
+                    "summary": "Una vez en cada uno de tus turnos, cuando impactes a un objetivo con tu descarga sobrenatural, puedes reducir la velocidad de esa criatura en 10 pies hasta el final de tu próximo turno.",
+                    "description": "Una vez en cada uno de tus turnos, cuando impactes a un objetivo con tu descarga sobrenatural, puedes reducir la velocidad de esa criatura en 10 pies hasta el final de tu próximo turno.",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 66,
+                    "category_id": 51,
+                    "category_name": "Invocación sobrenatural",
+                    "group_name": "Invocación sobrenatural",
+                    "required_level": 1,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 9952,
+                    "name": "Lista de Conjuros Ampliada",
+                    "symbol": null,
+                    "summary": "",
+                    "description": "El No-Muerto te otorga una lista de conjuros ampliada para cuando puedas aprender conjuros nuevos. Para ti, los siguientes conjuros se añaden a la lista de conjuros de brujo.\r\n\r\n* Nivel 1: *<a href=\"/games/dnd-5/spells/61-perdicion\" data-floating='true'>Perdición</a>, <a href=\"/games/dnd-5/spells/45-falsa-vida\" data-floating='true'>Falsa vida</a>*\r\n* Nivel 2: *<a href=\"/games/dnd-5/spells/104-sordera-ceguera\" data-floating='true'>Sordera / Ceguera</a>, <a href=\"/games/dnd-5/spells/360-fuerza-fantasmal\" data-floating='true'>Fuerza fantasmal</a>*\r\n* Nivel 3: *<a href=\"/games/dnd-5/spells/295-hablar-con-los-muertos\" data-floating='true'>Hablar con los muertos</a>, <a href=\"/games/dnd-5/spells/281-corcel-fantasma\" data-floating='true'>Corcel fantasma</a>*\r\n* Nivel 4: *<a href=\"/games/dnd-5/spells/385-guardia-contra-la-muerte\" data-floating='true'>Guardia contra la muerte</a>, <a href=\"/games/dnd-5/spells/393-invisibilidad-mejorada\" data-floating='true'>Invisibilidad mejorada</a>*\r\n* Nivel 5: *<a href=\"/games/dnd-5/spells/481-caparazon-antivida\" data-floating='true'>Caparazón antivida</a>, <a href=\"/games/dnd-5/spells/504-nube-aniquiladora\" data-floating='true'>Nube aniquiladora</a>*",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 1387,
+                    "category_id": null,
+                    "category_name": null,
+                    "group_name": "El Muerto Viviente",
+                    "required_level": 1,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 542,
+                    "name": "Magia del pacto",
+                    "symbol": null,
+                    "summary": "Puedes lanzar conjuros utilizando tu Carisma. Aprendes nuevos conjuros al subir de nivel. Para lanzar un conjuro debes conocerlo y gastar un espacio de conjuro (salvo trucos). Recuperas los espacios de conjuro gastados al terminar un descanso corto o largo. Puedes usar un foco arcano.",
+                    "description": "Tu investigación arcana y la magia que te otorga tu patrón te han dado la capacidad de lanzar conjuros.\r\n\r\n**Trucos**\r\n\r\nConoces dos trucos de tu elección de la lista de conjuros de brujo. Aprendes trucos de brujo adicionales de tu elección en niveles superiores, como se indica en la columna «Trucos» de la tabla del brujo.\r\n\r\n**Espacios de conjuro**\r\n\r\nLa tabla del brujo muestra cuántos espacios de conjuro tienes y de qué nivel son (todos del mismo). Para lanzar un conjuro de brujo de nivel 1 o superior, debes gastar un espacio de conjuro. Recuperas todos los espacios de conjuro que hayas gastado cuando termines un descanso prolongado o breve. Por ejemplo, al nivel 5 tienes dos espacios de conjuro de nivel 3. Para lanzar el conjuro de nivel 1 Onda atronadora debes gastar uno de esos espacios y lanzarlo como un conjuro de nivel 3.\r\n\r\n**Conjuros conocidos de nivel 1 y superior**\r\n\r\nEn el nivel 1, conoces al menos dos conjuros de nivel 1 de tu elección de la lista de conjuros de brujo.\r\n\r\nLa columna «Conjuros» de la tabla del brujo muestra cuándo aprendes nuevos conjuros. Los conjuros no pueden ser de un nivel superior al que se muestra en la columna «Nivel de los espacios» para tu nivel. Cuando llegues al nivel 6, por ejemplo, puedes aprender nuevos conjuros de brujo, que pueden ser de nivel 1, 2 o 3.\r\n\r\nAdemás, cuando subes de nivel en esta clase, puedes remplazar uno de los conjuros de brujo que conoces por otro conjuro de brujo de un nivel para el que tengas espacios de conjuro.\r\n\r\n**Característica para lanzar conjuros**\r\n\r\nLa característica con la que lanzas tus conjuros de brujo es Carisma. Usas Carisma cuando un conjuro se refiere a tu característica para lanzar conjuros. Además, usas tu modificador por Carisma para establecer la CD de la tirada de salvación para los conjuros de brujo que lances y cuando hagas una tirada de ataque con uno.\r\n\r\n**CD de la salvación de conjuros** = 8 + tu bonificador por competencia + tu modificador por Carisma\r\n\r\n**Modificador al ataque con conjuros** = tu bonificador por competencia + tu modificador por Carisma\r\n\r\n**Foco para lanzar conjuros**\r\n\r\nPuedes usar un foco arcano como foco para lanzar tus conjuros de brujo.",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 66,
+                    "category_id": null,
+                    "category_name": null,
+                    "group_name": null,
+                    "required_level": 1,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 12375,
+                    "name": "Maldición Enloquecedora",
+                    "symbol": null,
+                    "summary": "Como acción adicional, causas una perturbación psíquica alrededor de una criatura afectada por tu conjuro maleficio o por uno de tus rasgos de Brujo, como la Marca del Mal Augurio. Cuando lo hagas, infliges daño psíquico al objetivo y a cada criatura de tu elección que puedas ver y esté a 5 pies.",
+                    "description": "Como acción adicional, causas una perturbación psíquica alrededor de una criatura afectada por tu conjuro maleficio o por uno de tus rasgos de Brujo, como la Marca del Mal Augurio o la Maldición del Filo Maléficco. Cuando lo hagas, infliges daño psíquico al objetivo y a cada criatura de tu elección que puedas ver y esté a 5 pies o menos de él.\r\nEl daño psíquico es igual a tu modificador de Carisma (mínimo 1 de daño). Para utilizar esta invocación, debes ser capaz de ver al objetivo maldito, que ha de encontrarse a 30 pies o menos de ti.",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 66,
+                    "category_id": 51,
+                    "category_name": "Invocación sobrenatural",
+                    "group_name": "Invocación sobrenatural",
+                    "required_level": 5,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 547,
+                    "name": "Pacto del tomo",
+                    "symbol": null,
+                    "summary": "",
+                    "description": "Tu patrón te da un grimorio titulado Libro de las sombras. Cuando consigas este rasgo, elige tres trucos de cualquier lista de conjuros (no es necesario que sean de la misma lista). Mientras el libro esté en tu poder, puedes lanzar esos trucos a voluntad y no cuentan como trucos conocidos. Aunque no aparezcan en la lista de conjuros de brujo, para ti son conjuros de brujo.\r\n\r\nSi pierdes el Libro de las sombras, puedes llevar a cabo una ceremonia de 1 hora para que tu patrón te envíe un repuesto. Esta ceremonia se puede realizar durante un descanso breve o prolongado",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 66,
+                    "category_id": 52,
+                    "category_name": "Don del pacto",
+                    "group_name": "Don del pacto",
+                    "required_level": 1,
+                    "modifiers": [],
+                    "levels": []
+                },
+                {
+                    "id": 9954,
+                    "name": "Toque Sepulcral",
+                    "symbol": null,
+                    "summary": "",
+                    "description": "Los poderes de tu patrón ejercen un profundo efecto sobre tu cuerpo y tu magia. No necesitas comer, beber ni respirar.\r\n\r\nAdemás, una vez durante cada uno de tus turnos, cuando impactes con una tirada de ataque a una criatura y realices la tirada de daño contra ella, puedes sustituir el tipo de daño por daño necrótico. Mientras estés usando tu Forma del Terror, podrás tirar un dado de daño adicional al determinar el daño necrótico que recibe el objetivo.",
+                    "mode": "simple",
+                    "visible": true,
+                    "profession_id": 1387,
+                    "category_id": null,
+                    "category_name": null,
+                    "group_name": "El Muerto Viviente",
+                    "required_level": 6,
+                    "modifiers": [],
+                    "levels": []
+                }
+            ],
+            "portrait_url": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/554/medium-bf8dd581fa74327d7611fde0b153f6484944e957.jpg?1536945714"
+        }
+    ],
+    "race_feats": [
+        {
+            "id": 39,
+            "name": "Visión en la oscuridad",
+            "description": "Tienes una visión superior en la oscuridad y en la penumbra. Puedes ver en la penumbra a una distancia de 60 pies como si fuera luz brillante, y en la oscuridad como si fuera penumbra. En la oscuridad no puedes distinguir colores, solo tonos de gris."
+        },
+        {
+            "id": 40,
+            "name": "Fortaleza enana",
+            "description": "Tienes ventaja en las tiradas de salvación contra venenos y eres resistente al daño por veneno."
+        },
+        {
+            "id": 41,
+            "name": "Afinidad con la piedra",
+            "description": "Cuando realices una prueba de Inteligencia (Historia) relacionada con el origen de una obra de mampostería, se considera que tienes competencia con la habilidad de Historia y añades a la prueba tu bonificador por competencia multiplicado por 2 en lugar del bonificador habitual."
+        },
+        {
+            "id": 19624,
+            "name": "Velocidad enana",
+            "description": "Tu velocidad no se reduce por llevar armadura pesada."
+        }
+    ],
+    "other_feats": [],
+    "custom_feats": [],
+    "background": {
+        "name": "Marinero",
+        "specialty_title": null,
+        "specialty": "",
+        "feat_name": null,
+        "feat_description": "Cuando lo necesites, puedes asegurar un pasaje gratis en un barco para ti y tus compañeros de aventuras. Podrías navegar en la nave en la que serviste, o en otra nave con la que tengas buenas relaciones (quizá en una cuyo capitán fue tu compañero de tripulación). Ya que estás pidiendo un favor, no puedes asegurar un calendario o una ruta que cumpla con todas tus necesidades. Tu Dungeon Master determinará cuánto toma el llegar a donde necesites ir. A cambio de tu pasaje gratuito, se espera de ti y tus compañeros que sirvan a la tripulación durante el viaje.",
+        "ideals": "No me importa cuán oscuro se vuelva el camino, mientras cumpla con mi pacto de venganza.",
+        "bonds": "Los valores de negocio de mi familia seguirán siempre presentes.",
+        "flaws": "El poder me consume, y cada muerte me acerca más al demonio que me dio fuerzas.",
+        "traits": "Me gusta el trabajo bien hecho. Sobre todo si puedo convencer a otro de que lo haga.\r\nDeformo la verdad por el bien de una buena historia."
+    },
+    "resources": {
+        "pact_spell_slots": {
+            "4": "2"
+        }
+    },
+    "proficiencies": {
+        "skills": {
+            "proficient": [
+                "Arcanos",
+                "Atletismo",
+                "Engañar",
+                "Percepción"
+            ],
+            "expertise": []
+        },
+        "saving_throws": {
+            "proficient": [
+                "Carisma",
+                "Sabiduría"
+            ],
+            "expertise": []
+        },
+        "items": {
+            "proficient": [
+                "Hacha de batalla",
+                "Hacha de mano",
+                "Herramientas de navegante",
+                "Martillo de guerra",
+                "Martillo ligero",
+                "Vehículo (acuático)"
+            ],
+            "expertise": []
+        },
+        "item_groups": {
+            "proficient": [
+                "Armadura intermedia",
+                "Armadura ligera",
+                "Armas sencillas"
+            ],
+            "expertise": []
+        }
+    },
+    "actions": [
+        {
+            "id": "item-action-4070742",
+            "name": "Ballesta pesada",
+            "text": null,
+            "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1289/large-eb73cee51b2c0d765062fc2f5bce7585134c3d3d.PNG?1637061826",
+            "description": null,
+            "action_type": "folder",
+            "hidden": false,
+            "order": null,
+            "source_name": "Equipo",
+            "tooltip_title": "Ballesta pesada",
+            "owned": false,
+            "elements": [
+                {
+                    "id": "item-4070742-advantage-attack",
+                    "name": "Ataque con ventaja",
+                    "text": null,
+                    "icon": "/img/icons/attack-high.png",
+                    "description": "<p>Realiza una tirada de ataque con ventaja utilizando tu Ballesta pesada para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Ballesta pesada",
+                    "tooltip_title": "Ataque con ventaja",
+                    "owned": false,
+                    "dice_roll": "MAX(1d20, 1d20)+1",
+                    "dice_roll_formula": "MAX(1d20, 1d20)+1",
+                    "roll_options": {
+                        "roll_name": "Ballesta pesada",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": "item-4070742-attack",
+                    "name": "Ataque",
+                    "text": null,
+                    "icon": "/img/icons/melee-hit.png",
+                    "description": "<p>Realiza una tirada de ataque con tu Ballesta pesada para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Ballesta pesada",
+                    "tooltip_title": "Ataque",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+1",
+                    "roll_options": {
+                        "roll_name": "Ballesta pesada",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": "item-4070742-disadvantage-attack",
+                    "name": "Ataque con desventaja",
+                    "text": null,
+                    "icon": "/img/icons/attack-low.png",
+                    "description": "<p>Realiza una tirada de ataque con desventaja utilizando tu Ballesta pesada para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Ballesta pesada",
+                    "tooltip_title": "Ataque con desventaja",
+                    "owned": false,
+                    "dice_roll": "MIN(1d20, 1d20)+1",
+                    "dice_roll_formula": "MIN(1d20, 1d20)+1",
+                    "roll_options": {
+                        "roll_name": "Ballesta pesada",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": null,
+                    "name": "Daño",
+                    "text": null,
+                    "icon": "/img/icons/damage.png",
+                    "description": "<p>Si has impactado con la tirada de ataque, realiza la tirada de daño para obtener los puntos de daño que le infliges al enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Ballesta pesada",
+                    "tooltip_title": "Daño",
+                    "owned": false,
+                    "dice_roll": "1d10 +1",
+                    "dice_roll_formula": "1d10 +1",
+                    "roll_options": {
+                        "roll_name": "Ballesta pesada",
+                        "roll_type": "damage"
+                    }
+                },
+                {
+                    "id": null,
+                    "name": "Crítico",
+                    "text": null,
+                    "icon": "/img/icons/critical.png",
+                    "description": "<p>Si el impacto ha sido crítico, el ataque inflingirá más daño. Realiza la tirada de daño crítico para obtener los puntos de daño que le infliges al enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Ballesta pesada",
+                    "tooltip_title": "Crítico",
+                    "owned": false,
+                    "dice_roll": "2d10 +1",
+                    "dice_roll_formula": "2d10 +1",
+                    "roll_options": {
+                        "roll_name": "Ballesta pesada (crítico)",
+                        "roll_type": "damage"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "item-action-4070743",
+            "name": "Daga",
+            "text": null,
+            "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1296/large-14076cb4d6337dba5673e1554a8ddd5e097e3e87.PNG?1637061866",
+            "description": null,
+            "action_type": "folder",
+            "hidden": false,
+            "order": null,
+            "source_name": "Equipo",
+            "tooltip_title": "Daga",
+            "owned": false,
+            "elements": [
+                {
+                    "id": "item-4070743-advantage-attack",
+                    "name": "Ataque con ventaja",
+                    "text": null,
+                    "icon": "/img/icons/attack-high.png",
+                    "description": "<p>Realiza una tirada de ataque con ventaja utilizando tu Daga para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Daga",
+                    "tooltip_title": "Ataque con ventaja",
+                    "owned": false,
+                    "dice_roll": "MAX(1d20, 1d20)+4",
+                    "dice_roll_formula": "MAX(1d20, 1d20)+4",
+                    "roll_options": {
+                        "roll_name": "Daga",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": "item-4070743-attack",
+                    "name": "Ataque",
+                    "text": null,
+                    "icon": "/img/icons/melee-hit.png",
+                    "description": "<p>Realiza una tirada de ataque con tu Daga para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Daga",
+                    "tooltip_title": "Ataque",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+4",
+                    "roll_options": {
+                        "roll_name": "Daga",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": "item-4070743-disadvantage-attack",
+                    "name": "Ataque con desventaja",
+                    "text": null,
+                    "icon": "/img/icons/attack-low.png",
+                    "description": "<p>Realiza una tirada de ataque con desventaja utilizando tu Daga para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Daga",
+                    "tooltip_title": "Ataque con desventaja",
+                    "owned": false,
+                    "dice_roll": "MIN(1d20, 1d20)+4",
+                    "dice_roll_formula": "MIN(1d20, 1d20)+4",
+                    "roll_options": {
+                        "roll_name": "Daga",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": null,
+                    "name": "Daño",
+                    "text": null,
+                    "icon": "/img/icons/damage.png",
+                    "description": "<p>Si has impactado con la tirada de ataque, realiza la tirada de daño para obtener los puntos de daño que le infliges al enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Daga",
+                    "tooltip_title": "Daño",
+                    "owned": false,
+                    "dice_roll": "1d4 +1",
+                    "dice_roll_formula": "1d4 +1",
+                    "roll_options": {
+                        "roll_name": "Daga",
+                        "roll_type": "damage"
+                    }
+                },
+                {
+                    "id": null,
+                    "name": "Crítico",
+                    "text": null,
+                    "icon": "/img/icons/critical.png",
+                    "description": "<p>Si el impacto ha sido crítico, el ataque inflingirá más daño. Realiza la tirada de daño crítico para obtener los puntos de daño que le infliges al enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Daga",
+                    "tooltip_title": "Crítico",
+                    "owned": false,
+                    "dice_roll": "2d4 +1",
+                    "dice_roll_formula": "2d4 +1",
+                    "roll_options": {
+                        "roll_name": "Daga (crítico)",
+                        "roll_type": "damage"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "item-action-4070744",
+            "name": "Hacha de mano",
+            "text": null,
+            "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/607/large-a12483f9b514e8b6401052b1ecbb23f7d31945fa.PNG?1637058336",
+            "description": null,
+            "action_type": "folder",
+            "hidden": false,
+            "order": null,
+            "source_name": "Equipo",
+            "tooltip_title": "Hacha de mano",
+            "owned": false,
+            "elements": [
+                {
+                    "id": "item-4070744-advantage-attack",
+                    "name": "Ataque con ventaja",
+                    "text": null,
+                    "icon": "/img/icons/attack-high.png",
+                    "description": "<p>Realiza una tirada de ataque con ventaja utilizando tu Hacha de mano para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Hacha de mano",
+                    "tooltip_title": "Ataque con ventaja",
+                    "owned": false,
+                    "dice_roll": "MAX(1d20, 1d20)+4",
+                    "dice_roll_formula": "MAX(1d20, 1d20)+4",
+                    "roll_options": {
+                        "roll_name": "Hacha de mano",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": "item-4070744-attack",
+                    "name": "Ataque",
+                    "text": null,
+                    "icon": "/img/icons/melee-hit.png",
+                    "description": "<p>Realiza una tirada de ataque con tu Hacha de mano para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Hacha de mano",
+                    "tooltip_title": "Ataque",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+4",
+                    "roll_options": {
+                        "roll_name": "Hacha de mano",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": "item-4070744-disadvantage-attack",
+                    "name": "Ataque con desventaja",
+                    "text": null,
+                    "icon": "/img/icons/attack-low.png",
+                    "description": "<p>Realiza una tirada de ataque con desventaja utilizando tu Hacha de mano para tratar de superar la defensa del enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Hacha de mano",
+                    "tooltip_title": "Ataque con desventaja",
+                    "owned": false,
+                    "dice_roll": "MIN(1d20, 1d20)+4",
+                    "dice_roll_formula": "MIN(1d20, 1d20)+4",
+                    "roll_options": {
+                        "roll_name": "Hacha de mano",
+                        "roll_type": "attack"
+                    }
+                },
+                {
+                    "id": null,
+                    "name": "Daño",
+                    "text": null,
+                    "icon": "/img/icons/damage.png",
+                    "description": "<p>Si has impactado con la tirada de ataque, realiza la tirada de daño para obtener los puntos de daño que le infliges al enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Hacha de mano",
+                    "tooltip_title": "Daño",
+                    "owned": false,
+                    "dice_roll": "1d6 +1",
+                    "dice_roll_formula": "1d6 +1",
+                    "roll_options": {
+                        "roll_name": "Hacha de mano",
+                        "roll_type": "damage"
+                    }
+                },
+                {
+                    "id": null,
+                    "name": "Crítico",
+                    "text": null,
+                    "icon": "/img/icons/critical.png",
+                    "description": "<p>Si el impacto ha sido crítico, el ataque inflingirá más daño. Realiza la tirada de daño crítico para obtener los puntos de daño que le infliges al enemigo.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": "Hacha de mano",
+                    "tooltip_title": "Crítico",
+                    "owned": false,
+                    "dice_roll": "2d6 +1",
+                    "dice_roll_formula": "2d6 +1",
+                    "roll_options": {
+                        "roll_name": "Hacha de mano (crítico)",
+                        "roll_type": "damage"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "skill-checks",
+            "name": "Pruebas de habilidad",
+            "text": "PH",
+            "icon": "/img/icons/skills.png",
+            "description": "<p>Cuando tu Dungeon Master lo pida, puedes realizar Pruebas de Habilidad para ver si eres capaz de realizar ciertas acciones de manera heroica o si vas a fracasar cómica y estrepitosamente.</p>\n",
+            "action_type": "folder",
+            "hidden": false,
+            "order": 99,
+            "source_name": "Pruebas de habilidad",
+            "tooltip_title": "Pruebas de habilidad",
+            "owned": false,
+            "elements": [
+                {
+                    "id": "skill-action-88",
+                    "name": "Acrobacias",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/78/medium-baf510b8d3f3b5263c7890a80b7e19333d8ec740.png?1637056622",
+                    "description": "<p>Tu prueba de Destreza (Acrobacias) abarca tu intento por mantenerte en pie en situaciones difíciles, como cuando estás intentado correr sobre una capa de hielo, mantener el equilibrio en una cuerda floja o mantenerte recto sobre la borda de un barco que se balancea</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Acrobacias",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ skills.acrobacias.total }}",
+                    "roll_options": {
+                        "roll_name": "Acrobacias",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-91",
+                    "name": "Arcanos",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/541/medium-ee62fb462cdd50677948c42dbc16a80ad7b9f834.png?1637057513",
+                    "description": "<p>Tu prueba de Inteligencia (Arcana) mide tu capacidad para recordar conocimiento sobre conjuros, objetos mágicos, símbolos sobrenaturales, tradiciones mágicas, los planos de existencia y los habitantes de dichos planos</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Arcanos",
+                    "owned": false,
+                    "dice_roll": "1d20+3",
+                    "dice_roll_formula": "1d20+{{ skills.arcanos.total }}",
+                    "roll_options": {
+                        "roll_name": "Arcanos",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-87",
+                    "name": "Atletismo",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/69/medium-37ae6682c1a23d7b862e3147e36eab32b4f8c22d.png?1637056616",
+                    "description": "<p>Tu prueba de Fuerza (Atletismo) cubre situaciones difíciles mientras escalas, saltas o nadas</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Atletismo",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+{{ skills.atletismo.total }}",
+                    "roll_options": {
+                        "roll_name": "Atletismo",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-101",
+                    "name": "Engañar",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/71/medium-5bad512b029ee7b7fdda1af6fce7154e6b8d992e.png?1637056618",
+                    "description": "<p>Una prueba de Carisma (Engañar) determina si puedes esconder la verdad de manera convincente, ya sea verbalmente o a través de las acciones. Este engaño puede abarcar cualquier cosa, desde liar a alguien siendo ambiguo hasta mentir. Situaciones típicas son camelarse a un guardia, estafar a un mercader, ganar dinero con las apuestas, disfrazarse para hacerse pasar por otro, engañar a alguien suspicaz con afirmaciones falsas o mantener el rosto impávido mientras mientes descaradamente.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Engañar",
+                    "owned": false,
+                    "dice_roll": "1d20+7",
+                    "dice_roll_formula": "1d20+{{ skills.enganar.total }}",
+                    "roll_options": {
+                        "roll_name": "Engañar",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-92",
+                    "name": "Historia",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1066/medium-f95c5b05d701d58f8d7fa8ed391ab9aa832df163.png?1637060984",
+                    "description": "<p>Tu prueba de Inteligencia (Historia) mide tu capacidad para recordar eventos históricos, gente legendaria, reinos antiguos, disputas pasadas, guerras recientes y civilizaciones perdidas</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Historia",
+                    "owned": false,
+                    "dice_roll": "1d20+0",
+                    "dice_roll_formula": "1d20+{{ skills.historia.total }}",
+                    "roll_options": {
+                        "roll_name": "Historia",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-102",
+                    "name": "Interpretación",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/545/medium-6fc3c83c387dbd95ef800337961e939034fbc5a1.png?1637057516",
+                    "description": "<p>Una prueba de Carisma (Interpretación) determina si consigues deleitar a una audiencia con música, baile, actuación, cuentacuentos o alguna otra forma de entretenimiento.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Interpretación",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+{{ skills.interpretacion.total }}",
+                    "roll_options": {
+                        "roll_name": "Interpretación",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-103",
+                    "name": "Intimidar",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/951/medium-db1c795648636b6ae32de12c64348af220266045.PNG?1637060729",
+                    "description": "<p>Cuando intentas influenciar a alguien a través de una amenaza, acciones hostiles o violencia física, el director de juego puede pedirte hacer una prueba de Carisma (Intimidar). Algunos ejemplos son intentar sonsacar información a un prisionero, convencer a unos matones de que se echen atrás en una confrontación o usar una botella rota para convencer a un visir despreciable de que reconsidere una decisión.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Intimidar",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+{{ skills.intimidar.total }}",
+                    "roll_options": {
+                        "roll_name": "Intimidar",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-93",
+                    "name": "Investigación",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1054/medium-687cfb945ddd75572d004c57bdab5d453b6d2a45.png?1637060861",
+                    "description": "<p>Cuando miras a tu alrededor en busca de pistas y haces deducciones basándote en dichas pistas, haces una prueba de Inteligencia (Investigación). Puedes deducir dónde se encuentra un objeto escondido, discernir qué tipo de arma infligió una herida dependiendo de su apariencia o determinar el punto débil de un túnel que podría provocar un colapso. Estudiar detenidamente pergaminos antiguos en busca de conocimiento oculto también puede requerir una prueba de Inteligencia</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Investigación",
+                    "owned": false,
+                    "dice_roll": "1d20+0",
+                    "dice_roll_formula": "1d20+{{ skills.investigacion.total }}",
+                    "roll_options": {
+                        "roll_name": "Investigación",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-89",
+                    "name": "Juego de Manos",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/912/medium-0f861f410affbfcaa3c3997402a62fd0ae579146.PNG?1637060658",
+                    "description": "<p>Cuando hagas un acto de prestidigitación o un movimiento rápido con las manos, como pasarle algo a alguien u ocultar algo en tu cuerpo, haz una prueba de Destreza (Juego de Manos)</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Juego de Manos",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ skills.juego_de_manos.total }}",
+                    "roll_options": {
+                        "roll_name": "Juego de Manos",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-96",
+                    "name": "Medicina",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/937/medium-9a88695cd3ddbd96ef47b8459b36def833cfc635.PNG?1637060699",
+                    "description": "<p>Una prueba de Sabiduría (Medicina) te permite intentar estabilizar a un compañero moribundo o diagnosticar una enfermedad.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Medicina",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ skills.medicina.total }}",
+                    "roll_options": {
+                        "roll_name": "Medicina",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-94",
+                    "name": "Naturaleza",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1064/medium-28d59f80b78097b09e0340d403f77bda27b20a66.png?1637060983",
+                    "description": "<p>Una prueba de Inteligencia (Naturaleza) mide tu capacidad para recordar conocimiento sobre terrenos, plantas, animales, el clima y los ciclos naturales.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Naturaleza",
+                    "owned": false,
+                    "dice_roll": "1d20+0",
+                    "dice_roll_formula": "1d20+{{ skills.naturaleza.total }}",
+                    "roll_options": {
+                        "roll_name": "Naturaleza",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-97",
+                    "name": "Percepción",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/50/medium-a350643511f9afbe341cae069647e8a98dbea7ef.png?1637056605",
+                    "description": "<p>Una prueba de Sabiduría (Percepción) te permite ver, oír o detectar de otro modo la presencia de algo. Mide tu percepción general sobre lo que te rodea y la agudeza de tus sentidos.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Percepción",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+{{ skills.percepcion.total }}",
+                    "roll_options": {
+                        "roll_name": "Percepción",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-98",
+                    "name": "Perspicacia",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1108/medium-53ecd68ac02fda8cb14aa8cf0c8268a5e74cd0bc.png?1637061009",
+                    "description": "<p>Una prueba de Sabiduría (Perspicacia) determina si puedes conocer las verdaderas intenciones de una criatura, como cuando sospechas que te están mintiendo o predices el siguiente movimiento de alguien. Esto implica analizar el lenguaje corporal, la forma de hablar y los cambios en la gesticulación.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Perspicacia",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ skills.perspicacia.total }}",
+                    "roll_options": {
+                        "roll_name": "Perspicacia",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-104",
+                    "name": "Persuasión",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1065/medium-13173ac531b8a8613ca8b69cc5b21acc2ca31760.PNG?1637060984",
+                    "description": "<p>Cuando intentas influenciar a alguien o a un grupo de personas con tacto, cortesía o buen talante, el director de juego puede pedirte que hagas una prueba de Carisma (Persuasión). Normalmente usa persuasión cuando actúes de buena fe, para hacer amigos, hacer sugerencias cordiales o exhibir una etiqueta correcta. Ejemplos de persuadir a otros son convencer a un chambelán de que deje a tu grupo ver al rey, negociar la paz entre dos tribus en guerra o inspirar a una multitud de pueblerinos.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Persuasión",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+{{ skills.persuasion.total }}",
+                    "roll_options": {
+                        "roll_name": "Persuasión",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-95",
+                    "name": "Religión",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1084/medium-a4c5c819fc88e40bb51ce740b04a87cf6e8a52e2.png?1637060994",
+                    "description": "<p>Una prueba de Inteligencia (Religión) mide tu capacidad para recordar conocimiento sobre deidades, ritos y oraciones, jerarquías religiosas, símbolos sagrados y las prácticas de cultos secretos.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Religión",
+                    "owned": false,
+                    "dice_roll": "1d20+0",
+                    "dice_roll_formula": "1d20+{{ skills.religion.total }}",
+                    "roll_options": {
+                        "roll_name": "Religión",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-90",
+                    "name": "Sigilo",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/936/medium-ff6e1cc36ccf69618599d595a7f1d52d1eef5c32.PNG?1637060698",
+                    "description": "<p>Haz una tirada de Destreza (Sigilo) cuando intentes ocultarte de tus enemigos, escabullirte de unos guardias, escaquearte sin que te perciban o acercarte sigilosamente a alguien sin que te vean ni oigan</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Sigilo",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ skills.sigilo.total }}",
+                    "roll_options": {
+                        "roll_name": "Sigilo",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-99",
+                    "name": "Supervivencia",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/44/medium-b8a67a7436416834a408999af81d38fdfc0df25f.png?1637056601",
+                    "description": "<p>El director de juego puede pedirte hacer una prueba de Sabiduría (Supervivencia) para seguir huellas, cazar, guiar a tu grupo por un yermo helado, identificar signos de osos lechuza que viven cerca, predecir el clima o evitar arenas movedizas u otros peligros naturales.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Supervivencia",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ skills.supervivencia.total }}",
+                    "roll_options": {
+                        "roll_name": "Supervivencia",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "skill-action-100",
+                    "name": "Trato con Animales",
+                    "text": null,
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/1131/medium-3bcef5809ecbc7aed454c73f58ff4b5f85783f74.png?1637061058",
+                    "description": "<p>Cuando hay cualquier duda sobre si puedes calmar a un animal doméstico, evitar que una montura se asuste o intuir las intenciones de un animal, el director de juego puede pedir una prueba de Sabiduría (Trato con Animales). También puedes hacerla para controlar a tu montura cuando haces una maniobra arriesgada.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Trato con Animales",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ skills.trato_con_animales.total }}",
+                    "roll_options": {
+                        "roll_name": "Trato con Animales",
+                        "roll_type": "check"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "saving-throws",
+            "name": "Tiradas de Salvación",
+            "text": "TS",
+            "icon": "/img/icons/saving_throws.png",
+            "description": "<p>Una tirada de salvación, o simplemente salvación, representa un intento de resistir o evitar un conjuro, trampa, veneno, enfermedad o amenaza similar. No sueles decidir hacer una tirada de salvación, sino que te ves forzado a ello porque tu personaje o monstruo se encuentra en peligro</p>\n",
+            "action_type": "folder",
+            "hidden": false,
+            "order": 100,
+            "source_name": "Tiradas de Salvación",
+            "tooltip_title": "Tiradas de Salvación",
+            "owned": false,
+            "elements": [
+                {
+                    "id": "saving_throw-action-7",
+                    "name": "Fuerza",
+                    "text": "Fue",
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/530/medium-6e227eaedd83651df4b544b34d37ee715aca407e.png?1637057424",
+                    "description": "<p>Tirada de Salvación de Fuerza. La Fuerza mide la potencia física y capacidades deportivas</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Fuerza",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ saving_throws.fue.total }}",
+                    "roll_options": {
+                        "roll_name": "TS Fuerza",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "saving_throw-action-8",
+                    "name": "Destreza",
+                    "text": "Des",
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/52/medium-5176efe0950f785924b1471fc35561f3fb89330e.png?1637056606",
+                    "description": "<p>Tirada de Salvación de Destreza. La Destreza mide la agilidad y los reflejos</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Destreza",
+                    "owned": false,
+                    "dice_roll": "1d20+1",
+                    "dice_roll_formula": "1d20+{{ saving_throws.des.total }}",
+                    "roll_options": {
+                        "roll_name": "TS Destreza",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "saving_throw-action-9",
+                    "name": "Constitución",
+                    "text": "Con",
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/132/medium-ade763c3165acf2e82194fbb79f056c62d28b9c0.png?1637056699",
+                    "description": "<p>Tirada de Salvación de Constitución. La Constitución mide la resistencia y la salud</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Constitución",
+                    "owned": false,
+                    "dice_roll": "1d20+3",
+                    "dice_roll_formula": "1d20+{{ saving_throws.con.total }}",
+                    "roll_options": {
+                        "roll_name": "TS Constitución",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "saving_throw-action-10",
+                    "name": "Inteligencia",
+                    "text": "Int",
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/472/medium-adfd5c4a5da74b52472debf36b89a2667fed46fc.png?1637057319",
+                    "description": "<p>Tirada de Salvación de Inteligencia. La Inteligencia mide el razonamiento y la memoria</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Inteligencia",
+                    "owned": false,
+                    "dice_roll": "1d20+0",
+                    "dice_roll_formula": "1d20+{{ saving_throws.int.total }}",
+                    "roll_options": {
+                        "roll_name": "TS Inteligencia",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "saving_throw-action-11",
+                    "name": "Sabiduría",
+                    "text": "Sab",
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/50/medium-a350643511f9afbe341cae069647e8a98dbea7ef.png?1637056605",
+                    "description": "<p>Tirada de Salvación de Sabiduría. La Sabiduría mide la perspicacia e intuición.</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Sabiduría",
+                    "owned": false,
+                    "dice_roll": "1d20+4",
+                    "dice_roll_formula": "1d20+{{ saving_throws.sab.total }}",
+                    "roll_options": {
+                        "roll_name": "TS Sabiduría",
+                        "roll_type": "check"
+                    }
+                },
+                {
+                    "id": "saving_throw-action-12",
+                    "name": "Carisma",
+                    "text": "Car",
+                    "icon": "https://s3-eu-west-2.amazonaws.com/dungeon20/images/362/medium-36156b1ed2550cdb2da1de721a0bae08db41cb78.png?1637057144",
+                    "description": "<p>Tirada de Salvación de Carisma. El Carisma mide la fuerza de personalidad y la presencia</p>\n",
+                    "action_type": "dice_roll",
+                    "hidden": false,
+                    "order": null,
+                    "source_name": null,
+                    "tooltip_title": "Carisma",
+                    "owned": false,
+                    "dice_roll": "1d20+7",
+                    "dice_roll_formula": "1d20+{{ saving_throws.car.total }}",
+                    "roll_options": {
+                        "roll_name": "TS Carisma",
+                        "roll_type": "check"
+                    }
+                }
+            ]
+        }
+    ]
+}

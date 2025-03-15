@@ -45,11 +45,11 @@
             <div class="field-label">Clase y nivel</div>
           </div>
           <div class="info-field col pl-1 pr-1">
-            <div class="field-value handwrite">{{character.background}}</div>
+            <div class="field-value handwrite">{{character.background.name}}</div>
             <div class="field-label">Trasfondo</div>
           </div>
           <div class="info-field col pl-1 pr-1">
-            <div class="field-value handwrite">{{player.name}}</div>
+            <div class="field-value handwrite">{{character.player_name}}</div>
             <div class="field-label">Jugador</div>
           </div>
         </div>
@@ -59,11 +59,15 @@
             <div class="field-label">Raza</div>
           </div>
           <div class="info-field col pl-1 pr-2">
-            <div class="field-value handwrite">{{character.alignment}}</div>
+            <div class="field-value handwrite">{{character.fields.alignment}}</div>
             <div class="field-label">Alineamiento</div>
           </div>
           <div class="info-field col pl-1 pr-2">
-            <div class="field-value handwrite">{{character.experience}}</div>
+            <div class="field-value handwrite">
+              {% if character.fields.experience_points %}
+              {{character.fields.experience_points}}
+              {% endif %}
+            </div>
             <div class="field-label">Puntos de experiencia</div>
           </div>
         </div>
@@ -77,66 +81,66 @@
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Fuerza</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.strength.modifier}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.strength.total}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.strength.value}}</span>
+                  <span class="small">{{character.abilities.strength.modifier}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Destreza</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.dexterity.modifier}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.dexterity.total}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.dexterity.value}}</span>
+                  <span class="small">{{character.abilities.dexterity.modifier}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Constitución</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.constitution.modifier}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.constitution.total}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.constitution.value}}</span>
+                  <span class="small">{{character.abilities.constitution.modifier}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Inteligencia</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.intelligence.modifier}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.intelligence.total}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.intelligence.value}}</span>
+                  <span class="small">{{character.abilities.intelligence.modifier}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Sabiduría</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.wisdom.modifier}}</div>
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.wisdom.total}}</div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.wisdom.value}}</span>
+                  <span class="small">{{character.abilities.wisdom.modifier}}</span>
                 </div>
               </div>
               <div class="value-large text-center mt-1 mb-2">
                 <div class="bordered rounded p-1 pb-3 bg-white">
                   <div class="title">Carisma</div>
-                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.charisma.modifier}}
+                  <div class="value pt-2 pb-3 handwrite">{{character.abilities.charisma.total}}
                   </div>
                 </div>
                 <div style="margin-top: -24px; width: 40px; height: 40px;"
                   class="bordered rounded handwrite bg-white ml-auto mr-auto pt-1">
-                  <span class="small">{{character.abilities.charisma.value}}</span>
+                  <span class="small">{{character.abilities.charisma.modifier}}</span>
                 </div>
               </div>
             </div>
@@ -146,69 +150,79 @@
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.saving_throws.strength.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Fuerza</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.saving_throws.strength}}</div>
+                  <div class="handwrite small">{{character.saving_throws.strength.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.saving_throws.dexterity.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Destreza</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.saving_throws.dexterity}}</div>
+                  <div class="handwrite small">{{character.saving_throws.dexterity.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.saving_throws.constitution.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Constitución</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.saving_throws.constitution}}</div>
+                  <div class="handwrite small">{{character.saving_throws.constitution.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.saving_throws.intelligence.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Inteligencia</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.saving_throws.intelligence}}</div>
+                  <div class="handwrite small">{{character.saving_throws.intelligence.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
                   <i class="fa fa-circle-o"></i>
-                  <span class="handwrite proficiency-cross">x</span>
+                  {% if character.saving_throws.wisdom.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Sabiduría</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.saving_throws.wisdom}}</div>
+                  <div class="handwrite small">{{character.saving_throws.wisdom.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0">
                   <i class="fa fa-circle-o"></i>
-                  <span class="handwrite proficiency-cross">x</span>
+                  {% if character.saving_throws.charisma.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Carisma</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.saving_throws.charisma}}</div>
+                  <div class="handwrite small">{{character.saving_throws.charisma.value}}</div>
                 </div>
               </div>
               <div class="text-center title bottom">Tiradas de salvación</div>
@@ -217,203 +231,237 @@
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.acrobatics.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Acrobacias</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.acrobatics}}</div>
+                  <div class="handwrite small">{{character.skills.acrobatics.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
-                  <span class="handwrite proficiency-cross">x</span>
+                  {% if character.skills.arcana.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif
+                  %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Arcanos</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.arcana}}</div>
+                  <div class="handwrite small">{{character.skills.arcana.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
-                  <span class="handwrite proficiency-cross">x</span>
+                  {% if character.skills.athletics.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Atletismo</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.athletics}}</div>
+                  <div class="handwrite small">{{character.skills.athletics.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
-                  <span class="handwrite proficiency-cross">x</span>
+                  {% if character.skills.deception.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Engañar</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.deception}}</div>
+                  <div class="handwrite small">{{character.skills.deception.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.history.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Historia</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.history}}</div>
+                  <div class="handwrite small">{{character.skills.history.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.performance.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Interpretación</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.performance}}</div>
+                  <div class="handwrite small">{{character.skills.performance.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.intimidation.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Intimidar</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.intimidation}}</div>
+                  <div class="handwrite small">{{character.skills.intimidation.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.investigation.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Investigación</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.investigation}}</div>
+                  <div class="handwrite small">{{character.skills.investigation.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.sleight_of_hand.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Juego de Manos</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.sleight_of_hand}}</div>
+                  <div class="handwrite small">{{character.skills.sleight_of_hand.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.medicine.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Medicina</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.medicine}}</div>
+                  <div class="handwrite small">{{character.skills.medicine.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.nature.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif
+                  %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Naturaleza</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.nature}}</div>
+                  <div class="handwrite small">{{character.skills.nature.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
-                  <span class="handwrite proficiency-cross">x</span>
+                  {% if character.skills.perception.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Percepción</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.perception}}</div>
+                  <div class="handwrite small">{{character.skills.perception.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.insight.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Perspicacia</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.insight}}</div>
+                  <div class="handwrite small">{{character.skills.insight.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.persuasion.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Persuasión</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.persuasion}}</div>
+                  <div class="handwrite small">{{character.skills.persuasion.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.religion.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Religión</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.religion}}</div>
+                  <div class="handwrite small">{{character.skills.religion.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.stealth.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Sigilo</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.stealth}}</div>
+                  <div class="handwrite small">{{character.skills.stealth.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.survival.proficiency %}<span class="handwrite proficiency-cross">x</span>{%
+                  endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Supervivencia</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.survival}}</div>
+                  <div class="handwrite small">{{character.skills.survival.value}}</div>
                 </div>
               </div>
               <div class="row m-0 mb-1">
                 <div class="col-1 p-0 text-center">
                   <i class="fa fa-circle-o"></i>
+                  {% if character.skills.animal_handling.proficiency %}<span
+                    class="handwrite proficiency-cross">x</span>{% endif %}
                 </div>
                 <div class="col-9 pl-1 pr-1">
                   <div class="text-transform-none small">Trato con Animales</div>
                 </div>
                 <div class="col-2 pl-0 pr-2 text-center">
-                  <div class="handwrite small">{{character.skills.animal_handling}}</div>
+                  <div class="handwrite small">{{character.skills.animal_handling.value}}</div>
                 </div>
               </div>
               <div class="text-center title bottom">Habilidades</div>
@@ -437,7 +485,7 @@
               </div>
               <div class="mt-2">
                 <div class="underline mt-2">Idiomas:</div>
-                <div>{{character.languages}}</div>
+                <div>{{character.fields.languages}}</div>
               </div>
             </div>
             <div class="title bottom text-center">Otras competencias e idiomas</div>
@@ -583,7 +631,7 @@
               <div class="value-large">
                 <div class="bordered rounded-t p-1 bg-white">
                   <div class="value p-1 handwrite xx-small" style="height: 118px">
-                    {{character.personality_traits}}</div>
+                    {{character.background.traits}}</div>
                   <div class="title bottom text-center">Rasgos de personalidad</div>
                 </div>
               </div>
@@ -593,7 +641,7 @@
             <div class="col mt-1">
               <div class="value-large">
                 <div class="bordered p-1 bg-white">
-                  <div class="value p-1 handwrite xx-small" style="height: 85px">{{character.ideals}}
+                  <div class="value p-1 handwrite xx-small" style="height: 85px">{{character.background.ideals}}
                   </div>
                   <div class="title bottom text-center">Ideales</div>
                 </div>
@@ -604,7 +652,7 @@
             <div class="col mt-1">
               <div class="value-large">
                 <div class="bordered p-1 bg-white">
-                  <div class="value p-1 handwrite xx-small" style="height: 85px">{{character.bonds}}
+                  <div class="value p-1 handwrite xx-small" style="height: 85px">{{character.background.bonds}}
                   </div>
                   <div class="title bottom text-center">Vínculos</div>
                 </div>
@@ -615,7 +663,7 @@
             <div class="col mt-1">
               <div class="value-large">
                 <div class="bordered rounded-b p-1 bg-white">
-                  <div class="value p-1 handwrite xx-small" style="height: 85px">{{character.flaws}}
+                  <div class="value p-1 handwrite xx-small" style="height: 85px">{{character.background.flaws}}
                   </div>
                   <div class="title bottom text-center">Defectos</div>
                 </div>
@@ -625,9 +673,11 @@
         </div>
         <div class="mt-2 bordered rounded p-1 bg-white">
           <div class="value p-1 handwrite x-small" style="height: 740px">
-            {% for trait in character.traits %}
-            <div class="underline">{{trait.name}}:</div>
-            <div>{{trait.description}}</div>
+            {% for feats in character.feats_and_traits %}
+            <div class="underline">{{feats.origin}}</div>
+            {% for feat in feats.list %}
+            <div>- {{feat.name}}</div>
+            {% endfor %}
             {% endfor %}
           </div>
           <div class="title bottom text-center">Rasgos y atributos</div>
@@ -647,7 +697,7 @@
       </div>
       <div class="col-9 bordered rounded">
         <div class="row align-items-center m-0 small" style="min-height: 60px; border-bottom: 1px black solid;">
-          <div class="col value p-1 handwrite small" style="max-height: 100%">{{character.appearance}}</div>
+          <div class="col value p-1 handwrite small" style="max-height: 100%">{{character.fields.appearance}}</div>
         </div>
         <div class="field-label small">Apariencia</div>
       </div>
@@ -665,38 +715,49 @@
           <div class="title bottom text-center">Apariencia</div>
         </div>
         <div class="mt-3 bordered rounded p-1 bg-white">
-          <div class="value p-1 handwrite xx-small" style="height: 850px">{{character.notes}}</div>
+          <div class="value p-1 handwrite xx-small" style="height: 850px">
+            {% if character.fields.notes %}
+            {{ character.fields.notes }}
+            {% endif %}
+          </div>
           <div class="title bottom text-center">Notas adicionales</div>
         </div>
       </div>
       <div class="col-8 pr-0">
-        <div class="bordered rounded p-1 bg-white">
-          <div class="value p-1 handwrite xx-small" style="height: 140px">{{ character.history }}</div>
-          <div class="title bottom text-center">Historia del personaje</div>
-        </div>
-        <div class="mt-3 bordered rounded p-1 bg-white">
-          <div class="value p-1 handwrite xx-small" style="height: 1130px">
-            {% for trait in character.traits %}
-            <div class="pt-1 pb-1">
-              <div>
-                <i class="fa fa-caret-right" aria-hidden="true"></i>
-                <span class="underline">{{ trait.name }}:</span>
-                {{ trait.description }}
-              </div>
-            </div>
-            {% else %}
-            <div class="pt-1 pb-1">
-              <div>
-                <em>No hay rasgos definidos.</em>
-              </div>
-            </div>
-            {% endfor %}
+        <div class="bordered rounded p-1 bg-white" style="height: 100%;">
+          <div class="value p-1 handwrite xx-small" style="height: 1318px">
+            {% if character.fields.history %}
+            {{ character.fields.history }}
+            {% endif %}
           </div>
-          <div class="title bottom text-center">Rasgos</div>
+          <div class="title bottom text-center">Historia del personaje</div>
         </div>
       </div>
     </div>
     <div style="page-break-after: always"></div>
+    <div class="row">
+      <div class="mt-3 bordered rounded p-1 bg-white" style="min-height: 1420px;">
+        <div class="value p-1 handwrite xx-small" style="height: calc(100% - 32px)">
+          {% for feats in character.feats_and_traits %}
+          {% for feat in feats.list %}
+          <div>
+            <div>
+              <p style="margin-bottom: 0.2rem;">
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                <span class="underline">{{ feat.name }}:
+                </span>
+              </p>
+              <span class="handwrite xx-small margin-bottom: 0">{{ feat.description }}</span>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="title bottom text-center">Rasgos</div>
+      </div>
+    </div>
+    <div style="page-break-after: always"></div>
+
     <div class="row">
       <div class="col-4 pl-0" style="margin-top: 24px">
         <div class="info-field p-2">
@@ -746,113 +807,30 @@
     <div class="box-title">Espacios de conjuro</div>
     <div class="row bg-light-grey rounded p-1">
       <div class="col-12 row m-0 p-1">
+        {% for level in range(1, 7) %}
         <div class="col pl-0 pr-1">
           <div class="value-large text-center">
             <div class="bordered rounded p-1 bg-white">
-              <div class="title">Nivel 1</div>
+              <div class="title">Nivel {{ level }}</div>
               <div class="align-items-center" style="height: 48px">
-                <div class="value handwrite p-0">{{character.spells.level_1.list | length}}</div>
+                {% if character.spells['level_' ~ level].slots > 0 %}
+                <div class="value handwrite p-0">{{ character.spells['level_' ~ level].slots }}</div>
                 <div class="text-center p-0" style="font-size: 16px; line-height: 16px;">
-                  {% for i in range(character.spells.level_1.slots | int) %}
+                  {% for i in range(character.spells['level_' ~ level].slots) %}
                   <i class="fa fa-circle-o" style="margin-left: 1px; margin-right: 1px;"></i>
-                  {%endfor%}
+                  {% endfor %}
                 </div>
+                {% endif %}
               </div>
             </div>
           </div>
         </div>
-
-
-        <div class="col pl-0 pr-1">
-          <div class="value-large text-center">
-            <div class="bordered rounded p-1 bg-white">
-              <div class="title">Nivel 2</div>
-              <div class="align-items-center" style="height: 48px">
-                <div class="value handwrite p-0">{{character.spells.level_2.list | length}}</div>
-                <div class="text-center p-0" style="font-size: 16px; line-height: 16px;">
-                  {% for i in range(character.spells.level_2.slots | int) %}
-                  <i class="fa fa-circle-o" style="margin-left: 1px; margin-right: 1px;"></i>
-                  {%endfor%}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col pl-0 pr-1">
-          <div class="value-large text-center">
-            <div class="bordered rounded p-1 bg-white">
-              <div class="title">Nivel 3</div>
-              <div class="align-items-center" style="height: 48px">
-                <div class="value handwrite p-0">{{character.spells.level_3.list | length}}</div>
-                <div class="text-center p-0" style="font-size: 16px; line-height: 16px;">
-                  {% for i in range(character.spells.level_3.slots | int) %}
-                  <i class="fa fa-circle-o" style="margin-left: 1px; margin-right: 1px;"></i>
-                  {%endfor%}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col pl-0 pr-1">
-          <div class="value-large text-center">
-            <div class="bordered rounded p-1 bg-white">
-              <div class="title">Nivel 4</div>
-              <div class="align-items-center" style="height: 48px">
-                <div class="value handwrite p-0">{{character.spells.level_4.list | length}}</div>
-                <div class="text-center p-0" style="font-size: 16px; line-height: 16px;">
-                  {% for i in range(character.spells.level_4.slots | int) %}
-                  <i class="fa fa-circle-o" style="margin-left: 1px; margin-right: 1px;"></i>
-                  {%endfor%}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col pl-0 pr-1">
-          <div class="value-large text-center">
-            <div class="bordered rounded p-1 bg-white">
-              <div class="title">Nivel 5</div>
-              <div class="align-items-center" style="height: 48px">
-                <div class="value handwrite p-0">{{character.spells.level_5.list | length}}</div>
-                <div class="text-center p-0" style="font-size: 16px; line-height: 16px;">
-                  {% for i in range(character.spells.level_5.slots | int) %}
-                  <i class="fa fa-circle-o" style="margin-left: 1px; margin-right: 1px;"></i>
-                  {%endfor%}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col pl-0 pr-1">
-          <div class="value-large text-center">
-            <div class="bordered rounded p-1 bg-white">
-              <div class="title">Nivel 6</div>
-              <div class="align-items-center" style="height: 48px">
-                <div class="value handwrite p-0">{{character.spells.level_6.list | length}}</div>
-                <div class="text-center p-0" style="font-size: 16px; line-height: 16px;">
-                  {% for i in range(character.spells.level_6.slots | int) %}
-                  <i class="fa fa-circle-o" style="margin-left: 1px; margin-right: 1px;"></i>
-                  {%endfor%}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
+        {% endfor %}
         <div class="col pr-0 pl-1">
           <div class="value-large text-center">
             <div class="bordered rounded p-1 bg-white">
               <div class="title">Conjuros</div>
-              <div class="value handwrite p-0">{{character.spells.total}}</div>
+              <div class="value handwrite p-0">{{character.spells.known_spells}}</div>
               <div class="title bottom small">conocidos</div>
             </div>
           </div>
@@ -863,7 +841,7 @@
           <div class="value-large text-center">
             <div class="bordered rounded p-1 bg-white">
               <div class="title">Trucos</div>
-              <div class="value handwrite p-0">{{character.cantrips.total}}</div>
+              <div class="value handwrite p-0">{{character.spells.known_cantrips}}</div>
               <div class="title bottom small">conocidos</div>
             </div>
           </div>
@@ -872,7 +850,7 @@
       </div>
     </div>
     <div class="row mt-3">
-      <div class="bordered rounded col-12 pl-0 pr-0 pt-1 overflow-hidden" style="height: 1210px">
+      <div class="bordered rounded col-12 pl-0 pr-0 pt-1 overflow-hidden" style="min-height: 1210px">
         <div class="row m-0 x-small pt-1 pb-1">
           <div class="col-1 text-center pl-0 pr-0">Prep Nivel</div>
           <div class="col-2 pl-0">Nombre</div>
@@ -882,11 +860,14 @@
           <div class="col-1">Alcance</div>
           <div class="col-1 text-center pl-0 pr-0">Comps</div>
         </div>
-
-        {% for spell in character.spells.level_1.list %}
+        {% for index in character.spells %}
+        {% for spell in character.spells[index].list %}
         <div class="spell-row handwrite xx-small pt-1 pb-1">
-          <div class="row m-0">
+          <div class="row m-0 mt-1">
             <div class="col-1 text-center pl-0 pr-0">
+              {% if level != 'cantrips' %}
+              <i class="ml-3 fa fa-square-o"></i>
+              {% endif %}
               {{ spell.level }}
             </div>
             <div class="col-2 underline pl-0">{{ spell.name }}</div>
@@ -896,116 +877,209 @@
             <div class="col-1">{{ spell.range }}</div>
             <div class="col-1 text-center pl-0 pr-0">{{ spell.components }}</div>
           </div>
-          <div class="row ml-0 mr-0 mt-1">
+          <div class="row ml-0 mr-0 mt-3">
             <div class="col-12">
               {{ spell.description }}
             </div>
           </div>
         </div>
         {% endfor %}
-        {% for spell in character.spells.level_2.list %}
-        <div class="spell-row handwrite xx-small pt-1 pb-1">
-          <div class="row m-0">
-            <div class="col-1 text-center pl-0 pr-0">
-              {{ spell.level }}
-            </div>
-            <div class="col-2 underline pl-0">{{ spell.name }}</div>
-            <div class="col-2">{{ spell.school }}</div>
-            <div class="col-2">{{ spell.casting_time }}</div>
-            <div class="col-3">{{ spell.duration }}</div>
-            <div class="col-1">{{ spell.range }}</div>
-            <div class="col-1 text-center pl-0 pr-0">{{ spell.components }}</div>
-          </div>
-          <div class="row ml-0 mr-0 mt-1">
-            <div class="col-12">
-              {{ spell.description }}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        {% for spell in character.spells.level_3.list %}
-        <div class="spell-row handwrite xx-small pt-1 pb-1">
-          <div class="row m-0">
-            <div class="col-1 text-center pl-0 pr-0">
-              {{ spell.level }}
-            </div>
-            <div class="col-2 underline pl-0">{{ spell.name }}</div>
-            <div class="col-2">{{ spell.school }}</div>
-            <div class="col-2">{{ spell.casting_time }}</div>
-            <div class="col-3">{{ spell.duration }}</div>
-            <div class="col-1">{{ spell.range }}</div>
-            <div class="col-1 text-center pl-0 pr-0">{{ spell.components }}</div>
-          </div>
-          <div class="row ml-0 mr-0 mt-1">
-            <div class="col-12">
-              {{ spell.description }}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        {% for spell in character.spells.level_4.list %}
-        <div class="spell-row handwrite xx-small pt-1 pb-1">
-          <div class="row m-0">
-            <div class="col-1 text-center pl-0 pr-0">
-              {{ spell.level }}
-            </div>
-            <div class="col-2 underline pl-0">{{ spell.name }}</div>
-            <div class="col-2">{{ spell.school }}</div>
-            <div class="col-2">{{ spell.casting_time }}</div>
-            <div class="col-3">{{ spell.duration }}</div>
-            <div class="col-1">{{ spell.range }}</div>
-            <div class="col-1 text-center pl-0 pr-0">{{ spell.components }}</div>
-          </div>
-          <div class="row ml-0 mr-0 mt-1">
-            <div class="col-12">
-              {{ spell.description }}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        {% for spell in character.spells.level_5.list %}
-        <div class="spell-row handwrite xx-small pt-1 pb-1">
-          <div class="row m-0">
-            <div class="col-1 text-center pl-0 pr-0">
-              {{ spell.level }}
-            </div>
-            <div class="col-2 underline pl-0">{{ spell.name }}</div>
-            <div class="col-2">{{ spell.school }}</div>
-            <div class="col-2">{{ spell.casting_time }}</div>
-            <div class="col-3">{{ spell.duration }}</div>
-            <div class="col-1">{{ spell.range }}</div>
-            <div class="col-1 text-center pl-0 pr-0">{{ spell.components }}</div>
-          </div>
-          <div class="row ml-0 mr-0 mt-1">
-            <div class="col-12">
-              {{ spell.description }}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        {% for spell in character.spells.level_6.list %}
-        <div class="spell-row handwrite xx-small pt-1 pb-1">
-          <div class="row m-0">
-            <div class="col-1 text-center pl-0 pr-0">
-              {{ spell.level }}
-            </div>
-            <div class="col-2 underline pl-0">{{ spell.name }}</div>
-            <div class="col-2">{{ spell.school }}</div>
-            <div class="col-2">{{ spell.casting_time }}</div>
-            <div class="col-3">{{ spell.duration }}</div>
-            <div class="col-1">{{ spell.range }}</div>
-            <div class="col-1 text-center pl-0 pr-0">{{ spell.components }}</div>
-          </div>
-          <div class="row ml-0 mr-0 mt-1">
-            <div class="col-12">
-              {{ spell.description }}
-            </div>
-          </div>
-        </div>
         {% endfor %}
       </div>
     </div>
   </div>
+  <style type="text/css">
+    body {
+      text-transform: uppercase;
+    }
+
+    .ml-row {
+      margin-left: -15px;
+    }
+
+    .m-row {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .info-field {
+      width: 100%;
+    }
+
+    .info-field .field-value {
+      border-bottom: 1px black solid;
+      height: 32px;
+      line-height: 32px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 1.3em;
+    }
+
+    .info-field .field-label {
+      font-size: small;
+    }
+
+    .x-small {
+      font-size: x-small !important;
+    }
+
+    .xx-small {
+      font-size: xx-small !important;
+    }
+
+    .xxx-small {
+      font-size: xxx-small !important;
+    }
+
+    .handwrite {
+      font-family: "Montserrat";
+      color: #0D47A1;
+      text-transform: none;
+      font-size: 1.6em;
+      line-height: 1em;
+    }
+
+    .handwrite.small {
+      font-size: 1.2em !important;
+    }
+
+    .handwrite.x-small {
+      font-size: 1em !important;
+    }
+
+    .handwrite.xx-small {
+      font-size: 0.85em !important;
+    }
+
+    .handwrite.xxx-small {
+      font-size: 0.7em !important;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .ellipsize {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .transform-none {
+      text-transform: none;
+    }
+
+    .bordered {
+      border: 3px solid black;
+    }
+
+    body .rounded {
+      border-radius: 20px !important;
+    }
+
+    .rounded-t {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .rounded-b {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .rounded-l {
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .rounded-r {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .bg-light-grey {
+      background-color: #DEDFDF;
+    }
+
+    .bg-white {
+      background-color: white;
+    }
+
+    /* Large value boxes */
+    .value-large {}
+
+    .value-large .value {
+      font-size: 2em;
+    }
+
+    .bordered .title {
+      font-size: 10px;
+      font-weight: bold;
+      padding-top: 3px;
+    }
+
+    .bordered .title.small {
+      font-size: 8px !important;
+    }
+
+    .bordered .handwrite {
+      overflow: hidden;
+    }
+
+    .overflow-hidden {
+      overflow: hidden !important;
+    }
+
+    .subvalue .label {
+      text-transform: none;
+      font-size: small;
+      color: grey;
+      margin-right: 10px;
+      padding-bottom: 3px;
+    }
+
+    .subvalue .handwrite {}
+
+    .text-transform-none {
+      text-transform: none;
+    }
+
+    .proficiency-cross {
+      position: absolute;
+      left: 0;
+      top: -3px;
+      font-weight: bold;
+    }
+
+    .box-title {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .spell-row {
+      border-top: 1px solid darkgray;
+    }
+
+    .spell-row:nth-of-type(2n) {
+      background-color: #f1f1f1;
+    }
+
+    .logo-wrapper {
+      height: 75px;
+      margin-bottom: -10px !important;
+    }
+
+    .logo-img {
+      max-width: 95%;
+      max-height: 100%;
+      display: inline-block;
+    }
+  </style>
 </body>
 
 </html>
