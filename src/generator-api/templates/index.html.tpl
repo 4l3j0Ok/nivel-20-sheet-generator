@@ -676,7 +676,7 @@
           </div>
         </div>
         <div class="mt-2 bordered rounded p-1 bg-white">
-          <div class="value p-1 handwrite x-small" style="height: 740px">
+          <div class="value p-1 handwrite x-small" style="height: 745px">
             {% for feats in character.feats_and_traits %}
             <div class="underline">{{feats.origin}}</div>
             {% for feat in feats.list %}
