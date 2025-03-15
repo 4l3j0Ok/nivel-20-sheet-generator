@@ -119,7 +119,9 @@ def get_abilities(character: dict) -> dict:
             (
                 dict(
                     total=ability.get("total"),
-                    modifier=ability.get("mod"),
+                    modifier=f"+{ability.get('mod')}"
+                    if ability.get("mod") > 0
+                    else ability.get("mod"),
                 )
                 for ability in character.get("abilities")
                 if ability.get("name") == "Fuerza"
@@ -130,7 +132,9 @@ def get_abilities(character: dict) -> dict:
             (
                 dict(
                     total=ability.get("total"),
-                    modifier=ability.get("mod"),
+                    modifier=f"+{ability.get('mod')}"
+                    if ability.get("mod") > 0
+                    else ability.get("mod"),
                 )
                 for ability in character.get("abilities")
                 if ability.get("name") == "Destreza"
@@ -141,7 +145,9 @@ def get_abilities(character: dict) -> dict:
             (
                 dict(
                     total=ability.get("total"),
-                    modifier=ability.get("mod"),
+                    modifier=f"+{ability.get('mod')}"
+                    if ability.get("mod") > 0
+                    else ability.get("mod"),
                 )
                 for ability in character.get("abilities")
                 if ability.get("name") == "Constitución"
@@ -152,7 +158,9 @@ def get_abilities(character: dict) -> dict:
             (
                 dict(
                     total=ability.get("total"),
-                    modifier=ability.get("mod"),
+                    modifier=f"+{ability.get('mod')}"
+                    if ability.get("mod") > 0
+                    else ability.get("mod"),
                 )
                 for ability in character.get("abilities")
                 if ability.get("name") == "Inteligencia"
@@ -163,7 +171,9 @@ def get_abilities(character: dict) -> dict:
             (
                 dict(
                     total=ability.get("total"),
-                    modifier=ability.get("mod"),
+                    modifier=f"+{ability.get('mod')}"
+                    if ability.get("mod") > 0
+                    else ability.get("mod"),
                 )
                 for ability in character.get("abilities")
                 if ability.get("name") == "Sabiduría"
@@ -174,7 +184,9 @@ def get_abilities(character: dict) -> dict:
             (
                 dict(
                     total=ability.get("total"),
-                    modifier=ability.get("mod"),
+                    modifier=f"+{ability.get('mod')}"
+                    if ability.get("mod") > 0
+                    else ability.get("mod"),
                 )
                 for ability in character.get("abilities")
                 if ability.get("name") == "Carisma"
@@ -194,7 +206,9 @@ def get_saving_throws(character: dict) -> dict:
                     "proficiency": (
                         ability.get("saving_throw").get("proficiency") != "none"
                     ),
-                    "value": ability.get("saving_throw").get("total"),
+                    "value": f"+{ability.get('saving_throw').get('total')}"
+                    if ability.get("saving_throw").get("total") > 0
+                    else ability.get("saving_throw").get("total"),
                 }
                 for ability in character.get("abilities")
                 if ability.get("name") == "Fuerza"
@@ -207,7 +221,9 @@ def get_saving_throws(character: dict) -> dict:
                     "proficiency": (
                         ability.get("saving_throw").get("proficiency") != "none"
                     ),
-                    "value": ability.get("saving_throw").get("total"),
+                    "value": f"+{ability.get('saving_throw').get('total')}"
+                    if ability.get("saving_throw").get("total") > 0
+                    else ability.get("saving_throw").get("total"),
                 }
                 for ability in character.get("abilities")
                 if ability.get("name") == "Destreza"
@@ -220,7 +236,9 @@ def get_saving_throws(character: dict) -> dict:
                     "proficiency": (
                         ability.get("saving_throw").get("proficiency") != "none"
                     ),
-                    "value": ability.get("saving_throw").get("total"),
+                    "value": f"+{ability.get('saving_throw').get('total')}"
+                    if ability.get("saving_throw").get("total") > 0
+                    else ability.get("saving_throw").get("total"),
                 }
                 for ability in character.get("abilities")
                 if ability.get("name") == "Constitución"
@@ -233,7 +251,9 @@ def get_saving_throws(character: dict) -> dict:
                     "proficiency": (
                         ability.get("saving_throw").get("proficiency") != "none"
                     ),
-                    "value": ability.get("saving_throw").get("total"),
+                    "value": f"+{ability.get('saving_throw').get('total')}"
+                    if ability.get("saving_throw").get("total") > 0
+                    else ability.get("saving_throw").get("total"),
                 }
                 for ability in character.get("abilities")
                 if ability.get("name") == "Inteligencia"
@@ -246,7 +266,9 @@ def get_saving_throws(character: dict) -> dict:
                     "proficiency": (
                         ability.get("saving_throw").get("proficiency") != "none"
                     ),
-                    "value": ability.get("saving_throw").get("total"),
+                    "value": f"+{ability.get('saving_throw').get('total')}"
+                    if ability.get("saving_throw").get("total") > 0
+                    else ability.get("saving_throw").get("total"),
                 }
                 for ability in character.get("abilities")
                 if ability.get("name") == "Sabiduría"
@@ -259,7 +281,9 @@ def get_saving_throws(character: dict) -> dict:
                     "proficiency": (
                         ability.get("saving_throw").get("proficiency") != "none"
                     ),
-                    "value": ability.get("saving_throw").get("total"),
+                    "value": f"+{ability.get('saving_throw').get('total')}"
+                    if ability.get("saving_throw").get("total") > 0
+                    else ability.get("saving_throw").get("total"),
                 }
                 for ability in character.get("abilities")
                 if ability.get("name") == "Carisma"
@@ -277,7 +301,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Acrobacias"
@@ -288,7 +314,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Trato con animales"
@@ -299,7 +327,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Arcanos"
@@ -310,7 +340,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Atletismo"
@@ -321,7 +353,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Engañar"
@@ -332,7 +366,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Historia"
@@ -343,7 +379,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Perspicacia"
@@ -354,7 +392,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Intimidar"
@@ -365,7 +405,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Investigación"
@@ -376,7 +418,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Medicina"
@@ -387,7 +431,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Naturaleza"
@@ -398,7 +444,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Percepción"
@@ -409,7 +457,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Interpretación"
@@ -420,7 +470,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Persuasión"
@@ -431,7 +483,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Religión"
@@ -442,7 +496,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Juego de Manos"
@@ -453,7 +509,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Sigilo"
@@ -464,7 +522,9 @@ def get_skills(character: dict) -> dict:
             (
                 {
                     "proficiency": (skill.get("proficiency") != "none"),
-                    "value": skill.get("total"),
+                    "value": f"+{skill.get('total')}"
+                    if skill.get("total") > 0
+                    else skill.get("total"),
                 }
                 for skill in character.get("skills")
                 if skill.get("name") == "Supervivencia"
