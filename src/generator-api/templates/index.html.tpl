@@ -719,7 +719,7 @@
           <div class="title bottom text-center">Apariencia</div>
         </div>
         <div class="mt-3 bordered rounded p-1 bg-white">
-          <div class="value p-1 handwrite xx-small" style="height: 880px">
+          <div class="value p-1 handwrite xx-small" style="height: 882px">
             {% if character.fields.notes %}
             {{ character.fields.notes }}
             {% endif %}
