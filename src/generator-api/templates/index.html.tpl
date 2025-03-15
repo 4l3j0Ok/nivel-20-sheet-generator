@@ -989,10 +989,15 @@
     }
 
     .handwrite {
-      color: #0D47A1;
+      color: #222222;
       text-transform: none;
       font-size: 1.6em;
       line-height: 1em;
+    }
+
+    a {
+      color: #222222;
+      text-decoration: underline;
     }
 
     .handwrite.small {
