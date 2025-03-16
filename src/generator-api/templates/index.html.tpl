@@ -917,7 +917,7 @@
         <div class="spell-row handwrite xx-small pt-1 pb-1">
           <div class="row m-0 mt-1">
             <div class="col-1 text-center pl-0 pr-0">
-              {% if level != 'cantrips' %}
+              {% if index != 'cantrips' %}
               <i class="ml-3 fa fa-square-o"></i>
               {% endif %}
               {{ spell.level }}

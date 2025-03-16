@@ -68,7 +68,9 @@ def convert_to_character(character_url) -> Character:
             passive_wisdom=get_passive_wisdom(character_data),
             proficiency_bonus=character_data.get("info").get("proficiency_bonus"),
             armor_class=character_data.get("armor").get("normal"),
-            initiative=character_data.get("initiative").get("total"),
+            initiative=f"+{character_data.get('initiative').get('total')}"
+            if character_data.get("initiative").get("total") > 0
+            else character_data.get("initiative").get("total"),
             speed=character_data.get("speed").get("total"),
             max_hit_points=character_data.get("info").get("hit_points"),
             hit_dice=f"{character_data.get('professions')[-1].get('level')}d{character_data.get('professions')[-1].get('hit_points_dice')}"
@@ -82,9 +84,11 @@ def convert_to_character(character_url) -> Character:
             spell_save_dc=character_data.get("spell_books")[-1].get("spell_save_dc")
             if character_data.get("spell_books")
             else 0,
-            spell_attack_bonus=character_data.get("spell_books")[-1].get(
-                "spell_attack_bonus"
-            )
+            spell_attack_bonus=f"+{
+                character_data.get('spell_books')[-1].get('spell_attack_bonus')
+            }"
+            if character_data.get("spell_books")[-1].get("spell_attack_bonus") > 0
+            else character_data.get("spell_books")[-1].get("spell_attack_bonus")
             if character_data.get("spell_books")
             else 0,
             spells=get_spells(character_data),
@@ -646,6 +650,8 @@ def get_spells(character: dict) -> list:
             if not level.isdigit():
                 continue
             spells[f"level_{level}"]["slots"] += int(total)
+        spells["known_spells"] += spell_book.get("known_spells")
+        spells["known_cantrips"] += spell_book.get("cantrips")
         for i in spell_book.get("spells"):
             # indice 1 es la lista de hechizos, indice 0 es el int de nivel de hechizo
             for spell in i[1]:
