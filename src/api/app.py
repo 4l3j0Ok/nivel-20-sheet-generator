@@ -69,5 +69,9 @@ async def get_sheet(
 
 
 if __name__ == "__main__":
-    # Corremos la app con hot reload:
-    uvicorn.run("app:app", host="localhost", port=8000, reload=True)
+    uvicorn.run(
+        "app:app",
+        host=config.Application.host,
+        port=config.Application.port,
+        reload=True,
+    )

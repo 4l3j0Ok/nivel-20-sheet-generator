@@ -6,7 +6,9 @@ class Application:
     version = os.getenv("VERSION", "0.0.0")
     dev_mode = os.getenv("DEV_MODE", False)
     log_level = os.getenv("LOG_LEVEL", "INFO")
-    log_name = "generator-api"
+    log_name = "api"
+    host = os.getenv("HOST", "localhost")
+    port = os.getenv("PORT", 8000)
 
 
 class Path:
