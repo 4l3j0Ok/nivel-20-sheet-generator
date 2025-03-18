@@ -1,0 +1,56 @@
+---
+import Logo from "./Logo.astro";
+import { Icon } from "astro-icon/components";
+import { Application } from "../config";
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+    <content>
+        <Logo />
+        <p>
+            © 2024 {currentYear !== 2024 && `- ${currentYear}`}
+            <span class="project-name"
+                >{Application.name} by Alejo Sarmiento</span
+            >
+            {Application.major_version}.
+        </p>
+        <div class="links">
+            <a href={Application.githubUrl} target="_blank"
+                ><Icon name="mdi:github" /></a
+            >
+            <a href={Application.linkedinUrl} target="_blank"
+                ><Icon name="mdi:linkedin" /></a
+            >
+            <a href={`mailto:${Application.email}`}><Icon name="mdi:email" /></a
+            >
+        </div>
+    </content>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6em;
+        width: 100%;
+        position: relative;
+    }
+    content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+    .links {
+        font-size: 2em;
+        margin: 0 0.5em;
+    }
+    .project-name {
+        font-weight: 600;
+        color: var(--accentColor);
+    }
+</style>

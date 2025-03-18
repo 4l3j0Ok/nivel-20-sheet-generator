@@ -1,6 +1,6 @@
 export class Colors {
-    static primary = "#1c1c1c"
-    static accent = "#972626"
+    static accent = "#ff3a3a"
+    static accentHover = "#972626"
     static background = "#222222"
     static font = "#ffffff"
 
