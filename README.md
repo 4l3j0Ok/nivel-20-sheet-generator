@@ -1,28 +1,29 @@
-# Alejoide's Nivel 20 Sheet Generator
 
-## FAQ
+<div align="center">
+<span style="font-size: 32px">Alejoide's</span>
 
-### ¿Para que sirve esta herramienta?
+<img src="./frontend/src/assets/logo-nivel20.svg" alt="Logo de la aplicación Nivel 20" width="350">
+
+<span style="font-size: 32px">Sheet Generator</span>
+
+---
+
+![Python](https://img.shields.io/badge/3.12-3670A0?style=for-the-badge&logo=python&logoColor=ffd343&label=Python&labelColor=3670A0&color=ffd343)
+![FastAPI](https://img.shields.io/badge/0.115-3670A0?style=for-the-badge&logo=fastapi&logoColor=white&label=FastAPI&labelColor=009390&color=eee)
+![Astro](https://img.shields.io/badge/5.2-3670A0?style=for-the-badge&logo=astro&logoColor=white&label=Astro&labelColor=purple&color=eee)
+[![GitHub Actions](https://img.shields.io/badge/Actions-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/features/actions)
+
+</div>
 
 Alejoide's Nivel 20 Sheet Generator es un proyecto que permite generar la hoja de tu personaje de  Dungeons And Dragons 5ta Edición creado en [Nivel20](https://nivel20.com).
 
-### ¿Cómo se usa?
+## ¿Cómo se usa?
 
 1. Ingresa a la página de [Nivel20](https://nivel20.com).
 2. Crea tu personaje del juego de rol Dungeons And Dragons 5ta Edición.
 3. Copia el link de tu personaje.
 4. Ingresa a la página de [Alejoide's Nivel 20 Sheet Generator](https://sheet-generator.alejoide.com/).
 5. Pega el link de tu personaje en el campo de texto y presiona el botón "Generar". En ese momento comenzará a generarse tu hoja de personaje.
-
-### ¿Cuál es el template de la hoja de personaje?
-
-El template de la hoja de personaje es el utilizado actualmente por [Nivel20](https://nivel20.com) pero con algunas modificaciones:
-
-- Se cambió la fuente por [Montserrat](https://fonts.google.com/specimen/Montserrat).
-- Se cambió el color de la fuente por un gris, reemplazando el azul original.
-- Se modificó el tamaño de las secciones "Historia del personaje", "Rasgos" y "Conjuros".
-- Se cambiaron las `X` que indicaban proficiencia en habilidades y tiradas de salvación por un circulo relleno en su lugar.
-- Se agregó soporte de Markdown para que los apartados que lo disponen sean renderizados correctamente.
 
 ### ¿Por qué se creó esta herramienta?
 
@@ -35,16 +36,6 @@ Si quieres colaborar con el proyecto, puedes hacerlo de las siguientes maneras:
 - Reportando errores o bugs en la [sección de issues](https://github.com/4l3j0Ok/nivel-20-sheet-generator/issues).
 - Realizando un pull request con mejoras o nuevas funcionalidades.
 - Compartiendo la herramienta con tus amigos y en tus redes sociales.
-
-### ¿Es confiable esta herramienta?
-
-Sí, esta es una herramienta de código abierto y no tiene otro propósito que el de generar la hoja de tu personaje de Dungeons And Dragons 5ta Edición creado en [Nivel20](https://nivel20.com). Puedes revisar el código fuente en el [repositorio de GitHub](https://github.com/4l3j0Ok/nivel-20-sheet-generator).
-
-### ¿Qué tecnologías se utilizaron para crear esta herramienta?
-
-- FastAPI (API)
-- Jinja2 (API)
-- Astro (Frontend)
 
 ---
 
