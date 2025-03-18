@@ -1,13 +1,11 @@
 
 <div align="center">
 
-Alejoide's
-
-<img src="./frontend/src/assets/logo-nivel20.svg" width="350">
-
-Sheet Generator
-
----
+<h1>
+  Alejoide's<br>
+  <img src="./frontend/src/assets/logo-nivel20.svg" width="350"><br>
+  Sheet Generator
+</h1>
 
 ![Python](https://img.shields.io/badge/3.12-3670A0?style=for-the-badge&logo=python&logoColor=ffd343&label=Python&labelColor=3670A0&color=ffd343)
 ![FastAPI](https://img.shields.io/badge/0.115-3670A0?style=for-the-badge&logo=fastapi&logoColor=white&label=FastAPI&labelColor=009390&color=eee)
