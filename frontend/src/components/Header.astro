@@ -1,0 +1,70 @@
+---
+import Nivel20Logo from "../assets/logo-nivel20.svg";
+import Section from "../layouts/Section.astro";
+---
+
+<Section>
+	<header>
+		<div class="title">
+			<h1>Alejoide's</h1>
+			<img src={Nivel20Logo.src} alt="Astro Logo" />
+			<h1>5e Sheet Generator</h1>
+		</div>
+		<form>
+			<input
+				id="characterUrl"
+				type="text"
+				placeholder="Ingresa la URL del personaje"
+			/>
+			<button type="submit">Generar</button>
+		</form>
+	</header>
+</Section>
+
+<style>
+	header {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.title {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 16px;
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: center;
+	}
+
+	input {
+		padding: 1.2em;
+		width: 25%;
+		border-radius: var(--borderRadius);
+		background-color: #161616;
+		color: var(--fontColor);
+		outline: none;
+		border: none;
+	}
+
+	button {
+		background-color: var(--accentColor);
+		border: none;
+		border-radius: var(--borderRadius);
+		color: white;
+		cursor: pointer;
+		margin-left: 8px;
+		padding: 1.2em;
+	}
+</style>

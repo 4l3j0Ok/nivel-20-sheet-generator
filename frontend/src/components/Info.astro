@@ -1,0 +1,21 @@
+---
+import Section from "../layouts/Section.astro";
+import FAQ from "../FAQ.md";
+---
+
+<Section>
+    <div class="faq">
+        <div class="content"><FAQ /></div>
+    </div>
+</Section>
+
+<style>
+    .faq {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .content {
+        width: 50%;
+    }
+</style>

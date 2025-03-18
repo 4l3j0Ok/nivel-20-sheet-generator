@@ -1,0 +1,18 @@
+---
+interface Props {
+    sectionId?: string;
+    sectionClass?: string;
+}
+---
+
+<section id={Astro.props.sectionId} class={Astro.props.sectionClass}>
+    <slot />
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+</style>
