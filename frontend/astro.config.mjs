@@ -14,7 +14,6 @@ export default defineConfig({
   integrations: [icon(), react()],
   env: {
     schema: {
-      PUBLIC_EMAIL: envField.string({ context: "client", access: "public" }),
       GENERATOR_API_URL: envField.string({ context: "client", access: "public" }),
       APP_VERSION: envField.string({ context: "client", access: "public" }),
     }
