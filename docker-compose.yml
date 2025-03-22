@@ -1,0 +1,27 @@
+services:
+  backend:
+    image: alejoide/sheet-generator-backend:latest
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: alejoide/sheet-generator-frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4321:4321"
+    restart: unless-stopped
+    env_file:
+      - ./frontend/.env
+    networks:
+      - nginx-proxy
+
+networks:
+  nginx-proxy:
+    external: true
