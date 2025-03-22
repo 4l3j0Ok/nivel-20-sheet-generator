@@ -97,7 +97,9 @@ def convert_to_character(character_url) -> Character:
         return character
     except Exception as e:
         logger.error(f"Error al convertir el personaje: {e}")
-        raise ConvertCharacterError("Error en el proceso de conversión del personaje.")
+        raise ConvertCharacterError(
+            "Error en el proceso de conversión del personaje. Verifica que la URL sea correcta."
+        )
 
 
 def create_sheet(character: Character) -> str:

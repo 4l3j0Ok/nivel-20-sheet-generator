@@ -7,7 +7,9 @@ def get_logger() -> logging.Logger:
     logger = logging.getLogger(config.Application.log_name)
     level = config.Application.log_level
     logger.setLevel(level)
-    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    formatter = logging.Formatter(
+        "%(asctime)s - %(levelname)s - %(module)s - LINE: %(lineno)d - %(message)s"
+    )
 
     # Stream handler using sys.stdout
     stream_handler = logging.StreamHandler(sys.stdout)
