@@ -1,23 +1,23 @@
 ---
 import Nivel20Logo from "../assets/logo-nivel20.svg";
 import Section from "../layouts/Section.astro";
+import Form from "../components/Form.tsx";
+import { Application } from "../config";
 ---
 
 <Section>
 	<header>
 		<div class="title">
+			{
+				Application.version.startsWith("0") && (
+					<span class="beta">beta</span>
+				)
+			}
 			<h1>Alejoide's</h1>
 			<img src={Nivel20Logo.src} alt="Astro Logo" />
 			<h1>5e Sheet Generator</h1>
 		</div>
-		<form>
-			<input
-				id="characterUrl"
-				type="text"
-				placeholder="Ingresa la URL del personaje"
-			/>
-			<button type="submit">Generar</button>
-		</form>
+		<Form client:load />
 	</header>
 </Section>
 
@@ -41,30 +41,14 @@ import Section from "../layouts/Section.astro";
 		margin: 0;
 	}
 
-	form {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		justify-content: center;
-	}
-
-	input {
-		padding: 1.2em;
-		width: 25%;
-		border-radius: var(--borderRadius);
-		background-color: #161616;
-		color: var(--fontColor);
-		outline: none;
-		border: none;
-	}
-
-	button {
+	.beta {
+		position: absolute;
 		background-color: var(--accentColor);
-		border: none;
+		color: var(--fontColor);
+		padding: 0.3em;
+		margin-left: 17em;
+		margin-top: 8em;
 		border-radius: var(--borderRadius);
-		color: white;
-		cursor: pointer;
-		margin-left: 8px;
-		padding: 1.2em;
+		rotate: -45deg;
 	}
 </style>
