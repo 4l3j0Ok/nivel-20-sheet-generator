@@ -21,15 +21,20 @@ jobs:
         uses: actions/checkout@master
       - name: Set up project
         run: |
-          mkdir -p $DEPLOY_PATH
-          cp -f ./docker-compose.yml $DEPLOY_PATH/docker-compose.yml
-          echo "$ENV_CONTENT" > $DEPLOY_PATH/.env
+          mkdir -p "$DEPLOY_PATH"
+          cp -f ./docker-compose.yml "$DEPLOY_PATH/docker-compose.yml"
+          APP_VERSION=$(git describe --tags --abbrev=0 || echo "latest")
+          echo "$BACKEND_ENV_CONTENT" > "$DEPLOY_PATH/backend/.env"
+          echo "$FRONTEND_ENV_CONTENT" > "$DEPLOY_PATH/frontend/.env"
+          echo "APP_VERSION=${APP_VERSION}" >> "$DEPLOY_PATH/backend/.env"
+          echo "APP_VERSION=${APP_VERSION}" >> "$DEPLOY_PATH/frontend/.env"
         env:
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
-          ENV_CONTENT: ${{ secrets.ENV_CONTENT }}
+          BACKEND_ENV_CONTENT: ${{ secrets.BACKEND_ENV_CONTENT }}
+          FRONTEND_ENV_CONTENT: ${{ secrets.FRONTEND_ENV_CONTENT }}
       - name: Pull changes and restart
         run: |
-          cd ${{ secrets.DEPLOY_PATH }}
+          cd "${{ secrets.DEPLOY_PATH }}"
           docker compose down --remove-orphans
           docker compose pull
           docker compose up -d
