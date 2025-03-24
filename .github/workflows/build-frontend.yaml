@@ -7,13 +7,6 @@ jobs:
   build:
     name: Build and push
     runs-on: self-hosted
-    strategy:
-      matrix:
-        include:
-          - dockerfile: ./backend/Dockerfile
-            image: alejoide/sheet-generator-backend
-          - dockerfile: ./frontend/Dockerfile
-            image: alejoide/sheet-generator-frontend
     environment: prod
     steps:
       - name: Checkout
@@ -29,7 +22,7 @@ jobs:
         with:
           tags: |
             type=semver,pattern={{version}}
-          images: ${{ matrix.image }}
+          images: alejoide/sheet-generator-frontend
       - name: Add env files
         run: |
           APP_VERSION=${{ steps.meta.outputs.version }}
@@ -37,12 +30,6 @@ jobs:
           echo "APP_VERSION=${APP_VERSION}" >> ./frontend/.env
         env:
           FRONTEND_ENV_CONTENT: ${{ secrets.FRONTEND_ENV_CONTENT }}
-      - name: Build and push to Docker Hub
-        uses: docker/build-push-action@v5
-        with:
-          context: ./backend
-          tags: ${{ steps.meta.outputs.tags }}
-          push: true
       - name: Build and push frontend
         uses: docker/build-push-action@v5
         with:
@@ -50,10 +37,3 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           push: true
           file: ./frontend/Dockerfile
-      - name: Build and push backend
-        uses: docker/build-push-action@v5
-        with:
-          context: ./backend
-          tags: ${{ steps.meta.outputs.tags }}
-          push: true
-          file: ./backend/Dockerfile
