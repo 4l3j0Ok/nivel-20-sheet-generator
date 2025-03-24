@@ -22,6 +22,8 @@ jobs:
       - name: Set up project
         run: |
           mkdir -p "$DEPLOY_PATH"
+          mkdir -p "$DEPLOY_PATH/backend"
+          mkdir -p "$DEPLOY_PATH/frontend"
           cp -f ./docker-compose.yml "$DEPLOY_PATH/docker-compose.yml"
           APP_VERSION=$(git describe --tags --abbrev=0 || echo "latest")
           echo "$BACKEND_ENV_CONTENT" > "$DEPLOY_PATH/backend/.env"
