@@ -1,0 +1,68 @@
+name: build
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build-frontend:
+    name: Build and push frontend
+    runs-on: self-hosted
+    environment: prod
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Docker login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Docker metadata
+        id: meta-frontend
+        uses: docker/metadata-action@v5
+        with:
+          tags: |
+            type=semver,pattern={{version}}
+          images: alejoide/sheet-generator-frontend
+      - name: Add env files
+        run: |
+          APP_VERSION=${{ steps.meta-frontend.outputs.version }}
+          echo "$FRONTEND_ENV_CONTENT" > ./frontend/.env
+          echo "APP_VERSION=${APP_VERSION}" >> ./frontend/.env
+        env:
+          FRONTEND_ENV_CONTENT: ${{ secrets.FRONTEND_ENV_CONTENT }}
+      - name: Build and push frontend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend
+          tags: ${{ steps.meta-frontend.outputs.tags }}
+          push: true
+          file: ./frontend/Dockerfile
+
+  build-backend:
+    name: Build and push backend
+    runs-on: self-hosted
+    environment: prod
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Docker login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Docker metadata
+        id: meta-backend
+        uses: docker/metadata-action@v5
+        with:
+          tags: |
+            type=semver,pattern={{version}}
+          images: alejoide/sheet-generator-backend
+      - name: Build and push backend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend
+          tags: ${{ steps.meta-backend.outputs.tags }}
+          push: true
+          file: ./backend/Dockerfile

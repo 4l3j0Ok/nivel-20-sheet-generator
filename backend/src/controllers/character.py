@@ -651,9 +651,9 @@ def get_spells(character: dict) -> list:
         for level, total in spell_book.get("current_level_slots").items():
             if not level.isdigit():
                 continue
-            spells[f"level_{level}"]["slots"] += int(total)
-        spells["known_spells"] += spell_book.get("known_spells")
-        spells["known_cantrips"] += spell_book.get("cantrips")
+            spells[f"level_{level}"]["slots"] += int(total) if total else 0
+        spells["known_spells"] += spell_book.get("known_spells", 0)
+        spells["known_cantrips"] += spell_book.get("cantrips", 0)
         for i in spell_book.get("spells"):
             # indice 1 es la lista de hechizos, indice 0 es el int de nivel de hechizo
             for spell in i[1]:
