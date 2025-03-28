@@ -13,7 +13,7 @@ const currentYear = new Date().getFullYear();
             <span class="project-name"
                 >{Application.name} by Alejo Sarmiento</span
             >
-            {Application.major_version}.
+            v{Application.version}.
         </p>
         <div class="links">
             <a href={Application.githubUrl} target="_blank"
@@ -41,9 +41,10 @@ const currentYear = new Date().getFullYear();
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        text-align: center;
         padding-top: 3em;
         padding-bottom: 2em;
+        width: 80%;
     }
     .links {
         font-size: 2em;
