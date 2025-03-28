@@ -1,5 +1,5 @@
 ---
-import { Colors } from "../colors.ts";
+import { Colors } from "../colors";
 ---
 
 <!doctype html>
@@ -7,9 +7,58 @@ import { Colors } from "../colors.ts";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title></title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<!-- HTML Meta Tags -->
+		<title>Alejoide's Nivel 20 Sheet Generator</title>
+		<meta
+			name="description"
+			content="Genera tu hoja de personaje en base a tu personaje de Nivel 20"
+		/>
+		<meta name="keywords" content="sheet, generator, alejoide, nivel 20" />
+		<meta name="author" content="Alejoide" />
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+		<!-- Facebook Meta Tags -->
+		<meta
+			property="og:url"
+			content="https://sheet-generator.alejoide.com"
+		/>
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:title"
+			content="Alejoide's Nivel 20 Sheet Generator"
+		/>
+		<meta
+			property="og:description"
+			content="Genera tu hoja de personaje en base a tu personaje de Nivel 20"
+		/>
+		<meta
+			property="og:image"
+			content="https://sheet-generator.alejoide.com/og.webp"
+		/>
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			property="twitter:domain"
+			content="sheet-generator.alejoide.com"
+		/>
+		<meta
+			property="twitter:url"
+			content="https://sheet-generator.alejoide.com"
+		/>
+		<meta
+			name="twitter:title"
+			content="Alejoide's Nivel 20 Sheet Generator"
+		/>
+		<meta
+			name="twitter:description"
+			content="Genera tu hoja de personaje en base a tu personaje de Nivel 20"
+		/>
+		<meta
+			name="twitter:image"
+			content="https://sheet-generator.alejoide.com/og.webp"
+		/>
 	</head>
 	<body>
 		<slot />
