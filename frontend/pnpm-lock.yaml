@@ -1863,8 +1863,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@6.2.2:
-    resolution: {integrity: sha512-yW7PeMM+LkDzc7CgJuRLMW2Jz0FxMOsVJ8Lv3gpgW9WLcb9cTW+121UEr1hvmfR7w3SegR5ItvYyzVz1vxNJgQ==}
+  vite@6.2.3:
+    resolution: {integrity: sha512-IzwM54g4y9JA/xAeBPNaDXiBF8Jsgl3VBQ2YQ/wOY6fyW3xMdSoltIV3Bo59DErdqdE6RxUfv8W69DvUorE4Eg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -2043,11 +2043,11 @@ snapshots:
     dependencies:
       '@types/react': 19.0.12
       '@types/react-dom': 19.0.4(@types/react@19.0.12)
-      '@vitejs/plugin-react': 4.3.4(vite@6.2.2(@types/node@22.13.10))
+      '@vitejs/plugin-react': 4.3.4(vite@6.2.3(@types/node@22.13.10))
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       ultrahtml: 1.5.3
-      vite: 6.2.2(@types/node@22.13.10)
+      vite: 6.2.3(@types/node@22.13.10)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -2569,14 +2569,14 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-react@4.3.4(vite@6.2.2(@types/node@22.13.10))':
+  '@vitejs/plugin-react@4.3.4(vite@6.2.3(@types/node@22.13.10))':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.10)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.10)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 6.2.2(@types/node@22.13.10)
+      vite: 6.2.3(@types/node@22.13.10)
     transitivePeerDependencies:
       - supports-color
 
@@ -2664,8 +2664,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.2.2(@types/node@22.13.10)
-      vitefu: 1.0.6(vite@6.2.2(@types/node@22.13.10))
+      vite: 6.2.3(@types/node@22.13.10)
+      vitefu: 1.0.6(vite@6.2.3(@types/node@22.13.10))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -4165,7 +4165,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.2.2(@types/node@22.13.10):
+  vite@6.2.3(@types/node@22.13.10):
     dependencies:
       esbuild: 0.25.1
       postcss: 8.5.3
@@ -4174,9 +4174,9 @@ snapshots:
       '@types/node': 22.13.10
       fsevents: 2.3.3
 
-  vitefu@1.0.6(vite@6.2.2(@types/node@22.13.10)):
+  vitefu@1.0.6(vite@6.2.3(@types/node@22.13.10)):
     optionalDependencies:
-      vite: 6.2.2(@types/node@22.13.10)
+      vite: 6.2.3(@types/node@22.13.10)
 
   web-namespaces@2.0.1: {}
 
