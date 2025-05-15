@@ -1,4 +1,5 @@
-import { GENERATOR_API_URL, APP_VERSION } from "astro:env/client";
+import { APP_VERSION } from "astro:env/client";
+import { GENERATOR_API_URL } from "astro:env/server";
 
 
 export class Application {

@@ -9,8 +9,7 @@ services:
       - ./backend/.env
     ports:
       - "8000:8000"
-    networks:
-      - nginx-proxy
+
   frontend:
     image: alejoide/sheet-generator-frontend:latest
     build:
@@ -21,5 +20,3 @@ services:
     restart: unless-stopped
     env_file:
       - ./frontend/.env
-    networks:
-      - nginx-proxy

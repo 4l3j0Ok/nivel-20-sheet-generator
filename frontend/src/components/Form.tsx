@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { Application } from '../config';
 import '../styles/Form.css';
 
 export default function Form() {
@@ -14,14 +13,12 @@ export default function Form() {
         setError('');
 
         try {
-            const response = await fetch(Application.generatorAPIURL + `/sheet?character_url=${characterUrl}`,
-                {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
+            const response = await fetch(`/api/generator?character_url=${encodeURIComponent(characterUrl)}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-            );
+            });
 
             setLoading(false);
 
