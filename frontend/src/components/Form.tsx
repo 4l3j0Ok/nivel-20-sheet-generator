@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { FormEvent } from 'react';
-import { Icon } from '@iconify/react';
+import { Icon, loadIcon } from '@iconify/react';
 import '../styles/Form.css';
 
 export default function Form() {
     const [characterUrl, setCharacterUrl] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string>('');
+
+    useEffect(() => {
+        loadIcon('fa-solid:dice-d20');
+    }, []);
 
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
