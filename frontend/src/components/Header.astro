@@ -8,17 +8,18 @@ import { Application } from "../config";
 <Section>
 	<header>
 		<div class="title">
-			{
-				Application.version.startsWith("0") && (
-					<span class="beta">beta</span>
-				)
-			}
 			<h1>Alejoide's</h1>
 			<img
 				src={Nivel20Logo.src}
 				alt="Logo de Nivel 20 5e Sheet Generator"
 			/>
-			<h1>5e Sheet Generator</h1>
+			<h1>
+				5e Sheet Generator{
+					Application.version.startsWith("0") && (
+						<span class="beta">beta</span>
+					)
+				}
+			</h1>
 		</div>
 		<Form client:load />
 	</header>
@@ -38,20 +39,28 @@ import { Application } from "../config";
 		align-items: center;
 		flex-direction: column;
 		margin-bottom: 16px;
+		/*sombra a todo el objeto + imagen*/
+		text-shadow: var(--shadow);
+	}
+	.title img {
+		filter: drop-shadow(var(--shadow));
 	}
 
 	h1 {
 		margin: 0;
+		position: relative;
 	}
 
 	.beta {
 		position: absolute;
-		background-color: var(--accentColor);
+		background-color: var(--primaryColor);
 		color: var(--fontColor);
-		padding: 0.3em;
-		margin-left: 17em;
-		margin-top: 8em;
+		padding: 0.3em 0.6em;
+		font-size: 0.4em;
 		border-radius: var(--borderRadius);
-		rotate: -45deg;
+		top: -5px;
+		right: -30px;
+		rotate: 45deg;
+		box-shadow: var(--shadow);
 	}
 </style>

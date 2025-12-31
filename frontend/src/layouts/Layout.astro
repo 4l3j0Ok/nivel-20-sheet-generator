@@ -69,10 +69,11 @@ import { Colors } from "../colors";
 	is:global
 	define:vars={{
 		borderRadius: "1em",
-		accentColor: Colors.accent,
-		accentHoverColor: Colors.accentHover,
+		primaryColor: Colors.primary,
+		primaryHoverColor: Colors.primaryHover,
 		backgroundColor: Colors.background,
 		fontColor: Colors.font,
+		shadow: "2px 2px 5px rgba(0, 0, 0, 0.9)",
 	}}
 >
 	html {
@@ -83,21 +84,21 @@ import { Colors } from "../colors";
 	body {
 		background: linear-gradient(
 			180deg,
-			var(--accentColor) -80%,
+			var(--primaryColor) -80%,
 			var(--backgroundColor) 40%
 		);
 		margin: 0;
 		::selection {
-			background-color: var(--accentColor);
+			background-color: var(--primaryColor);
 			color: var(--fontColor);
 		}
 		a {
-			color: var(--accentColor);
+			color: var(--primaryColor);
 			text-decoration: none;
 		}
 		a:hover {
 			text-decoration: underline;
-			color: var(--accentHoverColor);
+			color: var(--primaryHoverColor);
 		}
 	}
 </style>

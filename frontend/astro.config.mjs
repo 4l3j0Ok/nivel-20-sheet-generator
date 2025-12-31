@@ -14,8 +14,8 @@ export default defineConfig({
   integrations: [icon(), react()],
   env: {
     schema: {
-      GENERATOR_API_URL: envField.string({ context: "server", access: "secret" }),
-      APP_VERSION: envField.string({ context: "client", access: "public" }),
+      GENERATOR_API_URL: envField.string({ context: "server", access: "secret", default: "http://localhost:8000" }),
+      APP_VERSION: envField.string({ context: "client", access: "public", default: "0.0.1" }),
     }
   },
 });

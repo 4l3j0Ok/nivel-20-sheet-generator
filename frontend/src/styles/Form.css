@@ -6,7 +6,7 @@
 }
 
 .error-message {
-    color: var(--accentColor);
+    color: var(--primaryColor);
 }
 
 .form {
@@ -25,16 +25,23 @@
     color: var(--fontColor);
     outline: none;
     border: none;
+    box-shadow: var(--shadow);
 }
 
 .form button {
-    background-color: var(--accentColor);
+    background-color: var(--primaryColor);
     border: none;
     border-radius: var(--borderRadius);
     color: white;
     cursor: pointer;
     padding: 1.2em;
     width: 8em;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--primaryHoverColor);
 }
 
 @media (max-width: 800px) {
@@ -75,7 +82,7 @@
 .loader .spinner {
     width: 50px;
     height: 50px;
-    border: 5px solid var(--accentColor);
+    border: 5px solid var(--primaryColor);
     animation: spin 1s linear infinite;
 }
 
