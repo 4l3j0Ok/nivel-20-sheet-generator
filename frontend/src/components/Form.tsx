@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import { Icon } from '@iconify/react';
 import '../styles/Form.css';
 
 export default function Form() {
@@ -64,7 +65,7 @@ function Loader() {
     return (
         <div className="loader">
             <div className="content">
-                <div className="spinner"></div>
+                <Icon icon="fa-solid:dice-d20" className="dice-spinner" />
                 <p>Generando hoja de personaje...</p>
             </div>
         </div>
