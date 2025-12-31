@@ -22,6 +22,11 @@
   <!-- Icons -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.print();
+    });
+  </script>
 </head>
 
 <body>
@@ -1006,7 +1011,7 @@
     }
 
     .handwrite.xx-small {
-      font-size: 0.85em !important;
+      font-size: 0.9em !important;
     }
 
     .handwrite.xxx-small {

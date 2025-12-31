@@ -34,7 +34,6 @@ async def base_character(
 ) -> JSONResponse:
     """Obtiene un personaje desde Nivel20 con la estructura original proporcionada por Nivel20."""
     try:
-        # character = get_base_character(character_url)
         ch = character.get_base_character(str(character_url))
         return JSONResponse(
             content=ch,
